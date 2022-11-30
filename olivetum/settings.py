@@ -29,6 +29,7 @@ DEBUG = development
 
 ALLOWED_HOSTS = [
     'localhost',
+    'olivetum-proj-milestone-5-am.herokuapp.com',
 ]
 
 
@@ -78,16 +79,16 @@ WSGI_APPLICATION = 'olivetum.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # if development:
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-# else:
-#     DATABASES = {
-#             'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
+# }
+# # else:
+DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
 
 
 # Password validation
