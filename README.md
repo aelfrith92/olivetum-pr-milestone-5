@@ -1,108 +1,173 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Olivetum
 
-Welcome Alfredo Morieri,
+Olivetum is an e-commerce website that lists olive-based products for sale. The website fosters genuine and
+locally-produced goods, to support farmers with their struggle against Xylella in Salento, Italy. See [this
+article](https://www.olivami.com/en/blog/curiosities-about-olive-trees/xylella-an-unprecedented-battle/) for further
+information about the context. This project collects all farmers' produce and pays them back, once their products are
+successfully sold for profit. The categories may range from olive oil, tapenade, or pitted kalamata, depending on the
+actual availability.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Inserire layout multi-piattaforma]
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Table of Contents
+* [User Experience Design (UX)](#User-Experience-Design)
+    * [The Strategy Plane](#The-Strategy-Plane)
+        * [Site Goals](#Site-Goals)
+        * [Agile Planning](#Agile-Planning)
+          * [User Stories](#User-Stories)
+    * [The Scope Plane](#The-Scope-Plan)
+    * [The Structure Plane](#The-Structure-Plan)
 
-## Gitpod Reminders
+# User-Experience-Design
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## The-Strategy-Plane
 
-`python3 -m http.server`
+### Site-Goals
 
-A blue button should appear to click: _Make Public_,
+The website empowers local farmers with online presence, to let them reach a broader target, that ranges from private
+customers to businesses, such as restaurants. In other words, the selling activity is meant as both B2C and B2B models.
+Initially, this project gives complete authority to the owners of the website, that will mediate between providers (the
+farmers) and end-customers. On a later stage, the website becomes a platform that will offer sellers' onboarding, to let
+each selling account conduct their selling strategy. This will be eventually possible with Stripe Connect and related
+services.
 
-Another blue button should appear to click: _Open Browser_.
+Actors on the website will be administrators, staff, sellers, and end-customers. Each account type behaves differently
+on the platform. The scope of this project will grant these actors all the basic and required functions expected for the
+selling activity. For example, sellers' profiles will store basic information about themselves, to show the end-user the
+source of the products being purchased; there is no need to collect KYC data in this phase, as the staff will take on
+this responsibility at the beginning.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Agile Planning
 
-A blue button should appear to click: _Make Public_,
+This project intends to use agile methodologies, by delivering small features in incremental sprints. The time this
+document was drafted, 4 sprints were mainly projected.
 
-Another blue button should appear to click: _Open Browser_.
+All issues were assigned to epics, prioritized under the labels Must have, Should have, Could have. They were assigned
+to sprints and stories according to their complexity (being self-explanatory). This allowed the main requirements to be
+completed first, while secondary features could be added whether time could be allocated to them or not.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The Kanban board was created using github projects and can be found ```Link to the project```. It can be viewed to see
+more information on the project cards. Some stories have a set of acceptance criteria in order to define the
+functionality that marks that story as complete. Some other stories do not have acceptance criteria, as they were
+considered self-explanatory.
 
-To log into the Heroku toolbelt CLI:
+```Pic to the project overview (Kanban board)```
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### User Stories
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The following user stories were completed over time. Basic setup stories - such as development-related ones - have been
+omitted, to prioritize those strictly pertaining the end-user experience.
 
-------
+The categories of users described below are:
+- "Site User" - meant as a non-authenticated user.
+- "Admin" - meant as an authenticated user with admin privileges.
+- "Shopper" - meant as an authenticated user whose purpose is to place and review orders.
 
-## Release History
+**Customer's statement**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+As the shop owners, we give local farmers the opportunity to reach a broader target, via online shopping. Shoppers will
+be able to interact with the website, to manage their orders and purchasing process. The staff/owners can help in
+specific scenarios, to guarantee the best CX.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**Epics**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The project can be divided into 5 Epics.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+**Admin and store management**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+As a site admin I can manipulate (add/edit/delete) products, so that I can handle the available listings on the website.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+As a site admin I can moderate (approve/delete) product reviews, so that I can prevent bad actors from leaving malicious
+or misleading information.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+As a site admin I can re-stock products, so that I can let customers view available products only.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**Viewing and Navigation**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+As a shopper, I can view the list of available products, so that I can select some to purchase.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+As a shopper, I can view the individual product details, so that I can see the price, description, product rating,
+product image, and available options such as litres and grams.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+As a shopper, I can quickly identitfy deals, clearance items and special offers, so that I can take advantage of special
+savings on products.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+As a shopper, I can easily view the total of my purchases at any time, so that I can avoid spending too much.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+**Registration and User Accounts**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+As a site user, I can easily register for an account, so that I have a personal account and be able to view my profile.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+As a site user, I can easily log in or log out, so that I can access my personal account information.
 
-------
+As a site user, I can easily recover my password in case I forget it, so that I recover access to my account.
 
-## FAQ about the uptime script
+As a site user, I can receive an email confirmation after registering, so that I verify that my account registration was
+successful.
 
-**Why have you added this script?**
+As a site user, I can have a personalised user profile, so that I view my personal order history and save my payment
+information.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+**Sorting and Searching**
 
-**How will this affect me?**
+As a shopper, I can sort the list of available products, so that I can easily identify the best-rated, best-priced, and
+categorically-sorted products.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+As a shopper, I can sort sort a specific category of products, so that I can easily identify the best-rated, best-priced
+product in a specific category, or sort the products in that category by name.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+As a shopper, I can sort multiple categories of products simultaneously, so that I can find the best-rated or
+best-priced products across broad categories, such as "food" and "homeware".
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+As a shopper, I can search for a product by name or description, so that I can find a specific product I would like to
+purchase.
 
-**So….?**
+As a shopper, I can search for a product by name or description, so that I can find a specific product I would like to
+purchase.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+As a shopper, I can easily see what I have searched for and the number of results, so that I can quickly decide whether
+the product I want is available.
 
-**Can I opt out?**
+**Purchasing and Checkout**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+As a shopper, I can easily select the size and the quantity of a product when purchasing it, so that I can ensure I do
+not accidentally select the wrong product, quantity, or size.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+As a shopper, I can view items in my bag to be purchased, so that I can identify the total cost of my purchase and all
+items I will receive.
 
-**Anything more?**
+As a shopper, I can adjust the quantity of individual items in my bag, so that I can easily make changes to my purchase
+before checkout.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+As a shopper, I can easily enter my payment information, so that I can check out quickly and with no hassles.
 
----
+As a shopper, I can feel my personal and payment information are safe and secure, so that I confidently provide the
+needed information to make a purchase.
 
-Happy coding!
+As a shopper, I can view an order confirmation after checkout, do that I can verify that I have not made any mistakes.
+
+As a shopper, I can receive an email confirmation after checking out, so that I can keep the confirmation of what I have
+purchased for my records.
+
+**Documentation**
+
+Tasks:
+
+* Complete readme documentation
+* Complete testing documentation write up
+
+## The-Scope-Plan
+
+* Responsive Design - Site should be fully functional on all devices from 320px up
+* Hamburger menu for mobile devices
+* Ability to perform CRUD functionality on products - admin
+* Restricted role-based features
+* Home page with grid of products
+* Review of orders for shoppers
+* Review of payment details for shoppers
+
+## The-Structure-Plan
+
+### Features
+
+```To be completed```
