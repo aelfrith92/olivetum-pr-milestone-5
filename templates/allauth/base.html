@@ -22,16 +22,13 @@
     {% bootstrap_css %}
 
     {% block corecss %}
+      <!-- Custom CSS -->
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block corejs %}
+      <!-- jQuery -->
       <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-      
-      {% comment %}
-        # Popper.js should be included in the bootstrap_javascript below 
-        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> 
-      {% endcomment %}
       
       <!-- Bootstrap JavaScript if it is in head -->
       {% if 'javascript_in_head'|bootstrap_setting %}
@@ -46,7 +43,7 @@
   </head>
   <body>
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#!">Start Bootstrap</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -76,7 +73,7 @@
     </nav>
 
     <!-- Header-->
-    <header class="bg-dark py-5 fixed-top">
+    <header class="bg-dark py-5">
       <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
           <h1 class="display-4 fw-bolder">Shop in style</h1>
@@ -89,7 +86,16 @@
     {% if messages %}
       <div class="message-container"></div>
     {% endif %}
+    
+    {% block page_header %}
+    {% endblock %}
 
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
+    
   <!-- Bootstrap JavaScript if it is in body -->
   {% if not 'javascript_in_head'|bootstrap_setting %}
     {% bootstrap_javascript %}
