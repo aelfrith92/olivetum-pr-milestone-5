@@ -170,4 +170,7 @@ Tasks:
 
 ### Features
 
+#### Colour-palette
+The colour palette can be found at https://colorhunt.co/palette/181d31678983e6ddc4f0e9d2
+
 ```To be completed```

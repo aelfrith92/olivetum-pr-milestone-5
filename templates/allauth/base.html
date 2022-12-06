@@ -1,40 +1,98 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html>
+{% load bootstrap5 %}
+{% if 'use_i18n'|bootstrap_setting %}
+    {% load i18n %}
+    {% get_current_language as LANGUAGE_CODE %}
+{% endif %}
+<html lang="{{ LANGUAGE_CODE|default:'en_us' }}">
+
   <head>
-    <title>{% block head_title %}{% endblock %}</title>
-    {% block extra_head %}
+    {% block meta %}
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    <!-- Bootstrap CSS -->
+    {% bootstrap_css %}
+
+    {% block corecss %}
+      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
+
+    {% block corejs %}
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+      
+      {% comment %}
+        # Popper.js should be included in the bootstrap_javascript below 
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> 
+      {% endcomment %}
+      
+      <!-- Bootstrap JavaScript if it is in head -->
+      {% if 'javascript_in_head'|bootstrap_setting %}
+          {% bootstrap_javascript %}
+      {% endif %}
+    {% endblock %}
+
+    <title>
+      Olivetum{% block extra_title %}{% endblock %}
+    </title>
+
   </head>
   <body>
-    {% block body %}
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#!">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#!">All Products</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                  <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-outline-dark" type="submit">
+              <i class="bi-cart-fill me-1"></i>
+              Cart
+              <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
+    <!-- Header-->
+    <header class="bg-dark py-5 fixed-top">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">Shop in style</h1>
+          <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Django messages -->
     {% if messages %}
-    <div>
-      <strong>Messages:</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
-    </div>
+      <div class="message-container"></div>
     {% endif %}
 
-    <div>
-      <strong>Menu:</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
-    </div>
-    {% block content %}
-    {% endblock %}
-    {% endblock %}
-    {% block extra_body %}
-    {% endblock %}
+  <!-- Bootstrap JavaScript if it is in body -->
+  {% if not 'javascript_in_head'|bootstrap_setting %}
+    {% bootstrap_javascript %}
+  {% endif %}
   </body>
 </html>

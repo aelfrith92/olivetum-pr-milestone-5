@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import sys
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -19,8 +20,10 @@ development = os.environ.get("DEVELOPMENT")
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+# Include BOOTSTRAP5_FOLDER in path
+BOOTSTRAP5_FOLDER = os.path.abspath(os.path.join(BASE_DIR, '..', 'bootstrap5'))
+if BOOTSTRAP5_FOLDER not in sys.path:
+    sys.path.insert(0, BOOTSTRAP5_FOLDER)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
@@ -44,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'bootstrap5',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -102,6 +106,26 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'olivetum.wsgi.application'
 
+# Bootstrap 5 settings
+BOOTSTRAP5 = {
+    "css_url": {
+        "href": "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/"
+                "bootstrap.min.css",
+        "integrity": "sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH6"
+                     "1DGLwZJEdK2Kadq2F9CUG65",
+        "crossorigin": "anonymous",
+    },
+
+    "javascript_url": {
+        "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/"
+               "bootstrap.bundle.min.js",
+        "integrity": "sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXk"
+                     "k+Q2h455rYXK/7HAuoJl+0I4",
+        "crossorigin": "anonymous",
+    },
+
+    'javascript_in_head': True,
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
