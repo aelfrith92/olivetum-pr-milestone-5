@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+{% load bootstrap5 %}
+{% if 'use_i18n'|bootstrap_setting %}
+    {% load i18n %}
+    {% get_current_language as LANGUAGE_CODE %}
+{% endif %}
+<html lang="{{ LANGUAGE_CODE|default:'en_us' }}">
+
+  <head>
+    {% block meta %}
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    <!-- Bootstrap CSS -->
+    {% bootstrap_css %}
+
+    {% block corecss %}
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0..1,-50..200" />
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+      
+      <!-- Bootstrap JavaScript if it is in head -->
+      {% if 'javascript_in_head'|bootstrap_setting %}
+          {% bootstrap_javascript %}
+      {% endif %}
+    {% endblock %}
+
+    <title>
+      Olivetum{% block extra_title %}{% endblock %}
+    </title>
+
+  </head>
+  <body>
+    <!-- Navigation-->
+    {% include 'includes/main-navbar.html' %}
+
+    <!-- Header-->
+    {% include 'includes/header-default.html' %}
+
+    <!-- Django messages -->
+    {% if messages %}
+      <div class="message-container"></div>
+    {% endif %}
+    
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
+    
+  <!-- Bootstrap JavaScript if it is in body -->
+  {% if not 'javascript_in_head'|bootstrap_setting %}
+    {% bootstrap_javascript %}
+  {% endif %}
+  </body>
+</html>

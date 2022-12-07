@@ -1,3 +1,6 @@
+/*------------------- Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&Meddon&display=swap');
+
 /*------------------- Bootstrap 5 override */
 
 :root {
@@ -31,16 +34,36 @@
   --bs-danger: #dc3545;
   --bs-light: #F0E9D2;
   --bs-dark: #181D31;
+  --bs-primary-rgb: 52, 77, 103;
+  --bs-secondary-rgb: 103, 137, 131;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 240, 233, 210;
+  --bs-dark-rgb: 24, 29, 49;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 24, 29, 49;
+  --bs-body-bg-rgb: 255, 255, 247;
   --bs-body-color: #181D31;
   --bs-body-bg: #fffff7;
 }
 
+/*------------------- Navigation bar */
+#navigationMenu {
+  font-family: 'Lato', sans-serif;
+}
 
-/*------------------- Google Icons */
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+.nav-item,
+#brand_name {
+  padding-top: 0.3rem;
+}
+
+#brand_icon {
+  margin-right: 1rem;
+}
+
+#brand_name {
+  font-family: 'Meddon', cursive;
 }
