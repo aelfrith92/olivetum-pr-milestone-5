@@ -24,6 +24,7 @@
     {% block corecss %}
       <!-- Custom CSS -->
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0..1,-50..200" />
     {% endblock %}
 
     {% block corejs %}
@@ -63,7 +64,7 @@
           </ul>
           <form class="d-flex">
             <button class="btn btn-outline-dark" type="submit">
-              <i class="bi-cart-fill me-1"></i>
+              {% include 'icons/shoppingbag.html' %}
               Cart
               <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
             </button>
