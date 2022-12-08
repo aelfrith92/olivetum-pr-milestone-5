@@ -67,3 +67,22 @@
 #brand_icon {
   margin-right: 1rem;
 }
+
+/*------------------- Navigation bar - media queries */
+@media (max-width: 992px) { 
+  .navbar-nav li {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #shoppingBag {
+    float: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #shoppingBag a {
+    display: inline;
+  }
+}
