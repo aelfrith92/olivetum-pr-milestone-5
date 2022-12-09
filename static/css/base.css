@@ -9,7 +9,8 @@ body {
   font-family: 'Meddon', cursive;
 }
 
-#navigationMenu {
+#navigationMenu,
+#textContainer h1 {
   font-family: 'Lato', sans-serif;
 }
 
@@ -74,9 +75,59 @@ body {
 }
 
 /*------------------- Header */
-header img {
-  max-width: 100%;
-  max-height: 100%;
+
+#headerTag {
+  height: 400px;
+}
+
+#headerContainer {
+  /* The image used */
+  background: url("/media/olive_branches_alpha.webp") no-repeat center center;
+  background-size: cover;
+  /* Full height */
+  height: 100%;
+  position: relative;
+  box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+#textContainer {
+  width: 38%;
+  margin-left: 0.25rem;
+}
+
+#textContainer h1 {
+  font-weight: 400;
+}
+
+.absoluteTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*------------------- Header bg animation */
+
+@-webkit-keyframes headerAnim {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
+}
+@-moz-keyframes headerAnim {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
+}
+@-o-keyframes headerAnim {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
+}
+@keyframes headerAnim {
+    0%{background-position:88% 0%}
+    50%{background-position:13% 100%}
+    100%{background-position:88% 0%}
 }
 
 /*------------------- Navigation bar - media queries */
@@ -95,5 +146,22 @@ header img {
 
   #shoppingBag a {
     display: inline;
+  }
+
+  #headerContainer {
+    position: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #textContainer {
+    width: 75%;
+    position: unset;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
+
+    background-color: rgba(240, 233, 210, 0.7);
   }
 }
