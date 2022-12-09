@@ -45,7 +45,7 @@ body {
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
-  --bs-light: #F0E9D2;
+  --bs-light: #f8f3e5;
   --bs-dark: #181D31;
   --bs-primary-rgb: 52, 77, 103;
   --bs-secondary-rgb: 103, 137, 131;
@@ -53,7 +53,7 @@ body {
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 240, 233, 210;
+  --bs-light-rgb: 248, 243, 229;
   --bs-dark-rgb: 24, 29, 49;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
@@ -72,6 +72,16 @@ body {
 
 #brand_icon {
   margin-right: 1rem;
+}
+
+#shoppingBag a {
+  background-color: #181D31;
+  color: #f8f3e5;
+}
+
+#shoppingBag a:hover {
+  background-color: #f8f3e5;
+  color: #181D31; 
 }
 
 /*------------------- Header */
@@ -137,6 +147,10 @@ body {
     margin-left: auto;
   }
 
+  #searchContainer {
+    width: 50%;
+  }
+
   #shoppingBag {
     float: none !important;
     display: flex;
@@ -156,7 +170,7 @@ body {
   }
 
   #textContainer {
-    width: 75%;
+    width: 50%;
     position: unset;
 
     border-radius: 10px;
