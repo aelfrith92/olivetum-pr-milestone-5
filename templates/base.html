@@ -53,16 +53,13 @@
     {% include 'includes/main-navbar.html' %}
 
     <!-- Header-->
-    {% include 'includes/header-default.html' %}
+    {% include 'includes/header-default.html' %}  
 
 
     <!-- Django messages -->
     {% if messages %}
       <div class="message-container"></div>
     {% endif %}
-    
-    {% block page_header %}
-    {% endblock %}
 
     {% block content %}
     {% endblock %}

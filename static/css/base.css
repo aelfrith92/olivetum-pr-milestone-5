@@ -63,6 +63,37 @@ body {
   --bs-body-bg: #fffff7;
 }
 
+.btnD {
+  color: #f8f3e5;
+  background-color: #343a40;
+  border-color: #343a40;
+  margin: 0.8rem auto;
+}
+.btnD:hover {
+  color: #181D31;
+  background-color: #f8f3e5;
+  border-color: #181D31;
+}
+.btn-check:focus + .btnD, .btnD:focus {
+  color: #f8f3e5;
+  background-color: #343a40;
+  border-color: #f8f3e5;
+  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+}
+.btn-check:checked + .btnD, .btn-check:active + .btnD, .btnD:active, .btnD.active, .show > .btnD.dropdown-toggle {
+  color: #f8f3e5;
+  background-color: #1a1e21;
+  border-color: #f8f3e5;
+}
+.btn-check:checked + .btnD:focus, .btn-check:active + .btnD:focus, .btnD:active:focus, .btnD.active:focus, .show > .btnD.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+}
+.btnD:disabled, .btnD.disabled {
+  color: #343a40;
+  background-color: #adb5bd;
+  border-color: #343a40;
+}
+
 /*------------------- Navigation bar */
 
 .nav-item,
@@ -117,27 +148,39 @@ body {
   left: 0;
 }
 
-/*------------------- Header bg animation */
+/*------------------- Sign-in elements */
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
 
-@-webkit-keyframes headerAnim {
-    0%{background-position:88% 0%}
-    50%{background-position:13% 100%}
-    100%{background-position:88% 0%}
+.form-signin .checkbox {
+  font-weight: 400;
 }
-@-moz-keyframes headerAnim {
-    0%{background-position:88% 0%}
-    50%{background-position:13% 100%}
-    100%{background-position:88% 0%}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
 }
-@-o-keyframes headerAnim {
-    0%{background-position:88% 0%}
-    50%{background-position:13% 100%}
-    100%{background-position:88% 0%}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
-@keyframes headerAnim {
-    0%{background-position:88% 0%}
-    50%{background-position:13% 100%}
-    100%{background-position:88% 0%}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-control {
+  color: #181D31;
+
 }
 
 /*------------------- Navigation bar - media queries */
