@@ -149,7 +149,8 @@ body {
 }
 
 /*------------------- Sign-in elements */
-.form-signin {
+.form-signin,
+.form-logout {
   width: 100%;
   max-width: 500px;
   padding: 15px;
