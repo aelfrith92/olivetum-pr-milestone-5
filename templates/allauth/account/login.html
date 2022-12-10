@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% load i18n %}
-{% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -27,7 +26,7 @@
     </div>
 
     <div class="checkbox mb-3">
-      <input id="id_remember" type="checkbox" name="remember" kl_vkbd_parsed="true"> Remember me
+      <input id="id_remember" class="checkbox" type="checkbox" name="remember" kl_vkbd_parsed="true"> Remember me
       <label for="id_remember"></label>
     </div>
 
