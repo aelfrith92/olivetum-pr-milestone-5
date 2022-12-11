@@ -3,7 +3,8 @@
 */
 
 $( document ).ready(function() {
-    function hoverButtons() {
+    // Self-invoking f for svg fills
+    (function () {
         
         // Select the path tag inside the svg tag to modify its attribute 'stroke'
         $('#shoppingBag').mouseover(function(event){
@@ -23,6 +24,31 @@ $( document ).ready(function() {
             event.stopPropagation();
             $('#searchBtn path').attr('fill', '#f8f3e5');
         });
-    }
-    hoverButtons();
+    })();
+    
+    // Self-invoking for search input enlarge when focus
+    // Script suspended until further optimization
+    // (function () {
+    //     let textType = false;
+    //     let searchInput =  $('#searchContainer input[type="search"]');
+    //     let inputWidth = searchInput.width();
+    //     console.log(inputWidth);
+    //     searchInput.focus(function() {
+    //             if (!textType) {
+    //                 $(this).animate({
+    //                     width: inputWidth*1.5
+    //             });
+    //         }
+    //     });
+
+    //     searchInput.blur(function() {
+    //         if(this.value === '') {
+    //             $(this).animate({
+    //                 width: inputWidth
+    //             });
+    //         } else {
+    //             textType = true;
+    //         }
+    //     });
+    // })();
 });

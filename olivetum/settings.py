@@ -107,7 +107,7 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'olivetum.wsgi.application'
 
-# Bootstrap 5 settings
+# Bootstrap 5 settings - last available version 5.2.3
 BOOTSTRAP5 = {
     "css_url": {
         "href": "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/"

@@ -22,8 +22,8 @@
             <div id="brand_name">Olivetum</div>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigationMenu" aria-controls="navigationMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navigationMenu">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+        <div class="collapse navbar-collapse justify-content-between" id="navigationMenu">
+            <ul class="navbar-nav me-4 mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
@@ -48,7 +48,7 @@
                     </li>
                 {% endif %}
             </ul>
-            <div id="searchContainer" class="container-fluid">
+            <div id="searchContainer" class="d-flex justify-content-center align-items-center">
                 <form class="d-flex" method='GET' action="#">
                     <input class="form-control me-2 mt-lg-1" type="search" placeholder="Search" aria-label="Search" name="q">
                     

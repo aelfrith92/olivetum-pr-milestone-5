@@ -10,7 +10,8 @@ body {
 }
 
 #navigationMenu,
-#textContainer h1 {
+#textContainer h1,
+h1 {
   font-family: 'Lato', sans-serif;
 }
 
@@ -115,6 +116,10 @@ body {
   color: #181D31; 
 }
 
+#searchContainer input[type="search"] {
+  width: 100%;
+}
+
 /*------------------- Header */
 
 #headerTag {
@@ -128,9 +133,12 @@ body {
   /* Full height */
   height: 100%;
   position: relative;
+  margin-top: 2rem;
+}
+
+.boxDefault {
   box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
   border-radius: 5px;
-  margin-top: 2rem;
 }
 
 #textContainer {
@@ -148,7 +156,7 @@ body {
   left: 0;
 }
 
-/*------------------- Sign-in elements */
+/*------------------- Sign-in and sign-up elements */
 .form-signin,
 .form-logout {
   width: 100%;
@@ -185,18 +193,21 @@ body {
   color: #181D31;
 }
 
-/*------------------- Sign-up elements */
+/*------------------- index */
+
+.bg-1 {
+  background: url("/media/branch-secondary.svg") no-repeat center center;
+  background-size: contain;
+}
 
 
 /*------------------- Navigation bar - media queries */
 @media (max-width: 992px) { 
-  .navbar-nav li {
+  .navbar-nav li,
+  #searchContainer,
+  .navbar-brand {
     margin-right: auto;
     margin-left: auto;
-  }
-
-  #searchContainer {
-    width: 50%;
   }
 
   #shoppingBag {
