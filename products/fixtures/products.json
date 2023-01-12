@@ -8,7 +8,7 @@
         "price": 53.99,
         "category": 6,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
     }
 }, {
@@ -21,7 +21,7 @@
         "price": 58.99,
         "category": 4,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0113201617034987M.jpg"
     }
 }, {
@@ -34,7 +34,7 @@
         "price": 205.99,
         "category": 2,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1230201417013175M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1230201417013175M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1230201417013175M.jpg"
     }
 }, {
@@ -47,7 +47,7 @@
         "price": 169.99,
         "category": 7,
         "rating": 3.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0716201503423610M.jpg"
     }
 }, {
@@ -60,7 +60,7 @@
         "price": 232.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1115201210371197C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1115201210371197C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1115201210371197C.jpg"
     }
 }, {
@@ -73,7 +73,7 @@
         "price": 30.99,
         "category": 7,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0624201520422666C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0624201520422666C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0624201520422666C.jpg"
     }
 }, {
@@ -86,7 +86,7 @@
         "price": 59.0,
         "category": 4,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0226201317034754M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0226201317034754M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0226201317034754M.jpg"
     }
 }, {
@@ -99,7 +99,7 @@
         "price": 36.99,
         "category": 7,
         "rating": 4.5,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0926201317071162M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0926201317071162M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0926201317071162M.jpg"
     }
 }, {
@@ -112,7 +112,7 @@
         "price": 169.99,
         "category": 2,
         "rating": 4.7,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1020201517025390M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1020201517025390M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1020201517025390M.jpg"
     }
 }, {
@@ -125,7 +125,7 @@
         "price": 33.99,
         "category": 7,
         "rating": 4.4,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0418201317011949M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0418201317011949M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0418201317011949M.jpg"
     }
 }, {
@@ -138,7 +138,7 @@
         "price": 29.99,
         "category": 7,
         "rating": 3.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/0900631B81B0C2D9M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/0900631B81B0C2D9M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "0900631B81B0C2D9M.jpg"
     }
 }, {
@@ -151,7 +151,7 @@
         "price": 19.99,
         "category": 1,
         "rating": 4.6,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0510201317010521M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0510201317010521M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0510201317010521M.jpg"
     }
 }, {
@@ -164,7 +164,7 @@
         "price": 20.0,
         "category": 7,
         "rating": 3.2,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0430201405053680M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0430201405053680M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0430201405053680M.jpg"
     }
 }, {
@@ -177,7 +177,7 @@
         "price": 26.99,
         "category": 5,
         "rating": 4.7,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/0900631B81C9387BM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/0900631B81C9387BM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "0900631B81C9387BM.jpg"
     }
 }, {
@@ -190,7 +190,7 @@
         "price": 48.99,
         "category": 5,
         "rating": 4.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1029201317111469M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1029201317111469M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1029201317111469M.jpg"
     }
 }, {
@@ -203,7 +203,7 @@
         "price": 65.99,
         "category": 6,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0918201520303373C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0918201520303373C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0918201520303373C.jpg"
     }
 }, {
@@ -216,7 +216,7 @@
         "price": 33.99,
         "category": 5,
         "rating": 4.4,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1119201520340305C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1119201520340305C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1119201520340305C.jpg"
     }
 }, {
@@ -229,7 +229,7 @@
         "price": 59.99,
         "category": 2,
         "rating": 4.8,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0807201317072274M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0807201317072274M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0807201317072274M.jpg"
     }
 }, {
@@ -242,7 +242,7 @@
         "price": 60.99,
         "category": 2,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0807201317072924M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0807201317072924M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0807201317072924M.jpg"
     }
 }, {
@@ -255,7 +255,7 @@
         "price": 20.99,
         "category": 7,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0821201317103183M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0821201317103183M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0821201317103183M.jpg"
     }
 }, {
@@ -268,7 +268,7 @@
         "price": 60.99,
         "category": 7,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/0900631B81D676AEM.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/0900631B81D676AEM.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "0900631B81D676AEM.jpg"
     }
 }, {
@@ -281,7 +281,7 @@
         "price": 76.99,
         "category": 4,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0917201317033820M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0917201317033820M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0917201317033820M.jpg"
     }
 }, {
@@ -294,7 +294,7 @@
         "price": 29.99,
         "category": 7,
         "rating": 4.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0927201317061305M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0927201317061305M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0927201317061305M.jpg"
     }
 }, {
@@ -307,7 +307,7 @@
         "price": 82.0,
         "category": 2,
         "rating": 3.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1023201317051585M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1023201317051585M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1023201317051585M.jpg"
     }
 }, {
@@ -320,7 +320,7 @@
         "price": 106.99,
         "category": 7,
         "rating": 3.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1108201317050996M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1108201317050996M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1108201317050996M.jpg"
     }
 }, {
@@ -333,7 +333,7 @@
         "price": 241.99,
         "category": 7,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0219201502115503C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0219201502115503C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0219201502115503C.jpg"
     }
 }, {
@@ -346,7 +346,7 @@
         "price": 338.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0610201317080834M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0610201317080834M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0610201317080834M.jpg"
     }
 }, {
@@ -359,7 +359,7 @@
         "price": 53.99,
         "category": 4,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/0900631B818ABCB9M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/0900631B818ABCB9M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "0900631B818ABCB9M.jpg"
     }
 }, {
@@ -372,7 +372,7 @@
         "price": 31.99,
         "category": 2,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0422201517022488M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0422201517022488M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0422201517022488M.jpg"
     }
 }, {
@@ -385,7 +385,7 @@
         "price": 72.99,
         "category": 2,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0113201417050002M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0113201417050002M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0113201417050002M.jpg"
     }
 }, {
@@ -398,7 +398,7 @@
         "price": 69.99,
         "category": 3,
         "rating": 4.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0213201417022274M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0213201417022274M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0213201417022274M.jpg"
     }
 }, {
@@ -411,7 +411,7 @@
         "price": 35.99,
         "category": 7,
         "rating": 4.8,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1028201517024563M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1028201517024563M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1028201517024563M.jpg"
     }
 }, {
@@ -424,7 +424,7 @@
         "price": 58.99,
         "category": 2,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0422201617033665M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0422201617033665M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0422201617033665M.jpg"
     }
 }, {
@@ -437,7 +437,7 @@
         "price": 93.99,
         "category": 5,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0915201413433903C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0915201413433903C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0915201413433903C.jpg"
     }
 }, {
@@ -450,7 +450,7 @@
         "price": 50.99,
         "category": 6,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0430201405113681M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0430201405113681M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0430201405113681M.jpg"
     }
 }, {
@@ -463,7 +463,7 @@
         "price": 23.99,
         "category": 4,
         "rating": 4.6,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0401201417083996M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0401201417083996M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0401201417083996M.jpg"
     }
 }, {
@@ -476,7 +476,7 @@
         "price": 21.99,
         "category": 2,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0828201517030241M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0828201517030241M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0828201517030241M.jpg"
     }
 }, {
@@ -489,7 +489,7 @@
         "price": 60.99,
         "category": 2,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0403201417141773M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0403201417141773M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0403201417141773M.jpg"
     }
 }, {
@@ -502,7 +502,7 @@
         "price": 41.99,
         "category": 3,
         "rating": 3.8,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0715201417203832M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0715201417203832M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0715201417203832M.jpg"
     }
 }, {
@@ -515,7 +515,7 @@
         "price": 31.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0430201405213832M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0430201405213832M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0430201405213832M.jpg"
     }
 }, {
@@ -528,7 +528,7 @@
         "price": 41.99,
         "category": 7,
         "rating": 3.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0430201405232442M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0430201405232442M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0430201405232442M.jpg"
     }
 }, {
@@ -541,7 +541,7 @@
         "price": 118.99,
         "category": 7,
         "rating": 4.7,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0519201417080443M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0519201417080443M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0519201417080443M.jpg"
     }
 }, {
@@ -554,7 +554,7 @@
         "price": 65.99,
         "category": 7,
         "rating": 4.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/0900631B8140782DM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/0900631B8140782DM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "0900631B8140782DM.jpg"
     }
 }, {
@@ -567,7 +567,7 @@
         "price": 60.99,
         "category": 5,
         "rating": 4.9,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0421201520311379C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0421201520311379C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0421201520311379C.jpg"
     }
 }, {
@@ -580,7 +580,7 @@
         "price": 41.0,
         "category": 2,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503421212M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0716201503421212M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0716201503421212M.jpg"
     }
 }, {
@@ -593,7 +593,7 @@
         "price": 162.99,
         "category": 2,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0722201417110136M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0722201417110136M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0722201417110136M.jpg"
     }
 }, {
@@ -606,7 +606,7 @@
         "price": 48.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1017201420511297C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1017201420511297C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1017201420511297C.jpg"
     }
 }, {
@@ -619,7 +619,7 @@
         "price": 34.99,
         "category": 1,
         "rating": 3.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0919201417043014M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0919201417043014M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0919201417043014M.jpg"
     }
 }, {
@@ -632,7 +632,7 @@
         "price": 60.99,
         "category": 2,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1015201417131329M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1015201417131329M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1015201417131329M.jpg"
     }
 }, {
@@ -645,7 +645,7 @@
         "price": 66.99,
         "category": 7,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1202201412542357M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1202201412542357M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1202201412542357M.jpg"
     }
 }, {
@@ -658,7 +658,7 @@
         "price": 19.99,
         "category": 5,
         "rating": 3.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1019201520531375C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1019201520531375C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1019201520531375C.jpg"
     }
 }, {
@@ -671,7 +671,7 @@
         "price": 88.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1124201417012025M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1124201417012025M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1124201417012025M.jpg"
     }
 }, {
@@ -684,7 +684,7 @@
         "price": 53.99,
         "category": 3,
         "rating": 3.7,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1220201417020921M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1220201417020921M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1220201417020921M.jpg"
     }
 }, {
@@ -697,7 +697,7 @@
         "price": 26.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0414201520383920C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0414201520383920C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0414201520383920C.jpg"
     }
 }, {
@@ -710,7 +710,7 @@
         "price": 28.99,
         "category": 4,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0428201617042837M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0428201617042837M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0428201617042837M.jpg"
     }
 }, {
@@ -723,7 +723,7 @@
         "price": 65.99,
         "category": 6,
         "rating": 3.9,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201523230512M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0113201523230512M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0113201523230512M.jpg"
     }
 }, {
@@ -736,7 +736,7 @@
         "price": 66.0,
         "category": 3,
         "rating": 4.7,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0323201517042926M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0323201517042926M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0323201517042926M.jpg"
     }
 }, {
@@ -749,7 +749,7 @@
         "price": 265.0,
         "category": 2,
         "rating": 3.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0204201517030626M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0204201517030626M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0204201517030626M.jpg"
     }
 }, {
@@ -762,7 +762,7 @@
         "price": 211.99,
         "category": 7,
         "rating": 4.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0224201517023517M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0224201517023517M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0224201517023517M.jpg"
     }
 }, {
@@ -775,7 +775,7 @@
         "price": 65.99,
         "category": 4,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0320201517010207M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0320201517010207M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0320201517010207M.jpg"
     }
 }, {
@@ -788,7 +788,7 @@
         "price": 344.99,
         "category": 2,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0302201517030242M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0302201517030242M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0302201517030242M.jpg"
     }
 }, {
@@ -801,7 +801,7 @@
         "price": 31.99,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0401201517030651M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0401201517030651M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0401201517030651M.jpg"
     }
 }, {
@@ -814,7 +814,7 @@
         "price": 169.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0408201517021489M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0408201517021489M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0408201517021489M.jpg"
     }
 }, {
@@ -827,7 +827,7 @@
         "price": 19.99,
         "category": 3,
         "rating": 4.9,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0527201520374912C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0527201520374912C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0527201520374912C.jpg"
     }
 }, {
@@ -840,7 +840,7 @@
         "price": 69.99,
         "category": 3,
         "rating": 4.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0213201417022274M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0213201417022274M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0213201417022274M.jpg"
     }
 }, {
@@ -853,7 +853,7 @@
         "price": 30.99,
         "category": 3,
         "rating": 4.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0515201517013144M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0515201517013144M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0515201517013144M.jpg"
     }
 }, {
@@ -866,7 +866,7 @@
         "price": 72.99,
         "category": 7,
         "rating": 4.5,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0515201517012588M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0515201517012588M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0515201517012588M.jpg"
     }
 }, {
@@ -879,7 +879,7 @@
         "price": 50.99,
         "category": 6,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0526201517022624M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0526201517022624M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0526201517022624M.jpg"
     }
 }, {
@@ -892,7 +892,7 @@
         "price": 42.0,
         "category": 2,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0519201517025089M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0519201517025089M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0519201517025089M.jpg"
     }
 }, {
@@ -905,7 +905,7 @@
         "price": 108.99,
         "category": 2,
         "rating": 4.2,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/0900631B8142A3AFM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/0900631B8142A3AFM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "0900631B8142A3AFM.jpg"
     }
 }, {
@@ -918,7 +918,7 @@
         "price": 108.99,
         "category": 8,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0608201517025373M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0608201517025373M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0608201517025373M.jpg"
     }
 }, {
@@ -931,7 +931,7 @@
         "price": 60.99,
         "category": 6,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0608201517035688M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0608201517035688M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0608201517035688M.jpg"
     }
 }, {
@@ -944,7 +944,7 @@
         "price": 60.99,
         "category": 6,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0608201517035747M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0608201517035747M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0608201517035747M.jpg"
     }
 }, {
@@ -957,7 +957,7 @@
         "price": 60.99,
         "category": 6,
         "rating": 4.2,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0608201517035763M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0608201517035763M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0608201517035763M.jpg"
     }
 }, {
@@ -970,7 +970,7 @@
         "price": 48.99,
         "category": 6,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0612201517032350M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0612201517032350M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0612201517032350M.jpg"
     }
 }, {
@@ -983,7 +983,7 @@
         "price": 50.99,
         "category": 6,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0831201520432399C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0831201520432399C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0831201520432399C.jpg"
     }
 }, {
@@ -996,7 +996,7 @@
         "price": 36.99,
         "category": 5,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0526201623053167C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0526201623053167C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0526201623053167C.jpg"
     }
 }, {
@@ -1009,7 +1009,7 @@
         "price": 60.99,
         "category": 6,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0623201517030671M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0623201517030671M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0623201517030671M.jpg"
     }
 }, {
@@ -1022,7 +1022,7 @@
         "price": 60.99,
         "category": 6,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0623201517030686M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0623201517030686M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0623201517030686M.jpg"
     }
 }, {
@@ -1035,7 +1035,7 @@
         "price": 29.0,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0702201517031050M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0702201517031050M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0702201517031050M.jpg"
     }
 }, {
@@ -1048,7 +1048,7 @@
         "price": 60.99,
         "category": 6,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0702201517033643M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0702201517033643M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0702201517033643M.jpg"
     }
 }, {
@@ -1061,7 +1061,7 @@
         "price": 48.99,
         "category": 1,
         "rating": 4.9,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1008201517035763M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1008201517035763M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1008201517035763M.jpg"
     }
 }, {
@@ -1074,7 +1074,7 @@
         "price": 27.0,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0716201517033520M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0716201517033520M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0716201517033520M.jpg"
     }
 }, {
@@ -1087,7 +1087,7 @@
         "price": 29.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0717201517041911M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0717201517041911M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0717201517041911M.jpg"
     }
 }, {
@@ -1100,7 +1100,7 @@
         "price": 138.99,
         "category": 3,
         "rating": 4.2,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0527201517022924M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0527201517022924M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0527201517022924M.jpg"
     }
 }, {
@@ -1113,7 +1113,7 @@
         "price": 326.99,
         "category": 2,
         "rating": 4.1,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0714201504201760M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0714201504201760M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0714201504201760M.jpg"
     }
 }, {
@@ -1126,7 +1126,7 @@
         "price": 58.99,
         "category": 4,
         "rating": 4.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0710201517034239M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0710201517034239M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0710201517034239M.jpg"
     }
 }, {
@@ -1139,7 +1139,7 @@
         "price": 108.99,
         "category": 8,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0805201520415923C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0805201520415923C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0805201520415923C.jpg"
     }
 }, {
@@ -1152,7 +1152,7 @@
         "price": 52.99,
         "category": 1,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0724201517031934M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0724201517031934M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0724201517031934M.jpg"
     }
 }, {
@@ -1165,7 +1165,7 @@
         "price": 244.99,
         "category": 3,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0721201517041500M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0721201517041500M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0721201517041500M.jpg"
     }
 }, {
@@ -1178,7 +1178,7 @@
         "price": 33.99,
         "category": 7,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0724201517024000M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0724201517024000M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0724201517024000M.jpg"
     }
 }, {
@@ -1191,7 +1191,7 @@
         "price": 50.99,
         "category": 1,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0731201517031510M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0731201517031510M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0731201517031510M.jpg"
     }
 }, {
@@ -1204,7 +1204,7 @@
         "price": 70.99,
         "category": 3,
         "rating": 4.9,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0807201517015600M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0807201517015600M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0807201517015600M.jpg"
     }
 }, {
@@ -1217,7 +1217,7 @@
         "price": 31.99,
         "category": 7,
         "rating": 3.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0731201517024285M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0731201517024285M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0731201517024285M.jpg"
     }
 }, {
@@ -1230,7 +1230,7 @@
         "price": 42.99,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0810201517010458M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0810201517010458M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0810201517010458M.jpg"
     }
 }, {
@@ -1243,7 +1243,7 @@
         "price": 92.99,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0805201517023421M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0805201517023421M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0805201517023421M.jpg"
     }
 }, {
@@ -1256,7 +1256,7 @@
         "price": 26.99,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0917201520473680C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0917201520473680C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0917201520473680C.jpg"
     }
 }, {
@@ -1269,7 +1269,7 @@
         "price": 58.99,
         "category": 7,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0820201517013830M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0820201517013830M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0820201517013830M.jpg"
     }
 }, {
@@ -1282,7 +1282,7 @@
         "price": 29.99,
         "category": 5,
         "rating": 4.4,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0903201517023529M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0903201517023529M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0903201517023529M.jpg"
     }
 }, {
@@ -1295,7 +1295,7 @@
         "price": 53.99,
         "category": 4,
         "rating": 4.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0908201517020936M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0908201517020936M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0908201517020936M.jpg"
     }
 }, {
@@ -1308,7 +1308,7 @@
         "price": 72.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0828201517024772M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0828201517024772M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0828201517024772M.jpg"
     }
 }, {
@@ -1321,7 +1321,7 @@
         "price": 71.99,
         "category": 3,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0930201517050189M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0930201517050189M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0930201517050189M.jpg"
     }
 }, {
@@ -1334,7 +1334,7 @@
         "price": 55.0,
         "category": 3,
         "rating": 4.2,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1002201517022007M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1002201517022007M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1002201517022007M.jpg"
     }
 }, {
@@ -1347,7 +1347,7 @@
         "price": 52.99,
         "category": 6,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1230201520420777C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1230201520420777C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1230201520420777C.jpg"
     }
 }, {
@@ -1360,7 +1360,7 @@
         "price": 30.99,
         "category": 1,
         "rating": 4.8,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0929201502575389M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0929201502575389M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0929201502575389M.jpg"
     }
 }, {
@@ -1373,7 +1373,7 @@
         "price": 166.99,
         "category": 2,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0921201517052807M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0921201517052807M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0921201517052807M.jpg"
     }
 }, {
@@ -1386,7 +1386,7 @@
         "price": 71.99,
         "category": 2,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0921201517052786M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0921201517052786M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0921201517052786M.jpg"
     }
 }, {
@@ -1399,7 +1399,7 @@
         "price": 60.99,
         "category": 4,
         "rating": 3.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1014201517031451M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1014201517031451M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1014201517031451M.jpg"
     }
 }, {
@@ -1412,7 +1412,7 @@
         "price": 29.99,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1021201517031368M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1021201517031368M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1021201517031368M.jpg"
     }
 }, {
@@ -1425,7 +1425,7 @@
         "price": 53.99,
         "category": 3,
         "rating": 4.8,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1016201517075816M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1016201517075816M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1016201517075816M.jpg"
     }
 }, {
@@ -1438,7 +1438,7 @@
         "price": 29.99,
         "category": 7,
         "rating": 1.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1022201517023782M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1022201517023782M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1022201517023782M.jpg"
     }
 }, {
@@ -1451,7 +1451,7 @@
         "price": 139.99,
         "category": 2,
         "rating": 3.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1112201517050819M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1112201517050819M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1112201517050819M.jpg"
     }
 }, {
@@ -1464,7 +1464,7 @@
         "price": 23.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1104201517020304M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1104201517020304M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1104201517020304M.jpg"
     }
 }, {
@@ -1477,7 +1477,7 @@
         "price": 24.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1106201517012318M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1106201517012318M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1106201517012318M.jpg"
     }
 }, {
@@ -1490,7 +1490,7 @@
         "price": 58.99,
         "category": 4,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1104201517021565M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1104201517021565M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1104201517021565M.jpg"
     }
 }, {
@@ -1503,7 +1503,7 @@
         "price": 41.0,
         "category": 4,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0216201620412947C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0216201620412947C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0216201620412947C.jpg"
     }
 }, {
@@ -1516,7 +1516,7 @@
         "price": 113.99,
         "category": 8,
         "rating": 4.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1105201517015618M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1105201517015618M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1105201517015618M.jpg"
     }
 }, {
@@ -1529,7 +1529,7 @@
         "price": 44.99,
         "category": 1,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1030201517035843M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1030201517035843M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1030201517035843M.jpg"
     }
 }, {
@@ -1542,7 +1542,7 @@
         "price": 19.99,
         "category": 1,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1119201517043586M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1119201517043586M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1119201517043586M.jpg"
     }
 }, {
@@ -1555,7 +1555,7 @@
         "price": 26.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1124201517014225M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1124201517014225M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1124201517014225M.jpg"
     }
 }, {
@@ -1568,7 +1568,7 @@
         "price": 19.99,
         "category": 1,
         "rating": 4.4,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1222201517041287M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1222201517041287M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1222201517041287M.jpg"
     }
 }, {
@@ -1581,7 +1581,7 @@
         "price": 16.99,
         "category": 5,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0405201620454892C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0405201620454892C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0405201620454892C.jpg"
     }
 }, {
@@ -1594,7 +1594,7 @@
         "price": 41.99,
         "category": 5,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1202201502000682M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1202201502000682M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1202201502000682M.jpg"
     }
 }, {
@@ -1607,7 +1607,7 @@
         "price": 49.0,
         "category": 5,
         "rating": 4.8,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1202201517021959M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1202201517021959M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1202201517021959M.jpg"
     }
 }, {
@@ -1620,7 +1620,7 @@
         "price": 60.99,
         "category": 6,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1202201517023245M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1202201517023245M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1202201517023245M.jpg"
     }
 }, {
@@ -1633,7 +1633,7 @@
         "price": 69.99,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1208201517020379M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1208201517020379M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1208201517020379M.jpg"
     }
 }, {
@@ -1646,7 +1646,7 @@
         "price": 48.99,
         "category": 6,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0726201317024762M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0726201317024762M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0726201317024762M.jpg"
     }
 }, {
@@ -1659,7 +1659,7 @@
         "price": 30.99,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1109201517012575M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1109201517012575M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1109201517012575M.jpg"
     }
 }, {
@@ -1672,7 +1672,7 @@
         "price": 26.99,
         "category": 8,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0105201617024447M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0105201617024447M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0105201617024447M.jpg"
     }
 }, {
@@ -1685,7 +1685,7 @@
         "price": 21.99,
         "category": 5,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0119201620405230C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0119201620405230C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0119201620405230C.jpg"
     }
 }, {
@@ -1698,7 +1698,7 @@
         "price": 42.99,
         "category": 5,
         "rating": 4.4,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0224201620571013C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0224201620571013C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0224201620571013C.jpg"
     }
 }, {
@@ -1711,7 +1711,7 @@
         "price": 41.99,
         "category": 4,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1228201517142050M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1228201517142050M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1228201517142050M.jpg"
     }
 }, {
@@ -1724,7 +1724,7 @@
         "price": 53.99,
         "category": 3,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1218201517095959M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1218201517095959M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1218201517095959M.jpg"
     }
 }, {
@@ -1737,7 +1737,7 @@
         "price": 58.99,
         "category": 6,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1223201517040398M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1223201517040398M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1223201517040398M.jpg"
     }
 }, {
@@ -1750,7 +1750,7 @@
         "price": 58.99,
         "category": 4,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0304201620452035C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0304201620452035C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0304201620452035C.jpg"
     }
 }, {
@@ -1763,7 +1763,7 @@
         "price": 34.99,
         "category": 2,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0126201620545687C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0126201620545687C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0126201620545687C.jpg"
     }
 }, {
@@ -1776,7 +1776,7 @@
         "price": 42.0,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0107201603172435M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0107201603172435M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0107201603172435M.jpg"
     }
 }, {
@@ -1789,7 +1789,7 @@
         "price": 66.0,
         "category": 5,
         "rating": 4.7,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1216201517030998M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1216201517030998M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1216201517030998M.jpg"
     }
 }, {
@@ -1802,7 +1802,7 @@
         "price": 28.99,
         "category": 1,
         "rating": 3.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0217201617084849M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0217201617084849M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0217201617084849M.jpg"
     }
 }, {
@@ -1815,7 +1815,7 @@
         "price": 35.99,
         "category": 1,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0309201620474626C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0309201620474626C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0309201620474626C.jpg"
     }
 }, {
@@ -1828,7 +1828,7 @@
         "price": 43.99,
         "category": 6,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1211201503400830M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1211201503400830M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1211201503400830M.jpg"
     }
 }, {
@@ -1841,7 +1841,7 @@
         "price": 64.99,
         "category": 6,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1216201517031308M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1216201517031308M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1216201517031308M.jpg"
     }
 }, {
@@ -1854,7 +1854,7 @@
         "price": 90.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/0900631B81E48245M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/0900631B81E48245M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "0900631B81E48245M.jpg"
     }
 }, {
@@ -1867,7 +1867,7 @@
         "price": 362.99,
         "category": 7,
         "rating": 4.5,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/0900631B81D6766FM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/0900631B81D6766FM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "0900631B81D6766FM.jpg"
     }
 }, {
@@ -1880,7 +1880,7 @@
         "price": 53.99,
         "category": 4,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0218201621532296C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0218201621532296C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0218201621532296C.jpg"
     }
 }, {
@@ -1893,7 +1893,7 @@
         "price": 82.99,
         "category": 7,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1016201517091568M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1016201517091568M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1016201517091568M.jpg"
     }
 }, {
@@ -1906,7 +1906,7 @@
         "price": 53.99,
         "category": 4,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0310201620422443C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0310201620422443C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0310201620422443C.jpg"
     }
 }, {
@@ -1919,7 +1919,7 @@
         "price": 19.99,
         "category": 7,
         "rating": 4.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0217201617074443M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0217201617074443M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0217201617074443M.jpg"
     }
 }, {
@@ -1932,7 +1932,7 @@
         "price": 46.99,
         "category": 1,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0316201621115243C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0316201621115243C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0316201621115243C.jpg"
     }
 }, {
@@ -1945,7 +1945,7 @@
         "price": 48.99,
         "category": 4,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0226201617024158M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0226201617024158M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0226201617024158M.jpg"
     }
 }, {
@@ -1958,7 +1958,7 @@
         "price": 31.99,
         "category": 5,
         "rating": 5.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1014201517033744M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP1014201517033744M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1014201517033744M.jpg"
     }
 }, {
@@ -1971,7 +1971,7 @@
         "price": 70.0,
         "category": 5,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0226201620313565C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0226201620313565C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0226201620313565C.jpg"
     }
 }, {
@@ -1984,7 +1984,7 @@
         "price": 58.99,
         "category": 5,
         "rating": 3.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0216201620424511C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0216201620424511C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0216201620424511C.jpg"
     }
 }, {
@@ -1997,7 +1997,7 @@
         "price": 78.99,
         "category": 7,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0224201617043146M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0224201617043146M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0224201617043146M.jpg"
     }
 }, {
@@ -2010,7 +2010,7 @@
         "price": 53.99,
         "category": 6,
         "rating": 1.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0722201517022951M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0722201517022951M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0722201517022951M.jpg"
     }
 }, {
@@ -2023,7 +2023,7 @@
         "price": 52.99,
         "category": 8,
         "rating": 4.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0325201617032503M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0325201617032503M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0325201617032503M.jpg"
     }
 }, {
@@ -2036,7 +2036,7 @@
         "price": 24.99,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0322201617031084M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0322201617031084M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0322201617031084M.jpg"
     }
 }, {
@@ -2049,7 +2049,7 @@
         "price": 43.99,
         "category": 4,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0322201617031125M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0322201617031125M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0322201617031125M.jpg"
     }
 }, {
@@ -2062,7 +2062,7 @@
         "price": 41.99,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0407201620401180C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0407201620401180C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0407201620401180C.jpg"
     }
 }, {
@@ -2075,7 +2075,7 @@
         "price": 53.99,
         "category": 8,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0404201617034330M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0404201617034330M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0404201617034330M.jpg"
     }
 }, {
@@ -2088,7 +2088,7 @@
         "price": 51.99,
         "category": 8,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0414201617030734M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0414201617030734M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0414201617030734M.jpg"
     }
 }, {
@@ -2101,7 +2101,7 @@
         "price": 45.99,
         "category": 8,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0411201617053625M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0411201617053625M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0411201617053625M.jpg"
     }
 }, {
@@ -2114,7 +2114,7 @@
         "price": 48.99,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0404201617034496M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0404201617034496M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0404201617034496M.jpg"
     }
 }, {
@@ -2127,7 +2127,7 @@
         "price": 94.99,
         "category": 8,
         "rating": 3.0,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0226201617023618M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
+        "image_url": "https://s7d2.scene7.com/is/image/JCPenney/DP0226201617023618M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0226201617023618M.jpg"
     }
 }, {
@@ -2140,7 +2140,7 @@
         "price": 102.99,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0413201617045423M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0413201617045423M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0413201617045423M.jpg"
     }
 }, {
@@ -2153,7 +2153,7 @@
         "price": 103.99,
         "category": 4,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0413201617045408M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0413201617045408M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0413201617045408M.jpg"
     }
 }, {
@@ -2166,7 +2166,7 @@
         "price": 72.99,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0408201617014664M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0408201617014664M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0408201617014664M.jpg"
     }
 }, {
@@ -2179,7 +2179,7 @@
         "price": 62.99,
         "category": 8,
         "rating": 4.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0421201617033561M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0421201617033561M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0421201617033561M.jpg"
     }
 }, {
@@ -2192,7 +2192,7 @@
         "price": 62.99,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0421201617033514M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0421201617033514M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0421201617033514M.jpg"
     }
 }, {
@@ -2205,7 +2205,7 @@
         "price": 60.99,
         "category": 6,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1202201517023245M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP1202201517023245M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1202201517023245M.jpg"
     }
 }, {
@@ -2218,7 +2218,7 @@
         "price": 58.99,
         "category": 8,
         "rating": 4.5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0325201617032536M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0325201617032536M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0325201617032536M.jpg"
     }
 }, {
@@ -2231,7 +2231,7 @@
         "price": 36.99,
         "category": 8,
         "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0429201617074742M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image_url": "https://s7d9.scene7.com/is/image/JCPenney/DP0429201617074742M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0429201617074742M.jpg"
     }
 }]
