@@ -3,6 +3,8 @@
 
 body {
   font-family: 'Roboto Flex', sans-serif;
+  background: url('/media/bg_webp/bg1.webp') no-repeat center center fixed;
+  background-size: cover;
 }
 
 #brand_name {
@@ -120,25 +122,12 @@ h1 {
   width: 100%;
 }
 
-/*------------------- Header */
-
-#headerTag {
-  height: 400px;
-}
-
-#headerContainer {
-  /* The image used */
-  background: url("/media/olive_branches_alpha.webp") no-repeat center center;
-  background-size: cover;
-  /* Full height */
-  height: 100%;
-  position: relative;
-  margin-top: 2rem;
-  z-index: -2;
-}
-
-.boxDefault {
+.boxDefault, .card {
   box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
+  border-radius: 5px;
+}
+
+#productImg {
   border-radius: 5px;
 }
 
@@ -196,9 +185,8 @@ h1 {
 
 /*------------------- index */
 
-.bg-1 {
-  background: url("/media/branch-secondary.svg") no-repeat center center;
-  background-size: contain;
+#homeContainer {
+  margin-top: 12rem;
 }
 
 /*------------------- Products templates */
@@ -233,14 +221,6 @@ h1 {
     display: inline;
   }
 
-  #headerContainer {
-    position: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -2;
-  }
-
   #textContainer {
     width: 50%;
     position: unset;
@@ -249,5 +229,32 @@ h1 {
     box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
 
     background-color: rgba(240, 233, 210, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  #homeContainer .row .jumbotron {
+    background-color: rgba(240, 233, 210, 0.6);
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  #homeContainer .row, 
+  #homeContainer+div,
+  #homeContainer+div+div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  #homeContainer {
+    margin-top: 7rem;
+  }
+
+  #homeContainer .row .jumbotron {
+    background-color: rgba(240, 233, 210, 0.6);
+    border-radius: 5px;
   }
 }

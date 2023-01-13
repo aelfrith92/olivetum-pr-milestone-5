@@ -12,10 +12,12 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
-                <hr class="w-50 mb-1">
+        <div class="row justify-content-center">
+            <div class="col d-flex flex-column align-items-center justify-content-center">
+                <div>
+                    <h2 class="logo-font">Products</h2>
+                </div>
+                <hr class="w-50">
             </div>
         </div>
         <div class="row">
@@ -23,21 +25,21 @@
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+                            <div class="card h-100 border-0 p-2">
                                 {% if product.image %}
                                     <a href="#">
-                                        <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                                        <img class="productImg card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
                                     </a>
                                 {% else %}
                                     <a href="#">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                        <img class="productImg card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                     </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="card-footer pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
@@ -57,6 +59,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
                         </div>
                     {% endfor %}
                 </div>

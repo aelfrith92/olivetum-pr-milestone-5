@@ -10,17 +10,14 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container d-flex justify-content-center mt-2">
-        <hr class="w-50">
-    </div>
     
-    <div class="container h-100 my-2">
+    <div id="homeContainer" class="container h-100">
         <div class="row h-100 ms-5">
-            <div class="col-7 col-md-6 my-auto jumbotron">
+            <div class="col-7 col-md-6 col-sm-12 my-auto jumbotron">
                 <h1 class="display-4 text-dark py-2">
                     From the land to your table
                 </h1>
-                <p class="lead">We work hard together out farmers to guarantee quality and sustainability.</p>
+                <p class="lead">We work hard together with our farmers to guarantee quality and sustainability.</p>
                 <p class="lead">Choose from a wide range of products.</p>
                 <div class="row ms-3 me-5 mb-4">
                     <div class="col-2">
@@ -44,15 +41,14 @@
                 </div>
                 <p class="lead">Find out our 2022/2023 offer!</p>
             </div>
-            <div class="bg-1 col-5 col-md-6"></div>
         </div>
     </div>
 
-    <div class="container d-flex justify-content-center mt-0">
-        <hr class="w-50">
+    <div class="container d-flex">
+        <hr class="ms-5 w-50">
     </div>
 
-    <div class="my-5 text-center">
-        <a href="{% url 'products' %}" class="btn-outline-dark btn btn-lg rounded-1 text-uppercase btnD">Shop Now</a>
+    <div class="container my-3">
+        <a href="{% url 'products' %}" class="btn-outline-dark ms-5 btn btn-lg rounded-1 text-uppercase btnD">Shop Now</a>
     </div>
 {% endblock %}
