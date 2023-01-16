@@ -5,6 +5,7 @@ body {
   font-family: 'Roboto Flex', sans-serif;
   background: url('/media/bg_webp/bg1.webp') no-repeat center center fixed;
   background-size: cover;
+  height: calc(100vh -76px);
 }
 
 #brand_name {
@@ -122,6 +123,7 @@ h1 {
   width: 100%;
 }
 
+/*------------------- Products and cards */
 .boxDefault, .card {
   box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
   border-radius: 5px;
@@ -191,6 +193,17 @@ h1 {
 
 /*------------------- Products templates */
 
+.header-container {
+  padding-top: 76px;
+  margin-bottom: 1.8rem;
+}
+
+#filterContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .overlay {
   height: 100%;
 	width: 100%;
@@ -201,12 +214,7 @@ h1 {
 	z-index: -1;
 }
 
-.overlay+.container-fluid {
-  margin-top: 7rem;
-}
-
-/*------------------- Navigation bar - media queries */
-@media (max-width: 992px) { 
+@media (max-width: 991px) { 
   .navbar-nav li,
   #searchContainer,
   .navbar-brand {
@@ -228,10 +236,8 @@ h1 {
   #textContainer {
     width: 50%;
     position: unset;
-
     border-radius: 10px;
     box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
-
     background-color: rgba(240, 233, 210, 0.7);
   }
 }
@@ -261,4 +267,18 @@ h1 {
     background-color: rgba(240, 233, 210, 0.6);
     border-radius: 5px;
   }
+
+  #filterContainer {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 266px){
+
+  .header-container {
+    padding-top: 106px;
+    margin-bottom: 1.2rem;
+  }
+
 }

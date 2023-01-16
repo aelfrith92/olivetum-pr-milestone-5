@@ -1,0 +1,49 @@
+<div class="container d-flex justify-content-evenly align-items-center header-container bg-white navbar-white">
+    <div id="filterContainer" class="btn-group" role="group" aria-label="Button group with nested dropdown categories">
+        <div class="btn-group dropdown-center text-center px-4" role="group">
+            <button id="orderBy" type="button" class="btn dropdown-toggle rounded-0 text-wrap" data-bs-toggle="dropdown" aria-expanded="false">
+            Order By
+            </button>
+            <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="orderBy">
+                <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+                <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a></li>
+                <li><a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
+            </ul>
+        </div>
+        <div class="btn-group dropdown-center text-center px-4" role="group">
+            <button id="orderBy" type="button" class="btn dropdown-toggle rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
+            Fun
+            </button>
+            <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="orderBy">
+                <li><a href="{% url 'products' %}?category=toys" class="dropdown-item">Toys</a></li>
+                <li><a href="{% url 'products' %}?category=brain_teasers" class="dropdown-item">Brain Teasers</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="{% url 'products' %}?category=toys,brain_teasers" class="dropdown-item">All Fun</a></li>
+            </ul>
+        </div>
+        <div class="btn-group dropdown-center text-center px-4" role="group">
+            <button id="allFood" type="button" class="btn dropdown-toggle rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
+            Edibles
+            </button>
+            <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="allFood">
+                <li><a href="{% url 'products' %}?category=oil" class="dropdown-item">Oil</a></li>
+                <li><a href="{% url 'products' %}?category=food" class="dropdown-item">Food</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="{% url 'products' %}?category=oil,food" class="dropdown-item">All Food</a></li>
+            </ul>
+        </div>
+        <div class="btn-group dropdown-center text-center px-4" role="group">
+            <button id="specialOffers" type="button" class="btn dropdown-toggle rounded-0  text-wrap" data-bs-toggle="dropdown" aria-expanded="false">
+            Special Offers
+            </button>
+            <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="specialOffers">
+                <li><a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a></li>
+                <li><a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="{% url 'products' %}?category=deals,clearance" class="dropdown-item">All Specials</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
