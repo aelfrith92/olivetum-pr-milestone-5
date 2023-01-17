@@ -231,6 +231,20 @@ a.category-badge > span.badge:hover {
 	z-index: -1;
 }
 
+/*------------------- Back to top btn */
+
+.btt-button {
+    height: 52px;
+    width: 52px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 @media (max-width: 991px) { 
   .navbar-nav li,
   #searchContainer,
@@ -288,11 +302,6 @@ a.category-badge > span.badge:hover {
   #filterContainer {
     flex-direction: column;
   }
-
-  #btnFilterCollapse {
-    display: block!important;
-  }
-
 }
 
 @media (max-width: 266px){
