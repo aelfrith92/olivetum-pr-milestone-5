@@ -67,6 +67,14 @@ h1 {
   --bs-body-bg: #fffff7;
 }
 
+.border-dark {
+  border-color: 181D31;
+}
+
+.border-light {
+  border-color: #f8f3e5;
+}
+
 .btnD {
   color: #f8f3e5;
   background-color: #181D31;
@@ -204,6 +212,15 @@ h1 {
   justify-content: space-evenly;
 }
 
+
+
+a.category-badge > span.badge:hover {
+  background: #181D31 !important;
+  color: #f8f3e5 !important;
+  box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
+}
+
+
 .overlay {
   height: 100%;
 	width: 100%;
@@ -270,6 +287,10 @@ h1 {
 
   #filterContainer {
     flex-direction: column;
+  }
+
+  #btnFilterCollapse {
+    display: block!important;
   }
 
 }

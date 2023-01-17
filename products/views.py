@@ -29,7 +29,7 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-        
+
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -47,6 +47,8 @@ def all_products(request):
             products = products.order_by(sortkey)
 
     current_sorting = f'{sort}_{direction}'
+
+    print(categories)
 
     context = {
         'products': products,
