@@ -6,6 +6,7 @@ body {
   background: url('/media/bg_webp/bg1.webp') no-repeat center center fixed;
   background-size: cover;
   height: calc(100vh -76px);
+  color: #181D31;
 }
 
 #brand_name {
@@ -76,7 +77,8 @@ h1 {
 }
 
 .bg-light {
-  background-color: #f8f3e5 !important;;
+  background-color: #f8f3e5 !important;
+  ;
 }
 
 .text-dark {
@@ -89,26 +91,41 @@ h1 {
   border-color: #181D31;
   margin: 0.8rem auto;
 }
+
 .btnD:hover {
   color: #181D31;
   background-color: #f8f3e5;
   border-color: #181D31;
 }
-.btn-check:focus + .btnD, .btnD:focus {
+
+.btn-check:focus+.btnD,
+.btnD:focus {
   color: #f8f3e5;
   background-color: #181D31;
   border-color: #f8f3e5;
   box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
 }
-.btn-check:checked + .btnD, .btn-check:active + .btnD, .btnD:active, .btnD.active, .show > .btnD.dropdown-toggle {
+
+.btn-check:checked+.btnD,
+.btn-check:active+.btnD,
+.btnD:active,
+.btnD.active,
+.show>.btnD.dropdown-toggle {
   color: #f8f3e5;
   background-color: #1a1e21;
   border-color: #f8f3e5;
 }
-.btn-check:checked + .btnD:focus, .btn-check:active + .btnD:focus, .btnD:active:focus, .btnD.active:focus, .show > .btnD.dropdown-toggle:focus {
+
+.btn-check:checked+.btnD:focus,
+.btn-check:active+.btnD:focus,
+.btnD:active:focus,
+.btnD.active:focus,
+.show>.btnD.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
 }
-.btnD:disabled, .btnD.disabled {
+
+.btnD:disabled,
+.btnD.disabled {
   color: #181D31;
   background-color: #adb5bd;
   border-color: #181D31;
@@ -116,7 +133,7 @@ h1 {
 
 /*------------------- Navigation bar */
 
-body > nav {
+body>nav {
   min-width: 300px;
 }
 
@@ -129,14 +146,14 @@ body > nav {
   margin-right: 1rem;
 }
 
-#shoppingBag a {
+#shoppingBagSvgHoverColor a {
   background-color: #181D31;
   color: #f8f3e5;
 }
 
-#shoppingBag a:hover {
+#shoppingBagSvgHoverColor a:hover {
   background-color: #f8f3e5;
-  color: #181D31; 
+  color: #181D31;
 }
 
 #searchContainer input[type="search"] {
@@ -144,7 +161,8 @@ body > nav {
 }
 
 /*------------------- Products and cards */
-.boxDefault, .card {
+.boxDefault,
+.card {
   box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
   border-radius: 5px;
 }
@@ -201,10 +219,6 @@ body > nav {
   border-top-right-radius: 0;
 }
 
-.form-control {
-  color: #181D31;
-}
-
 /*------------------- index */
 
 #homeContainer {
@@ -230,7 +244,7 @@ body > nav {
 
 
 
-a.category-badge > span.badge:hover {
+a.category-badge>span.badge:hover {
   background: #181D31 !important;
   color: #f8f3e5 !important;
   box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
@@ -239,30 +253,31 @@ a.category-badge > span.badge:hover {
 
 .overlay {
   height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: white;
+  z-index: -1;
   background-color: #f8f3e5;
 }
 
 /*------------------- Back to top btn */
 
 .btt-button {
-    height: 52px;
-    width: 52px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+  height: 52px;
+  width: 52px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 .btt-link {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-@media (max-width: 991px) { 
+@media (max-width: 991px) {
+
   .navbar-nav li,
   #searchContainer,
   .navbar-brand {
@@ -299,12 +314,12 @@ a.category-badge > span.badge:hover {
 
 @media (max-width: 576px) {
 
-  #homeContainer .row, 
+  #homeContainer .row,
   #homeContainer+div,
   #homeContainer+div+div {
     text-align: center;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
   }
 
   #delivery-banner {
@@ -325,7 +340,7 @@ a.category-badge > span.badge:hover {
   }
 }
 
-@media (max-width: 266px){
+@media (max-width: 266px) {
   .header-container {
     margin-bottom: 1.2rem;
   }

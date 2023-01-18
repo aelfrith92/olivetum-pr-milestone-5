@@ -7,13 +7,13 @@ $( document ).ready(function() {
     (function () {
         
         // Select the path tag inside the svg tag to modify its attribute 'stroke'
-        $('#shoppingBag').mouseover(function(event){
+        $('#shoppingBagSvgHoverColor').mouseover(function(event){
             event.stopPropagation();
-            $('#shoppingBag path').attr('fill', '#181D31');
+            $('#shoppingBagSvgHoverColor path').attr('fill', '#181D31');
         });
-        $('#shoppingBag').mouseleave(function(event){
+        $('#shoppingBagSvgHoverColor').mouseleave(function(event){
             event.stopPropagation();
-            $('#shoppingBag path').attr('fill', '#f8f3e5');
+            $('#shoppingBagSvgHoverColor path').attr('fill', '#f8f3e5');
         });
 
         $('#searchBtn').mouseover(function(event){
