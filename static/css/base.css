@@ -68,11 +68,19 @@ h1 {
 }
 
 .border-dark {
-  border-color: 181D31;
+  border-color: 181D31 !important;
 }
 
 .border-light {
-  border-color: #f8f3e5;
+  border-color: #f8f3e5 !important;
+}
+
+.bg-light {
+  background-color: #f8f3e5 !important;;
+}
+
+.text-dark {
+  color: #181D31 !important;
 }
 
 .btnD {
@@ -107,6 +115,10 @@ h1 {
 }
 
 /*------------------- Navigation bar */
+
+body > nav {
+  min-width: 300px;
+}
 
 .nav-item,
 #brand_name {
@@ -199,10 +211,14 @@ h1 {
   margin-top: 12rem;
 }
 
+#delivery-banner {
+  padding-top: 66px;
+}
+
 /*------------------- Products templates */
 
 .header-container {
-  padding-top: 76px;
+  padding-top: 24px;
   margin-bottom: 1.8rem;
 }
 
@@ -229,6 +245,7 @@ a.category-badge > span.badge:hover {
 	position: fixed;
 	background: white;
 	z-index: -1;
+  background-color: #f8f3e5;
 }
 
 /*------------------- Back to top btn */
@@ -290,6 +307,10 @@ a.category-badge > span.badge:hover {
     align-items: center;    
   }
 
+  #delivery-banner {
+    padding-top: 66px;
+  }
+
   #homeContainer {
     margin-top: 7rem;
   }
@@ -305,10 +326,7 @@ a.category-badge > span.badge:hover {
 }
 
 @media (max-width: 266px){
-
   .header-container {
-    padding-top: 106px;
     margin-bottom: 1.2rem;
   }
-
 }
