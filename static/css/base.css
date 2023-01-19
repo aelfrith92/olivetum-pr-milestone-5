@@ -262,6 +262,11 @@ a.category-badge>span.badge:hover {
   background-color: #f8f3e5;
 }
 
+.dims {
+  height: auto;
+  width: 1.4rem;
+}
+
 /*------------------- Back to top btn */
 
 .btt-button {
