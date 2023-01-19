@@ -37,11 +37,19 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="shadow rounded card-img-top img-fluid" src="{{ item.product.image.url }}">
+                                        <a href="{% url 'product_detail' item.product.id %}">
+                                            <img class="shadow rounded card-img-top img-fluid" src="{{ item.product.image.url }}">
+                                        </a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                        <p class="my-0"><strong><a class="text-decoration-none" href="{% url 'product_detail' item.product.id %}">{{ item.product.name }}</a></strong></p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                        {% if item.product.has_child_variants %}
+                                            <p class="my-0 small text-muted">
+                                                <strong>Litres: </strong>
+                                                {{ item.size }}
+                                            </p>
+                                        {% endif %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
