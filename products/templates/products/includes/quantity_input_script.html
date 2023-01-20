@@ -33,9 +33,7 @@
         var allQtyInputs = $('.qty_input');
         for(var i = 0; i < allQtyInputs.length; i++){
             var itemId = $(allQtyInputs[i]).data('item_id');
-            console.log(itemId);
             var size = $(allQtyInputs[i]).data('size');
-            console.log(size);
             handleEnableDisable(itemId, size, parseInt($(allQtyInputs[i]).val()));
         }
 

@@ -36,6 +36,10 @@ def bag_contents(request):
                     'product': product,
                     'subtotal': subtotal,
                     'size': size,
+                    'size_jinja_fronte': (
+                        f"{''.join(list(size)[0:1])}."
+                        f"{''.join(list(size)[-3:])}"
+                    ),
                 })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:

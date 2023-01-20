@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 
 def view_bag(request):
@@ -31,9 +31,9 @@ def add_to_bag(request, item_id):
                     if such item_id found in the bag session data already has a
                     dictionary key named 'size'
                 """
-                bag[item_id]['items_by_size'][size] += quantity # Then, to such
-                #  specific key, sum the quantity being added from the request
-                # to the one available via the specified key/size
+                bag[item_id]['items_by_size'][size] += quantity  # Then, to
+                #  such specific key, sum the quantity being added from the
+                #  request to the one available via the specified key/size
             else:
                 """
                     If there is no key/size in the dictionary of such item_id
@@ -54,3 +54,57 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def update_bag(request, item_id):
+    """ Update the quantity of the specified product via the shopping bag """
+
+    quantity = int(request.POST.get('quantity'))
+    size = None
+
+    if 'product_size' in request.POST:
+        """product_size passed via the related input and name attribute"""
+        size = request.POST['product_size']  # Then, assign it
+    bag = request.session.get('bag', {})  # Now, update the bag session data
+
+    if size:
+        """if size has been honoured through the logic above"""
+        if quantity > 0:
+            bag[item_id]['items_by_size'][size] = quantity
+        else:
+            del bag[item_id]['items_by_size'][size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+    else:
+        if quantity > 0:
+            bag[item_id] = quantity
+        else:
+            bag.pop(item_id)
+
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
+
+
+def remove_from_bag(request, item_id):
+    """Remove item entirely from the shoping bag"""
+
+    try:
+        size = None
+
+        if 'product_size' in request.POST:
+            """product_size passed via the related input and name attribute"""
+            size = request.POST['product_size']  # Then, assign it
+        bag = request.session.get('bag', {})  # Now, update the bag session data
+
+        if size:
+            """if size has been honoured through the logic above"""
+            del bag[item_id]['items_by_size'][size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+        else:
+            bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)

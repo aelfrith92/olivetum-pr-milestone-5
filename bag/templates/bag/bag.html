@@ -47,7 +47,7 @@
                                         {% if item.product.has_child_variants %}
                                             <p class="my-0 small text-muted">
                                                 <strong>Unit Litres: </strong>
-                                                {{ item.size }}
+                                                {{ item.size_jinja_fronte }}
                                             </p>
                                         {% endif %}
                                     </td>
@@ -55,7 +55,7 @@
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'update_bag' item.item_id%}">
                                             {% csrf_token %}
                                             <div class="col-12  text-center text-md-start">
                                                 <div class="inputParent inputParent-{{ item.item_id }} d-flex flex-row justify-content-center">
@@ -87,7 +87,7 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="mt-2 d-flex justify-content-center mx-auto w-50">
+                                        <div class="mt-2 d-flex justify-content-center mx-auto w-50 updDelParent">
                                             <a class="d-block update-link btn btn-dark rounded-0"><small>Update</small></a>
                                             <a class="d-block remove-item btn btn-outline-danger rounded-0" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                                         </div>
@@ -146,4 +146,25 @@
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
+    <script type="text/javascript">
+        // Update quantity on click
+        $('.update-link').click(function(e) {
+            var form = $(this).closest('.updDelParent').prev('.update-form');
+            form.submit();
+        })
+
+        // Remove item and reload on click
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var size = $(this).data('size');
+            var url = `/bag/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+
+            $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+        })
+    </script>
 {% endblock %}
