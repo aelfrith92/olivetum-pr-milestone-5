@@ -52,9 +52,9 @@
                                         Litres
                                     </label>
                                     <select class="form-control rounded w-25" name="product_size" id='id_product_size'>
-                                        <option value="0.5L">0.50</option>
-                                        <option value="0.75L">0.75</option>
-                                        <option value="5.00L">5.00</option>
+                                        <option value="050L">0.50</option>
+                                        <option value="075L">0.75</option>
+                                        <option value="500L">5.00</option>
                                     </select>
                                 </div>
                             </div>
@@ -63,22 +63,20 @@
                             <label for="id_qty_{{ product.id }}" class="form-label mt-3 fs-3 fw-semibold">
                                 Quantity
                             </label>
-                            <div class="inputParent d-flex flex-row justify-content-center justify-content-md-start">
+                            <div class="inputParent inputParent-{{ product.id }} d-flex flex-row justify-content-center justify-content-md-start">
                                 <div class="input-group-prepend">
-                                    <button class="decrement-qty btn btn-black rounded" type="button"
-                                        data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                    <button class="decrement-qty btn rounded decrement-qty_{{ product.id }}"
+                                        type="button" data-item_id="{{ product.id }}">
                                         <span class="icon">
                                             <i class="fas fa-minus"></i>
                                         </span>
                                     </button>
                                 </div>
-                                <input type="number" class="w-25 form-control qty_input"
-                                    name="quantity" value="1" min="1" max="99"
-                                    data-item_id="{{ product.id }}"
-                                    id="id_qty_{{ product.id }}">
+                                <input type="number" class="w-25 form-control qty_input id_qty_{{ product.id }}"
+                                    name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
                                 <div class="input-group-append">
-                                    <button class="increment-qty btn btn-black rounded" type="button"
-                                        data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                    <button class="increment-qty btn rounded increment-qty_{{ product.id }}"
+                                        type="button" data-item_id="{{ product.id }}">
                                         <span class="icon">
                                             <i class="fas fa-plus"></i>
                                         </span>
