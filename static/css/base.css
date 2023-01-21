@@ -287,6 +287,12 @@ a.category-badge>span.badge:hover {
   top: 56px;
 }
 
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 @media (max-width: 991px) {
 
   .navbar-nav li,
