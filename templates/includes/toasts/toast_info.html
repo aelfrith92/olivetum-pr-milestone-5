@@ -1,8 +1,6 @@
-<div class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="arrow-up arrow-info"></div>
-    <div class="w-100 toast-capper bg-info"></div>
-    <div class="toast-header bg-white text-dark">
-        <svg height="24" viewBox="0 0 512 512" width="24" xmlns="http://www.w3.org/2000/svg">
+<div class="toast rounded" role="status" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
+    <div class="toast-header bg-info text-dark">
+        <svg class="rounded me-2" height="24" viewBox="0 0 512 512" width="24" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="400" cy="416" fill="#2e9163" rx="56" ry="40"/>
             <ellipse cx="312" cy="384" fill="#3dc285" rx="16" ry="72"/>
             <ellipse cx="400" cy="472" fill="#35a872" rx="72" ry="16"/>
@@ -22,7 +20,7 @@
         <strong class="me-auto">Alert!</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-    <div class="toast-body bg-white">
+    <div class="toast-body rounded bg-white">
         {{ message }}
     </div>
 </div>

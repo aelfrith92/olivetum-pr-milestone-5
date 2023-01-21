@@ -281,6 +281,12 @@ a.category-badge>span.badge:hover {
   cursor: pointer;
 }
 
+/*------------------- Toasts */
+
+.toast-container {
+  top: 56px;
+}
+
 @media (max-width: 991px) {
 
   .navbar-nav li,
@@ -309,20 +315,12 @@ a.category-badge>span.badge:hover {
     background-color: rgba(240, 233, 210, 0.7);
   }
 
-  #messages-container {
-    right: 12%;
-  }
-
 }
 
 @media (max-width: 768px) {
   #homeContainer .row .jumbotron {
     background-color: rgba(240, 233, 210, 0.6);
     border-radius: 5px;
-  }
-
-  #messages-container {
-    right: 10%;
   }
 }
 
@@ -334,10 +332,6 @@ a.category-badge>span.badge:hover {
     text-align: center;
     justify-content: center;
     align-items: center;
-  }
-
-  #messages-container {
-    right: 2%;
   }
 
   #delivery-banner {
