@@ -138,21 +138,43 @@
         </div>
       </div>
     </nav>
-    <div id="delivery-banner" class="row text-center text-wrap border-bottom">
-      <div class="col bg-light text-dark">
+    <div id="delivery-banner" class="d-flex container text-wrap border-bottom">
+      <!-- Django messages -->
+      {% if messages %}
+      <div class="col container d-flex justify-content-end order-1">
+          {% for message in messages %}
+              {% with message.level as level %}
+                  {% if level == 40 %}
+                      {% include 'includes/toasts/toast_error.html' %}
+                  {% elif level == 30 %}
+                      {% include 'includes/toasts/toast_warning.html' %}
+                  {% elif level == 25 %}
+                      {% include 'includes/toasts/toast_success.html' %}
+                  {% else %}
+                      {% include 'includes/toasts/toast_info.html' %}
+                  {% endif %}
+              {% endwith %}
+          {% endfor %}
+      </div>
+      {% endif %}
+      <div class="col bg-light text-dark text-end order-0">
         <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
       </div>
     </div>
-
-    <!-- Django messages -->
-    {% if messages %}
-      <div class="message-container"></div>
-    {% endif %}
 
     {% block content %}
     {% endblock %}
 
     {% block postloadjs %}
+    {{ block.super }}
+      <script type="text/javascript">
+        const toastElList = $('.toast');
+        for(let toastEl of toastElList){
+          const toast = new bootstrap.Toast(toastEl);
+          toast.show();
+        }
+        
+      </script>
     {% endblock %}
     
   <!-- Bootstrap JavaScript if it is in body -->
