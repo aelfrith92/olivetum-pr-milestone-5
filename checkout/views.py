@@ -9,6 +9,9 @@ import stripe
 
 
 def checkout(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_private_key = settings.STRIPE_PRIVATE_KEY
+
     bag = request.session.get('bag', {})
     if not bag:
         messages.error(request, "There's nothing in your bag at the moment")
@@ -17,13 +20,21 @@ def checkout(request):
     current_bag = bag_contents(request)
     total = current_bag['grand_total']
     stripe_total = round(total * 100)
+    stripe.api_key = stripe_private_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
+
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing.')
 
     order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_VDViABjamtGOekjF1fH0jLgZ',
-        'client_secret': 'test client secret',
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)

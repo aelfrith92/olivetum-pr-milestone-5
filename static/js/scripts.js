@@ -25,30 +25,4 @@ $( document ).ready(function() {
             $('#searchBtn path').attr('fill', '#f8f3e5');
         });
     })();
-    
-    // Self-invoking for search input enlarge when focus
-    // Script suspended until further optimization
-    // (function () {
-    //     let textType = false;
-    //     let searchInput =  $('#searchContainer input[type="search"]');
-    //     let inputWidth = searchInput.width();
-    //     console.log(inputWidth);
-    //     searchInput.focus(function() {
-    //             if (!textType) {
-    //                 $(this).animate({
-    //                     width: inputWidth*1.5
-    //             });
-    //         }
-    //     });
-
-    //     searchInput.blur(function() {
-    //         if(this.value === '') {
-    //             $(this).animate({
-    //                 width: inputWidth
-    //             });
-    //         } else {
-    //             textType = true;
-    //         }
-    //     });
-    // })();
 });
