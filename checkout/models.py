@@ -38,7 +38,7 @@ class Order(models.Model):
         accounting for delivery costs.
         """
         self.order_total = (self.lineitems.aggregate(Sum('lineitem_total'))
-                            ['lineitem_total__sum'])
+                            ['lineitem_total__sum']) or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = (self.order_total *
                                   settings.STANDARD_DELIVERY_PERCENTAGE / 100)
@@ -66,7 +66,7 @@ class OrderLineItem(models.Model):
                               related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False,
                                 on_delete=models.CASCADE)
-    product_size = models.CharField(max_length=2, null=True,
+    product_size = models.CharField(max_length=255, null=True,
                                     blank=True)  # 050L, 075L, 500L
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
