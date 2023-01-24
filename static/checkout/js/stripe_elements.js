@@ -116,6 +116,9 @@ form.addEventListener('submit', function(ev) {
                 $('#submit-button').attr('disabled', false);
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
+                    // Comment out the following to simulate sth wrong
+                    // in regard to form submission and test via 
+                    // webhook response
                     form.submit();
                 }
             }
