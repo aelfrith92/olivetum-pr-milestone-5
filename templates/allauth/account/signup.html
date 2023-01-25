@@ -1,54 +1,24 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
-{% block content %}
-<main class="form-signin">
-  <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-    {% csrf_token %}
-      <img class="mb-4" src="{{ MEDIA_URL }}icons/olive-oil.svg" alt="" width="48" height="48">
-      <h1 class="h3 mb-3 fw-normal">{% trans "Sign Up" %}</h1>
+{% block inner_content %}
+<hr>
+<h2 class="logo-font mb-4">{% trans "Sign Up" %}</h2>
+<hr>
 
-    {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
+<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
-      <div class="form-floating">
-        <input type="email" name="email" autofocus="autofocus" placeholder="E-mail address" required class="form-control" id="id_email" kl_vkbd_parsed="true">
-        <label for="id_email">Email</label>
-      </div>
-      <div class="form-floating">
-        <input type="email" name="email2" placeholder="E-mail address confirmation" required class="form-control rounded-0" id="id_email2" kl_vkbd_parsed="true">
-        <label for="id_email2">Email (again)</label>
-      </div>
-      <div class="form-floating">
-        <input type="text" name="username" placeholder="Username" minlength="4" maxlength="150" required class="form-control rounded-0" id="id_username" kl_vkbd_parsed="true">
-        <label for="id_username">Username</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" name="password1" placeholder="Password required" class="form-control rounded-0" id="id_password1" kl_vkbd_parsed="true">
-        <label for="id_password1">Password</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" name="password2" placeholder="Repeat password" class="form-control" id="id_password2" kl_vkbd_parsed="true">
-        <label for="id_password2">Repeat password</label>
-      </div>
-    
-      <button type="submit" class="mb-3 btn btnD btn-lg">
-        {% trans "Sign Up" %}
-      </button>
-
-    <p>
-      {% blocktrans %}
-        Already have an account? Then please 
-        <a href="{{ login_url }}">
-          sign in
-        </a>.
-      {% endblocktrans %}
-    </p>      
-  </form>
-<main>
+<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  {% csrf_token %}
+  {{ form|crispy }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <a class="btn btn-outline-black rounded-0" href="{% url 'account_login' %}">Back to Login</a>
+  <button type="submit">{% trans "Sign Up" %}</button>
+</form>
 
 {% endblock %}
