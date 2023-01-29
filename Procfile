@@ -1,1 +1,1 @@
-web: gunicorn olivetum.wsgi
+web: gunicorn olivetum.wsgi:application

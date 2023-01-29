@@ -185,6 +185,7 @@ body>nav {
 }
 
 /*------------------- Products and cards */
+
 .boxDefault,
 .card {
   box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
@@ -246,7 +247,7 @@ body>nav {
 /*------------------- index */
 
 #homeContainer {
-  margin-top: 12rem;
+  margin-top: 9rem;
 }
 
 #delivery-banner {
@@ -289,6 +290,12 @@ a.category-badge>span.badge:hover {
 .dims {
   height: auto;
   width: 1.4rem;
+}
+
+#div_id_image .input-group * {
+  border-color: #181D31!important;
+  border-radius: 0!important;
+  border-width: 1px!important;
 }
 
 /*------------------- Back to top btn */
