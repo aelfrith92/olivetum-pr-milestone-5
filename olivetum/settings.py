@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'location_field.apps.DefaultConfig',
     'bootstrap5',
     'allauth',
     'allauth.account',
@@ -255,3 +256,9 @@ STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
 STRIPE_PRIVATE_KEY = os.environ.get("STRIPE_PRIVATE_KEY")
 STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET")
+
+# Location Services
+LOCATION_FIELD = {
+    'map.provider': 'openstreetmap',
+    'search.provider': 'google',
+}

@@ -1,4 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
+from location_field.models.plain import PlainLocationField
+
+
+SCORE = ((1, "1"), (2, "2"), (3, "3"), (4, "4"), (5, "5"))
+DD = ((1, "Simplified_DD"), (2, "Standard_DD"), (3, "Enhanced_DD"))
 
 
 class Category(models.Model):
@@ -16,7 +23,6 @@ class Category(models.Model):
         return self.friendly_name
 
 
-# Temporary Product model
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
@@ -33,3 +39,69 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Review(models.Model):
+    '''This class defines the review model'''
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,
+                              related_name="reviews")
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    title = models.TextField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    single_rating = models.IntegerField(choices=SCORE)
+    verified_purchase = models.BooleanField(default=False)
+
+    class Meta:
+        '''Meta class defining the order of retrieved reviews'''
+        ordering = ["created_on"]
+
+    def __str__(self):
+        '''Returns a string which facilitates a concise approach'''
+        return f"Review {self.body} rated {self.single_rating} by {self.name}"
+    
+
+class Comment(models.Model):
+    '''This class defines the comment model'''
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,
+                              related_name="comments")
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        '''Meta class defining the order of retrieved comments'''
+        ordering = ["created_on"]
+
+    def __str__(self):
+        '''Returns a string which facilitates a concise approach'''
+        return f"Comment {self.body} by {self.name}"
+    
+
+def unknown_provider():
+    return get_user_model().objects.get_or_create(username='deleted')[0]
+
+
+class Provider(models.Model):
+    '''This class defines the provider model'''
+    point_of_contact = models.ForeignKey(User, on_delete=models.SET_NULL,
+                              related_name="users", null=True)
+    business_name = models.CharField(max_length=50)
+    risk_lev = models.IntegerField(choices=DD)
+    city = models.CharField(max_length=255)
+    location = PlainLocationField(based_fields=['Supersano'],
+                                  zoom=5)
+    ship_abroad = models.BooleanField(default=False)
+    slr_rating = models.IntegerField(choices=SCORE)
+
+    class Meta:
+        '''Meta class defining the order of retrieved providers'''
+        ordering = ["-slr_rating"]
+
+    def __str__(self):
+        '''Returns a string which facilitates a concise approach'''
+        return f"Provider {self.business_name} from {self.city}"
