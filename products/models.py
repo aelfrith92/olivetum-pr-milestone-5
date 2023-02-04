@@ -93,8 +93,9 @@ class Provider(models.Model):
     business_name = models.CharField(max_length=50)
     risk_lev = models.IntegerField(choices=DD)
     city = models.CharField(max_length=255)
-    location = PlainLocationField(based_fields=['Supersano'],
-                                  zoom=5)
+    location = PlainLocationField(based_fields=['city'],
+                                  zoom=5,
+                                  default='40.015585972319,18.24176788330078')
     ship_abroad = models.BooleanField(default=False)
     slr_rating = models.IntegerField(choices=SCORE)
 

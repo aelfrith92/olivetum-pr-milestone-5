@@ -259,6 +259,8 @@ STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET")
 
 # Location Services
 LOCATION_FIELD = {
-    'map.provider': 'openstreetmap',
-    'search.provider': 'google',
+    'provider.google.api': '//maps.google.com/maps/api/js?sensor=false',
+    'provider.google.api_key': os.environ.get("GOOGLE_MAPS_API"),
+    'provider.google.api_libraries': '',
+    'provider.google.map.type': 'ROADMAP',
 }
