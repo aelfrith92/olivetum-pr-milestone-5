@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-
+from django.views.generic import (CreateView, ListView, UpdateView, DeleteView,
+                                  View)
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.template.defaulttags import register
 from django.db.models.functions import Lower
 from .models import Product, Category, Review
-from .forms import ProductForm
+from .forms import ProductForm, review_form
 
 
 @register.filter
@@ -74,20 +75,52 @@ def all_products(request):
                   context)
 
 
-def product_detail(request, product_id):
-    """A view to show the overview of a specific product"""
+class product_detail(View):
+    """Overview of a single product"""
 
-    product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.filter(approved=True).order_by('created_on')
+    def get(self, request, product_id, *args, **kwargs):
+        '''Retrieving related reviews'''
 
-    context = {
-        'product': product,
-        'reviews': reviews,
-    }
+        product = get_object_or_404(Product, pk=product_id)
+        reviews = product.reviews.filter(approved=True).order_by('created_on')
 
-    return render(request,
-                  'products/product_detail.html',
-                  context)
+        context = {
+            'product': product,
+            'reviews': reviews,
+            'review_form': review_form(),
+        }
+
+        return render(request,
+                      'products/product_detail.html',
+                      context)
+
+    def post(self, request, product_id, *args, **kwargs):
+        '''Handling Review submission'''
+
+        product = get_object_or_404(Product, id=product_id)
+        reviews = product.reviews.filter(approved=True).order_by('created_on')
+
+        review_dataform = review_form(data=request.POST)
+
+        if review_dataform.is_valid():
+            review_dataform.instance.email = request.user.email
+            review_dataform.instance.name = request.user.username
+
+            review = review_dataform.save(commit=False)
+            review.product = product
+            review.save()
+        else:
+            review_dataform = review_form()
+
+        context = {
+            'product': product,
+            'reviews': reviews,
+            'review_form': review_form(),
+        }
+
+        return render(request,
+                      'products/product_detail.html',
+                      context)
 
 
 @login_required

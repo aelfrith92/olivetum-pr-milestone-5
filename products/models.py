@@ -47,7 +47,7 @@ class Review(models.Model):
                                 related_name="reviews")
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    title = models.TextField()
+    title = models.CharField(max_length=254)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=True)

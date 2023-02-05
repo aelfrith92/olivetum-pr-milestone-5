@@ -28,4 +28,4 @@ class review_form(forms.ModelForm):
             Fields
         '''
         model = Review
-        fields = ('body', 'single_rating',)
+        fields = ('title', 'body', 'single_rating',)
