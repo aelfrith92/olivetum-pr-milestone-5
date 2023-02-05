@@ -44,13 +44,13 @@ class Product(models.Model):
 class Review(models.Model):
     '''This class defines the review model'''
     product = models.ForeignKey(Product, on_delete=models.CASCADE,
-                              related_name="reviews")
+                                related_name="reviews")
     name = models.CharField(max_length=50)
     email = models.EmailField()
     title = models.TextField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
     single_rating = models.IntegerField(choices=SCORE)
     verified_purchase = models.BooleanField(default=False)
 
@@ -61,12 +61,12 @@ class Review(models.Model):
     def __str__(self):
         '''Returns a string which facilitates a concise approach'''
         return f"Review {self.body} rated {self.single_rating} by {self.name}"
-    
+
 
 class Comment(models.Model):
     '''This class defines the comment model'''
     product = models.ForeignKey(Product, on_delete=models.CASCADE,
-                              related_name="comments")
+                                related_name="comments")
     name = models.CharField(max_length=50)
     email = models.EmailField()
     body = models.TextField()
@@ -80,16 +80,12 @@ class Comment(models.Model):
     def __str__(self):
         '''Returns a string which facilitates a concise approach'''
         return f"Comment {self.body} by {self.name}"
-    
-
-def unknown_provider():
-    return get_user_model().objects.get_or_create(username='deleted')[0]
 
 
 class Provider(models.Model):
     '''This class defines the provider model'''
     point_of_contact = models.ForeignKey(User, on_delete=models.SET_NULL,
-                              related_name="users", null=True)
+                                         related_name="users", null=True)
     business_name = models.CharField(max_length=50)
     risk_lev = models.IntegerField(choices=DD)
     city = models.CharField(max_length=255)

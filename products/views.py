@@ -3,9 +3,20 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.template.defaulttags import register
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, Review
 from .forms import ProductForm
+
+
+@register.filter
+def get_range(value):
+    return range(value)
+
+
+@register.filter
+def get_range_empty_star(value):
+    return range(5-value)
 
 
 def all_products(request):
@@ -58,19 +69,25 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
 
-    return render(request, 'products/products.html', context)
+    return render(request,
+                  'products/products.html',
+                  context)
 
 
 def product_detail(request, product_id):
     """A view to show the overview of a specific product"""
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(approved=True).order_by('created_on')
 
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request,
+                  'products/product_detail.html',
+                  context)
 
 
 @login_required

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, Category
+from .models import Product, Category, Review
 
 
 class ProductForm(forms.ModelForm):
@@ -16,3 +16,16 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-dark rounded-0'
+
+
+class review_form(forms.ModelForm):
+    '''
+        This class creates instances of a form that will let the user submit
+        their review
+    '''
+    class Meta:
+        '''
+            Fields
+        '''
+        model = Review
+        fields = ('body', 'single_rating',)

@@ -104,7 +104,39 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <hr>
+            <div class="text-center display-6 mb-3">Reviews</div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col justify-content-left align-content-center">
+                {% for review in reviews %}
+                <div class="card border-0 rounded-0 shadow-none">
+                    <div class="card-header border-0 rounded-0">
+                        <div class="col-8">Posted by {{ review.name }} on {{ review.created_on }}</div>
+                        <div class="col-4">
+                            {% for y in review.single_rating|get_range %}
+                                <span class="text-warning fa-solid fa-star"></span>
+                            {% endfor %}
+                            {% for i in review.single_rating|get_range_empty_star %}
+                                <span class="fa-regular fa-star"></span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ review.title }}</h5>
+                        <p class="card-text">{{ review.body }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col justify-content-right align-content-center">
+
+            </div>
+        </div>
     </div>
+
 {% endblock %}
 
 {% block postloadjs %}
