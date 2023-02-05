@@ -113,10 +113,10 @@
             <div class="col justify-content-start align-content-center">
                 {% if reviews %}
                     {% for review in reviews %}
-                    <div class="card border-0 rounded-0 shadow-none">
-                        <div class="card-header border-0 rounded-0">
+                    <div class="card rounded-0 shadow-none {% if review.email == user.email %}border border-dark{% else %}border-0{% endif %}">
+                        <div class="row mx-0 card-header {% if review.email == user.email %}border-bottom border-dark{% else %}border-0{% endif %} rounded-0">
                             <div class="col-8">Posted by {{ review.name }} on {{ review.created_on }}</div>
-                            <div class="col-4">
+                            <div class="col-4 text-center">
                                 {% for y in review.single_rating|get_range %}
                                     <span class="text-warning fa-solid fa-star"></span>
                                 {% endfor %}
@@ -124,6 +124,9 @@
                                     <span class="fa-regular fa-star"></span>
                                 {% endfor %}
                             </div>
+                            {% if review.email == user.email %}
+                                <p id="reviewId" data-reviewId="{{ review.id }}" class="text-dark fw-bold mb-1 mt-2 pe-5 badge justify-content-end text-end"><i class="fa-solid fa-user"></i> My review</p>
+                            {% endif %}
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ review.title }}</h5>
@@ -135,19 +138,60 @@
                     <p>No reviews found for this product</p>
                 {% endif %}
             </div>
-            <div class="col justify-content-end align-content-center">
-                {% if user.is_authenticated %}
-                    <h3>Leave a review:</h3>
-                    <p>Posting as:
-                        <h4>
-                            <span class="badge fw-normal{% if user.is_staff %} bg-primary {% else %} bg-success{% endif %} rounded-0">{{ user.username }}</span>
-                        </h4>
-                    </p>
-                <form method="POST" style="margin-top: 1.3em;">
-                    {{ review_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-dark rounded-0 text-uppercase">Submit</button>
-                </form>
+            <div class="col">
+                {% if reviewed and user.is_authenticated %}
+                    <div class="accordion rounded-0" id="editReviewAccordion">
+                        <div class="accordion-item rounded-0">
+                            <h2 class="accordion-header rounded-0" id="headingOne">
+                                <button class="accordion-button collapsed rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#editForm" aria-expanded="false" aria-controls="editForm">
+                                    Edit your Review
+                                </button>
+                            </h2>
+                            <div id="editForm" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#editReviewAccordion">
+                                <div class="accordion-body">
+                                    <h3>Edit your review:</h3>
+                                    <p>Posting as:
+                                        <h4>
+                                            <span class="badge fw-normal{% if user.is_staff %} bg-primary {% else %} bg-success{% endif %} rounded-0">{{ user.username }}</span>
+                                        </h4>
+                                    </p>
+                                    <form method="POST" style="margin-top: 1.3em;"">
+                                        {{ review_form | crispy }}
+                                        {% csrf_token %}
+                                        <input id="reviewEditId" type="hidden" name="reviewEditId" value="">
+                                        <button type="submit" class="btn btn-dark rounded-0 text-uppercase">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% elif user.is_authenticated %}
+                    <div class="accordion rounded-0" id="editReviewAccordion">
+                        <div class="accordion-item rounded-0">
+                            <h2 class="accordion-header rounded-0" id="headingOne">
+                                <button class="accordion-button collapsed rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#editForm" aria-expanded="false" aria-controls="editForm">
+                                    Leave your Review
+                                </button>
+                            </h2>
+                            <div id="editForm" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#editReviewAccordion">
+                                <div class="accordion-body">
+                                    <h3>Enter your review below:</h3>
+                                    <p>Posting as:
+                                        <h4>
+                                            <span class="badge fw-normal{% if user.is_staff %} bg-primary {% else %} bg-success{% endif %} rounded-0">{{ user.username }}</span>
+                                        </h4>
+                                    </p>
+                                    <form method="POST" style="margin-top: 1.3em;">
+                                        {{ review_form | crispy }}
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-dark rounded-0 text-uppercase">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>You need to <a href="{% url 'account_login' %}">log in</a> to leave a review</p>
                 {% endif %}
             </div>
         </div>
@@ -158,4 +202,7 @@
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
+    {% if reviewed %}
+        {% include 'products/includes/review_id.html' %}
+    {% endif %}
 {% endblock %}

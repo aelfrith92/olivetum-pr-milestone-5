@@ -81,12 +81,18 @@ class product_detail(View):
     def get(self, request, product_id, *args, **kwargs):
         '''Retrieving related reviews'''
 
+        reviewed = False
+
         product = get_object_or_404(Product, pk=product_id)
         reviews = product.reviews.filter(approved=True).order_by('created_on')
+
+        if product.reviews.filter(email=request.user.email).exists():
+            reviewed = True
 
         context = {
             'product': product,
             'reviews': reviews,
+            'reviewed': reviewed,
             'review_form': review_form(),
         }
 
@@ -97,24 +103,36 @@ class product_detail(View):
     def post(self, request, product_id, *args, **kwargs):
         '''Handling Review submission'''
 
+        bool(request.POST['reviewEditId'])
         product = get_object_or_404(Product, id=product_id)
         reviews = product.reviews.filter(approved=True).order_by('created_on')
+        reviewed = product.reviews.filter(email=request.user.email).exists()
+        review_id_passed = request.POST['reviewEditId']
 
-        review_dataform = review_form(data=request.POST)
-
-        if review_dataform.is_valid():
-            review_dataform.instance.email = request.user.email
-            review_dataform.instance.name = request.user.username
-
-            review = review_dataform.save(commit=False)
-            review.product = product
-            review.save()
+        if (reviewed and not review_id_passed):
+            messages.info(request, 'You have already left a review for'
+                          ' this product.')
+        elif (reviewed and review_id_passed):
+            print(f'Value correclty passed for the edit: {review_id_passed}')
         else:
-            review_dataform = review_form()
+            review_dataform = review_form(data=request.POST)
+
+            if review_dataform.is_valid():
+                review_dataform.instance.email = request.user.email
+                review_dataform.instance.name = request.user.username
+
+                review = review_dataform.save(commit=False)
+                review.product = product
+                reviewed = True
+                review.save()
+            else:
+                messages.error(request, 'Failed to add the review. Please'
+                               ' ensure the form is valid.')
 
         context = {
             'product': product,
             'reviews': reviews,
+            'reviewed': reviewed,
             'review_form': review_form(),
         }
 

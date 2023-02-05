@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        console.log($('#reviewId').length == 1);
+        if ($('#reviewId').length == 1){
+            var reviewEditId = $('#reviewId').attr('data-reviewId');
+            console.log(reviewEditId);
+            console.log($('#reviewEditId').length == 1);
+            if ($('#reviewEditId').length == 1){
+                $('#reviewEditId').attr("value", reviewEditId);
+            }
+        }
+    
+    });
+</script>

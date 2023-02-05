@@ -23,21 +23,21 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class ReviewAdmin(admin.ModelAdmin):
     """Forms and actions in the admin area"""
-    list_display = ('product', 'name', 'email', 'title', 'body',
+    list_display = ('id', 'product', 'name', 'email', 'title', 'body',
                     'approved', 'single_rating')
     search_fields = ['title', 'body']
     list_filters = ('single_rating', 'approved')
     actions = ['approve_review', 'hide_review']
-    
+
     def approve_review(self, request, queryset):
         """Show the function approve review in the admin overview"""
         queryset.update(approved=True)
-    
+
     def hide_review(self, request, queryset):
         """Show the function hide review in the admin overview"""
         queryset.update(approved=False)
-    
-    
+
+
 class CommentAdmin(admin.ModelAdmin):
     '''This class defines forms and related actions/tools in the admin area
     Comment management'''
@@ -50,7 +50,7 @@ class CommentAdmin(admin.ModelAdmin):
         '''Adds the function Approve Comment to possible actions in
         the admin area'''
         queryset.update(approved=True)
-    
+
     def hide_comments(self, request, queryset):
         '''Adds the function Hide Comment to possible actions in
         the admin area'''
