@@ -8,16 +8,22 @@ from django.contrib.auth.decorators import login_required
 from django.template.defaulttags import register
 from django.db.models.functions import Lower
 from .models import Product, Category, Review
+from checkout.models import Order, OrderLineItem
 from .forms import ProductForm, review_form
 
 
 @register.filter
 def get_range(value):
+    """This filter handles for loop with ranges"""
     return range(value)
 
 
 @register.filter
 def get_range_empty_star(value):
+    """
+        This filter handles for loop with ranges
+        Number of empty stars in the reviews
+    """
     return range(5-value)
 
 
@@ -83,26 +89,51 @@ class product_detail(View):
         '''Retrieving related reviews'''
 
         reviewed = False
+        verified = False
 
         product = get_object_or_404(Product, pk=product_id)
+
+        # The following vars determine the reviews on the
+        # front-end, based on the permissions Admin VS standard user
         staff = request.user.is_staff
         super_u = request.user.is_superuser
         auth_user = request.user.is_authenticated
-        if not super_u or not auth_user or not staff:
+        if super_u or staff:
+            reviews = product.reviews.order_by('-created_on')
+        else:
             reviews = (product.reviews.filter(approved=True)
-                       .order_by('created_on'))
-        elif super_u or staff:
-            reviews = product.reviews.order_by('created_on')
-
+                       .order_by('-created_on'))
+        # Check whether the user is authenticated
         if request.user.is_authenticated:
+            # Check whether the user already left a review about
+            # the product on the page
             if product.reviews.filter(email=request.user.email).exists():
                 reviewed = True
+
+        # Retrieve all emails on reviews in relation to product_id
+        emails_on_reviews = []
+        for review in reviews:
+            emails_on_reviews.append(review.email)
+
+        # All orders in relation to product_id
+        order_line_objects = OrderLineItem.objects.filter(product=product_id)
+        emails_on_orders = []
+        for order_line_object in order_line_objects:
+            order_id = order_line_object.order
+            order_object = get_object_or_404(Order, order_number=order_id)
+            email_on_order = order_object.email
+            emails_on_orders.append(email_on_order)
+        verified_reviews = []
+        for review_email in emails_on_reviews:
+            if review_email in emails_on_orders:
+                verified_reviews.append(get_object_or_404(Review, email=review_email).id)
 
         context = {
             'product': product,
             'reviews': reviews,
             'reviewed': reviewed,
             'review_form': review_form(),
+            'verified_reviews': verified_reviews,
         }
 
         return render(request,
@@ -113,50 +144,73 @@ class product_detail(View):
         '''Handling Review submission'''
 
         product = get_object_or_404(Product, id=product_id)
-        reviews = product.reviews.filter(approved=True).order_by('created_on')
+
+        staff = request.user.is_staff
+        super_u = request.user.is_superuser
+        auth_user = request.user.is_authenticated
+        if super_u or staff:
+            reviews = product.reviews.order_by('-created_on')
+        else:
+            reviews = (product.reviews.filter(approved=True)
+                       .order_by('-created_on'))
+
         reviewed = product.reviews.filter(email=request.user.email).exists()
         review_id_passed = request.POST.get('reviewEditId', False)
 
-        if (reviewed and not review_id_passed):
-            messages.info(request, 'You have already left a review for'
-                          ' this product.')
-        elif (reviewed and review_id_passed):
-            review_dataform = review_form(data=request.POST)
-            review = get_object_or_404(Review, id=review_id_passed)
-            # Enable the following lines for testing purposes
-            # print(f'Questi sono i dati dalla post request crudi: '
-            #       f'{request.POST}')
-            # print(f'This is the form data passed: {review_dataform}')
-            # print(f'This is the review that is going to be updated: {review}')
+        if request.user.is_authenticated:
+            if (reviewed and not review_id_passed):
+                messages.info(request, 'You have already left a review for'
+                                       ' this product.')
+            elif (reviewed and review_id_passed):
+                review_dataform = review_form(data=request.POST)
+                review = get_object_or_404(Review, id=review_id_passed)
 
-            if review_dataform.is_valid():
-                review.body = request.POST['body']
-                review.title = request.POST['title']
-                review.single_rating = request.POST['single_rating']
-                review.save()
+                if review_dataform.is_valid():
+                    review.body = request.POST['body']
+                    review.title = request.POST['title']
+                    review.single_rating = request.POST['single_rating']
+                    review.save()
+                else:
+                    messages.error(request, 'Failed to add the review. Please'
+                                            ' ensure the form is valid.')
             else:
-                messages.error(request, 'Failed to add the review. Please'
-                               ' ensure the form is valid.')
-        else:
-            review_dataform = review_form(data=request.POST)
+                review_dataform = review_form(data=request.POST)
 
-            if review_dataform.is_valid():
-                review_dataform.instance.email = request.user.email
-                review_dataform.instance.name = request.user.username
+                if review_dataform.is_valid():
+                    review_dataform.instance.email = request.user.email
+                    review_dataform.instance.name = request.user.username
 
-                review = review_dataform.save(commit=False)
-                review.product = product
-                reviewed = True
-                review.save()
-            else:
-                messages.error(request, 'Failed to add the review. Please'
-                               ' ensure the form is valid.')
+                    review = review_dataform.save(commit=False)
+                    review.product = product
+                    reviewed = True
+                    review.save()
+                else:
+                    messages.error(request, 'Failed to add the review. Please'
+                                            ' ensure the form is valid.')
+        # Retrieve all emails on reviews in relation to product_id
+        emails_on_reviews = []
+        for review in reviews:
+            emails_on_reviews.append(review.email)
+
+        # All orders in relation to product_id
+        order_line_objects = OrderLineItem.objects.filter(product=product_id)
+        emails_on_orders = []
+        for order_line_object in order_line_objects:
+            order_id = order_line_object.order
+            order_object = get_object_or_404(Order, order_number=order_id)
+            email_on_order = order_object.email
+            emails_on_orders.append(email_on_order)
+        verified_reviews = []
+        for review_email in emails_on_reviews:
+            if review_email in emails_on_orders:
+                verified_reviews.append(get_object_or_404(Review, email=review_email).id)
 
         context = {
             'product': product,
             'reviews': reviews,
             'reviewed': reviewed,
             'review_form': review_form(),
+            'verified_reviews': verified_reviews,
         }
 
         return render(request,
