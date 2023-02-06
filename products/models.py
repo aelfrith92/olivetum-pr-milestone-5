@@ -26,6 +26,8 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
+    provider = models.ForeignKey('Provider', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -64,29 +66,10 @@ class Review(models.Model):
                f" rated {self.single_rating} by {self.name}"
 
 
-class Comment(models.Model):
-    '''This class defines the comment model'''
-    product = models.ForeignKey(Product, on_delete=models.CASCADE,
-                                related_name="comments")
-    name = models.CharField(max_length=50)
-    email = models.EmailField()
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
-
-    class Meta:
-        '''Meta class defining the order of retrieved comments'''
-        ordering = ["created_on"]
-
-    def __str__(self):
-        '''Returns a string which facilitates a concise approach'''
-        return f"Comment {self.body} by {self.name}"
-
-
 class Provider(models.Model):
     '''This class defines the provider model'''
-    point_of_contact = models.ForeignKey(User, on_delete=models.SET_NULL,
-                                         related_name="users", null=True)
+    point_of_contact = models.CharField(max_length=50, null=False,
+                                        blank=False)
     business_name = models.CharField(max_length=50)
     risk_lev = models.IntegerField(choices=DD)
     city = models.CharField(max_length=255)

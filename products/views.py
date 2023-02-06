@@ -294,7 +294,10 @@ def delete_review(request, review_id):
 
     review = get_object_or_404(Review, pk=review_id)
     product_id = review.product.id
-    # product = get_object_or_404(Product, pk=product_id)
+    if request.user.email is not review.email:
+        messages.error(request, 'Sorry, only the review author can do that.')
+        return redirect(reverse('product_detail', args=[product_id]))
+
     review.delete()
     messages.success(request, 'Review deleted!')
     return redirect(reverse('product_detail', args=[product_id]))
