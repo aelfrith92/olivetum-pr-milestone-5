@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic import (CreateView, ListView, UpdateView, DeleteView,
                                   View)
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -86,8 +87,9 @@ class product_detail(View):
         product = get_object_or_404(Product, pk=product_id)
         reviews = product.reviews.filter(approved=True).order_by('created_on')
 
-        if product.reviews.filter(email=request.user.email).exists():
-            reviewed = True
+        if request.user.is_authenticated:
+            if product.reviews.filter(email=request.user.email).exists():
+                reviewed = True
 
         context = {
             'product': product,
@@ -103,17 +105,31 @@ class product_detail(View):
     def post(self, request, product_id, *args, **kwargs):
         '''Handling Review submission'''
 
-        bool(request.POST['reviewEditId'])
         product = get_object_or_404(Product, id=product_id)
         reviews = product.reviews.filter(approved=True).order_by('created_on')
         reviewed = product.reviews.filter(email=request.user.email).exists()
-        review_id_passed = request.POST['reviewEditId']
+        review_id_passed = request.POST.get('reviewEditId', False)
 
         if (reviewed and not review_id_passed):
             messages.info(request, 'You have already left a review for'
                           ' this product.')
         elif (reviewed and review_id_passed):
-            print(f'Value correclty passed for the edit: {review_id_passed}')
+            review_dataform = review_form(data=request.POST)
+            review = get_object_or_404(Review, id=review_id_passed)
+            # Enable the following lines for testing purposes
+            # print(f'Questi sono i dati dalla post request crudi: '
+            #       f'{request.POST}')
+            # print(f'This is the form data passed: {review_dataform}')
+            # print(f'This is the review that is going to be updated: {review}')
+
+            if review_dataform.is_valid():
+                review.body = request.POST['body']
+                review.title = request.POST['title']
+                review.single_rating = request.POST['single_rating']
+                review.save()
+            else:
+                messages.error(request, 'Failed to add the review. Please'
+                               ' ensure the form is valid.')
         else:
             review_dataform = review_form(data=request.POST)
 
@@ -139,6 +155,16 @@ class product_detail(View):
         return render(request,
                       'products/product_detail.html',
                       context)
+
+
+class delete_review(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """This view deletes the review"""
+    model = Review
+    success_url = '/'
+    template_name = 'products/review_confirm_delete.html'
+
+    def test_func(self):
+        return self.request.user.is_staff
 
 
 @login_required

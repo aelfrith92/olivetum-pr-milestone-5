@@ -60,7 +60,8 @@ class Review(models.Model):
 
     def __str__(self):
         '''Returns a string which facilitates a concise approach'''
-        return f"Review {self.body} rated {self.single_rating} by {self.name}"
+        return f"Review ID {self.id} review-body {self.body}"\
+               f" rated {self.single_rating} by {self.name}"
 
 
 class Comment(models.Model):

@@ -123,14 +123,23 @@
                                 {% for i in review.single_rating|get_range_empty_star %}
                                     <span class="fa-regular fa-star"></span>
                                 {% endfor %}
+                                {% if review.email == user.email %}
+                                    <p id="reviewId" data-reviewId="{{ review.id }}" class="text-dark fw-bold mb-1 mt-2 badge justify-content-center text-center"><i class="fa-solid fa-user"></i> My review</p>
+                                {% endif %}
                             </div>
-                            {% if review.email == user.email %}
-                                <p id="reviewId" data-reviewId="{{ review.id }}" class="text-dark fw-bold mb-1 mt-2 pe-5 badge justify-content-end text-end"><i class="fa-solid fa-user"></i> My review</p>
-                            {% endif %}
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{ review.title }}</h5>
-                            <p class="card-text">{{ review.body }}</p>
+                            <div class="row">
+                                <div {% if review.email == user.email %}class="col-8"{% endif %}>
+                                    <h5 class="card-title">{{ review.title }}</h5>
+                                    <p class="card-text">{{ review.body }}</p>
+                                </div>
+                                {% if review.email == user.email %}
+                                    <div class="col-4 align-content-center text-center">
+                                        <a class="btn btn-sm btn-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                                    </div>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                     {% endfor %}
