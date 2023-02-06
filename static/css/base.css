@@ -211,6 +211,11 @@ body>nav {
   left: 0;
 }
 
+.borderHidden {
+  border-style: dashed!important;
+  border-width: 1px!important;
+}
+
 /*------------------- Sign-in and sign-up elements */
 .form-signin,
 .form-logout {

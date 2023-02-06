@@ -113,8 +113,8 @@
             <div class="col justify-content-start align-content-center">
                 {% if reviews %}
                     {% for review in reviews %}
-                    <div class="card rounded-0 shadow-none {% if review.email == user.email %}border border-dark{% else %}border-0{% endif %}">
-                        <div class="row mx-0 card-header {% if review.email == user.email %}border-bottom border-dark{% else %}border-0{% endif %} rounded-0">
+                    <div class="card rounded-0 shadow-none{% if review.email == request.user.email %}{% if review.approved %} border-1 border-dark{% else %} border-1 borderHidden{% endif %}{% elif not review.approved and request.user.is_superuser or not review.approved and request.user.is_staff %} border-warning border-1 borderHidden{% else %} border-0{% endif %}">
+                        <div class="row mx-0 card-header {% if review.email == request.user.email %}border-bottom border-dark{% else %}border-0{% endif %} rounded-0">
                             <div class="col-8">Posted by {{ review.name }} on {{ review.created_on }}</div>
                             <div class="col-4 text-center">
                                 {% for y in review.single_rating|get_range %}
@@ -130,15 +130,24 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div {% if review.email == user.email %}class="col-8"{% endif %}>
+                                <div {% if review.email == user.email or user.is_staff or request.user.is_superuser %}class="col-8"{% endif %}>
                                     <h5 class="card-title">{{ review.title }}</h5>
                                     <p class="card-text">{{ review.body }}</p>
                                 </div>
-                                {% if review.email == user.email %}
-                                    <div class="col-4 align-content-center text-center">
-                                        <a class="btn btn-sm btn-danger" href="{% url 'delete_review' review.id %}">Delete</a>
-                                    </div>
+                                <div class="col-4 align-content-center justify-content-center">
+                                {% if review.email == request.user.email %}
+                                        <a class="my-1 d-block btn btn-sm btn-danger" href="{% url 'delete_review' review.id %}">Delete</a>
                                 {% endif %}
+                                {% if request.user.is_staff or request.user.is_superuser %}
+                                    <a class="my-1 d-block btn btn-sm btn-info" 
+                                    {% if review.approved %}
+                                        href="{% url 'hide_review' review.id %}">Hide
+                                    {% else %}
+                                        href="{% url 'unhide_review' review.id %}">Unhide
+                                    {% endif %}
+                                    </a>
+                                {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>

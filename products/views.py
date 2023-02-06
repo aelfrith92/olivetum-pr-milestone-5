@@ -85,7 +85,14 @@ class product_detail(View):
         reviewed = False
 
         product = get_object_or_404(Product, pk=product_id)
-        reviews = product.reviews.filter(approved=True).order_by('created_on')
+        staff = request.user.is_staff
+        super_u = request.user.is_superuser
+        auth_user = request.user.is_authenticated
+        if not super_u or not auth_user or not staff:
+            reviews = (product.reviews.filter(approved=True)
+                       .order_by('created_on'))
+        elif super_u or staff:
+            reviews = product.reviews.order_by('created_on')
 
         if request.user.is_authenticated:
             if product.reviews.filter(email=request.user.email).exists():
@@ -157,16 +164,6 @@ class product_detail(View):
                       context)
 
 
-class delete_review(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    """This view deletes the review"""
-    model = Review
-    success_url = '/'
-    template_name = 'products/review_confirm_delete.html'
-
-    def test_func(self):
-        return self.request.user.is_staff
-
-
 @login_required
 def add_product(request):
     """ Add a product to the store """
@@ -235,3 +232,49 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def delete_review(request, review_id):
+    """This view deletes the review"""
+
+    review = get_object_or_404(Review, pk=review_id)
+    product_id = review.product.id
+    # product = get_object_or_404(Product, pk=product_id)
+    review.delete()
+    messages.success(request, 'Review deleted!')
+    return redirect(reverse('product_detail', args=[product_id]))
+
+
+@login_required
+def hide_review(request, review_id):
+    """This view hides the review"""
+
+    review = get_object_or_404(Review, pk=review_id)
+    product_id = review.product.id
+
+    if not request.user.is_superuser and not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('product_detail', args=[product_id]))
+
+    review.approved = False
+    review.save()
+    messages.success(request, 'Review hidden!')
+    return redirect(reverse('product_detail', args=[product_id]))
+
+
+@login_required
+def unhide_review(request, review_id):
+    """This view hides the review"""
+
+    review = get_object_or_404(Review, pk=review_id)
+    product_id = review.product.id
+
+    if not request.user.is_superuser and not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('product_detail', args=[product_id]))
+
+    review.approved = True
+    review.save()
+    messages.success(request, 'Review unhidden!')
+    return redirect(reverse('product_detail', args=[product_id]))
