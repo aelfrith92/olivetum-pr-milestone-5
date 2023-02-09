@@ -1,0 +1,20 @@
+<script type="text/javascript">
+
+    /* 
+    * Disable +/- buttons outside 1-99 range.
+    * If no size is passed to the function, the parameter will have a value of undefined by default,
+    * which prevents any errors 
+    */
+    $(document).ready(function() {
+        if($('.coords').length){
+            var allCoordsElements = $('.coords');
+            for(var i = 0; i < allCoordsElements.length; i++){
+                var lat = $(allCoordsElements[i]).data(`location-coords-${i+1}`).split(',')[0];
+                var lon = $(allCoordsElements[i]).data(`location-coords-${i+1}`).split(',')[1];
+                var url = `https://www.google.com/maps/search/?api=1&query=${encodeURI(lat)}%2C${encodeURI(lon)}`;
+                $(`#link-${i+1}`).attr('href', url);
+            }
+        }
+    });
+
+</script>

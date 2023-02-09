@@ -70,14 +70,18 @@ class Provider(models.Model):
     '''This class defines the provider model'''
     point_of_contact = models.CharField(max_length=50, null=False,
                                         blank=False)
-    business_name = models.CharField(max_length=50)
-    risk_lev = models.IntegerField(choices=DD)
-    city = models.CharField(max_length=255)
+    business_name = models.CharField(max_length=50, null=False,
+                                     blank=False)
+    risk_lev = models.IntegerField(choices=DD, null=False,
+                                   blank=False)
+    city = models.CharField(max_length=255, null=False,
+                            blank=False)
     location = PlainLocationField(based_fields=['city'],
                                   zoom=5,
-                                  default='40.015585972319,18.24176788330078')
+                                  default='40.015585972319,18.24176788330078',
+                                  blank=False, null=False)
     ship_abroad = models.BooleanField(default=False)
-    slr_rating = models.IntegerField(choices=SCORE)
+    slr_rating = models.IntegerField(choices=SCORE, default=3)
 
     class Meta:
         '''Meta class defining the order of retrieved providers'''

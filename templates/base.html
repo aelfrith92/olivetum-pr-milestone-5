@@ -88,8 +88,18 @@
             </li>
             {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-                <li class="nav-item">
-                  <a href="{% url 'add_product' %}" class="nav-link">Product Management</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="managementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Management
+                  </a>
+                  <ul class="dropdown-menu border-dark rounded-0" aria-labelledby="managementDropdown">
+                    <li>
+                      <a href="{% url 'add_product' %}" class="dropdown-item text-dark">Add a product</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'all_providers' %}" class="dropdown-item text-dark">All providers</a>
+                    </li>
+                  </ul>
                 </li>
               {% endif %}
               <li class="nav-item">
@@ -110,9 +120,9 @@
           <div id="searchContainer" class="d-flex justify-content-center align-items-center">
             <form class="d-flex" method='GET' action="{% url 'products' %}">
                 
-              <input class="form-control me-2 mt-lg-1" type="search" placeholder="Search" aria-label="Search" name="q">
+              <input class="form-control rounded-0 me-2 mt-lg-1" type="search" placeholder="Search" aria-label="Search" name="q">
               
-              <button id="searchBtn" class="svgFill btn btn-outline-light mt-lg-1" type="submit">
+              <button id="searchBtn" class="svgFill rounded-0 btn btn-outline-light mt-lg-1" type="submit">
                 <svg height="24" width="24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
                   <path fill="#f8f3e5" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z"/>
                 </svg>
@@ -121,7 +131,7 @@
             </form>
           </div>
           <div id="shoppingBag" class="svgFill nav-item float-end mt-3 mt-lg-0">
-            <a id="shoppingBagSvgHoverColor" href="{% url 'view_bag' %}" class="d-flex align-items-center btn btn-outline-light nav-item">
+            <a id="shoppingBagSvgHoverColor" href="{% url 'view_bag' %}" class="rounded-0 d-flex align-items-center btn btn-outline-light nav-item">
               <svg height="32" viewBox="-96 -27 859 859.3115" width="32" xmlns="http://www.w3.org/2000/svg">
                   <path fill="#f8f3e5" d="m621.503906 805.6875h-585.683594c-1.175781 0-2.355468-.054688-3.519531-.140625-22.253906-2.050781-38.617187-21.675781-36.601562-43.785156l48.835937-537.070313c1.894532-20.882812 19.128906-36.632812 40.101563-36.632812h488.050781c20.9375.023437 38.167969 15.773437 40.070312 36.632812l48.828126 537.070313c.105468 1.144531.15625 2.386719.15625 3.621093.011718 22.199219-18.027344 40.289063-40.238282 40.304688zm-536.867187-590.777344c-6.984375 0-12.726563 5.246094-13.355469 12.207032l-48.832031 537.085937c-.679688 7.367187 4.785156 13.910156 12.15625 14.578125l1.214843.054688h585.667969c7.398438-.015626 13.402344-6.03125 13.402344-13.441407l-48.878906-538.261719c-.628907-6.960937-6.371094-12.207031-13.351563-12.222656zm136.609375 67.171875c-.019532-7.40625-6.066406-13.449219-13.457032-13.464843l.0625-26.851563c22.125.050781 40.183594 18.109375 40.246094 40.238281zm0 0"/>
                   <path fill="#f8f3e5" d="m449.5 322.324219c-22.210938 0-40.28125-18.066407-40.28125-40.28125 0-22.210938 18.066406-40.277344 40.28125-40.277344 22.210938 0 40.277344 18.066406 40.277344 40.277344 0 22.214843-18.066406 40.28125-40.277344 40.28125zm0-53.707031c-7.40625 0-13.429688 6.019531-13.429688 13.425781 0 7.414062 6.023438 13.429687 13.429688 13.429687 7.410156 0 13.425781-6.015625 13.425781-13.429687 0-7.40625-6.015625-13.425781-13.425781-13.425781zm0 0"/>

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, Category, Review
+from .models import Product, Category, Review, Provider
 
 
 class ProductForm(forms.ModelForm):
@@ -29,3 +29,17 @@ class review_form(forms.ModelForm):
         '''
         model = Review
         fields = ('title', 'body', 'single_rating',)
+
+
+class provider_form(forms.ModelForm):
+    '''
+        This class creates instances of a form that will let the admins submit
+        a provider
+    '''
+    class Meta:
+        '''
+            Fields
+        '''
+        model = Provider
+        fields = ('point_of_contact', 'business_name', 'risk_lev', 'city',
+                  'location', 'ship_abroad')

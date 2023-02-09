@@ -7,9 +7,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.template.defaulttags import register
 from django.db.models.functions import Lower
-from .models import Product, Category, Review
+from .models import Product, Category, Review, Provider
 from checkout.models import Order, OrderLineItem
-from .forms import ProductForm, review_form
+from .forms import ProductForm, review_form, provider_form
 
 
 @register.filter
@@ -25,6 +25,16 @@ def get_range_empty_star(value):
         Number of empty stars in the reviews
     """
     return range(5-value)
+
+
+@register.filter
+def get_lat(value):
+    return value.split(',')[0]
+
+
+@register.filter
+def get_lon(value):
+    return value.split(',')[1]
 
 
 def all_products(request):
@@ -335,3 +345,89 @@ def unhide_review(request, review_id):
     review.save()
     messages.success(request, 'Review unhidden!')
     return redirect(reverse('product_detail', args=[product_id]))
+
+
+@login_required
+def all_providers(request):
+    """ Retrieve all providers """
+    if not request.user.is_superuser or not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    providers = Provider.objects.all()
+    print(providers)
+    context = {
+        'providers': providers,
+    }
+
+    return render(request, 'products/providers.html', context)
+
+
+@login_required
+def add_provider(request):
+    """ Add a provider to the store """
+    if not request.user.is_superuser or not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = provider_form(request.POST)
+        if form.is_valid():
+            provider = form.save()
+            messages.success(request, 'Successfully added provider!')
+            return redirect(reverse('all_providers'))
+        else:
+            messages.error(request, 'Failed to add provider. Please ensure the'
+                           ' form is valid.')
+    else:
+        form = provider_form()
+
+    template = 'products/add_provider.html'
+    context = {
+        'provider_form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_provider(request, provider_id):
+    """ Edit a product in the store """
+    if not request.user.is_superuser or not request.user.is_staff:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    provider = get_object_or_404(Provider, pk=provider_id)
+    if request.method == 'POST':
+        form = provider_form(request.POST, instance=provider)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated provider!')
+            return redirect(reverse('all_providers'))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure'
+                           ' the form is valid.')
+    else:
+        form = provider_form(instance=provider)
+        messages.info(request, f'You are editing {provider.business_name}')
+
+    template = 'products/edit_provider.html'
+    context = {
+        'form': form,
+        'provider': provider,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_provider(request, provider_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    provider = get_object_or_404(Provider, pk=provider_id)
+    provider.delete()
+    messages.success(request, 'Provider deleted!')
+    return redirect(reverse('all_providers'))

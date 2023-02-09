@@ -189,10 +189,11 @@ body>nav {
 .boxDefault,
 .card {
   box-shadow: 1px 1px 10px 1px rgba(24, 29, 49, 0.2), -1px -1px 10px 1px rgba(24, 29, 49, 0.2);
-  border-radius: 5px;
 }
 
-#productImg {
+#productImg,
+.boxDefault,
+.card {
   border-radius: 5px;
 }
 
@@ -256,7 +257,7 @@ body>nav {
 }
 
 #delivery-banner {
-  padding-top: 66px;
+  padding-top: 56px;
 }
 
 /*------------------- Products templates */
