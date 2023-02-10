@@ -476,7 +476,7 @@ def contactform(request):
             {'contact': contact})
         body = render_to_string(
             '../templates/includes/send_email_confirmation/'
-            'confirmation_email_subject.txt',
+            'confirmation_email_body.txt',
             {'contact': contact, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
         send_mail(
