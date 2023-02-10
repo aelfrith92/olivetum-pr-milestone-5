@@ -90,3 +90,15 @@ class Provider(models.Model):
     def __str__(self):
         '''Returns a string which facilitates a concise approach'''
         return f"Provider {self.business_name} from {self.city}"
+
+
+class Contact(models.Model):
+    '''This class defines the contact model'''
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    query = models.TextField(null=False, blank=False)
+    auth = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        '''Returns a string which facilitates a concise approach'''
+        return f"Query submitted by {self.email}"

@@ -1,13 +1,16 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.views.generic import (CreateView, ListView, UpdateView, DeleteView,
-                                  View)
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic import View
+from django.http import HttpResponseRedirect, HttpResponseServerError
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.template.defaulttags import register
 from django.db.models.functions import Lower
-from .models import Product, Category, Review, Provider
+from datetime import datetime
+from django.conf import settings
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from .models import Product, Category, Review, Provider, Contact
 from checkout.models import Order, OrderLineItem
 from .forms import ProductForm, review_form, provider_form
 
@@ -136,7 +139,9 @@ class product_detail(View):
         verified_reviews = []
         for review_email in emails_on_reviews:
             if review_email in emails_on_orders:
-                verified_reviews.append(get_object_or_404(Review, email=review_email).id)
+                verified_reviews.append(get_object_or_404(Review,
+                                                          email=review_email)
+                                        .id)
 
         context = {
             'product': product,
@@ -431,3 +436,57 @@ def delete_provider(request, provider_id):
     provider.delete()
     messages.success(request, 'Provider deleted!')
     return redirect(reverse('all_providers'))
+
+
+def contactform(request):
+    """ Contact form """
+
+    print('view contactform initiated')
+
+    if request.method == 'POST':
+        email_from_form = request.POST['contactEmail']
+        contactQuery_from_form = request.POST['contactQuery']
+        user_is_auth = request.user.is_authenticated
+        form_is_from_auth = request.POST.get('authEmail')
+
+        auth_from_form = (form_is_from_auth
+                          if request.user.is_authenticated else False)
+
+        if auth_from_form and not request.user.is_authenticated:
+            return HttpResponseServerError(
+                render(
+                    request,
+                    "500.html",
+                )
+            )
+
+        contact = Contact(
+            email=email_from_form,
+            query=contactQuery_from_form,
+            auth=auth_from_form,
+            created_on=datetime.now(),
+        )
+        contact.save()
+        
+        """Send the user a confirmation email"""
+        
+        subject = render_to_string(
+            '../templates/includes/send_email_confirmation/'
+            'confirmation_email_subject.txt',
+            {'contact': contact})
+        body = render_to_string(
+            '../templates/includes/send_email_confirmation/'
+            'confirmation_email_subject.txt',
+            {'contact': contact, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [email_from_form]
+        )
+
+    messages.success(
+        request, 'Contact request successfully submitted'
+    )
+    return redirect(reverse('home'))

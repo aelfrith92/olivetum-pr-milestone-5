@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, Review, Provider
+from .models import Product, Category, Review, Provider, Contact
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -52,7 +52,14 @@ class ProviderAdmin(admin.ModelAdmin):
         queryset.update(risk_lev=3)
 
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('email', 'query', 'auth', 'created_on')
+    list_filter = ('email', 'auth', 'created_on')
+    search_filter = ['email', 'auth', 'created_on']
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Review, ReviewAdmin)
 admin.site.register(Provider, ProviderAdmin)
+admin.site.register(Contact, ContactAdmin)
