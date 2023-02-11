@@ -1,6 +1,5 @@
 from django import forms
 from .models import UserProfile
-from crispy_bootstrap5.bootstrap5 import FloatingField
 
 
 class UserProfileForm(forms.ModelForm):

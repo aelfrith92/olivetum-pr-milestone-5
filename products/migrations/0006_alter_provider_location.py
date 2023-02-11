@@ -14,6 +14,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='provider',
             name='location',
-            field=location_field.models.plain.PlainLocationField(default='40.015585972319,18.24176788330078', max_length=63),
+            field=location_field.models.plain.PlainLocationField(default='40.015585972319,18.24176788330078',
+                                                                 max_length=63
+                                                                 ),
         ),
     ]

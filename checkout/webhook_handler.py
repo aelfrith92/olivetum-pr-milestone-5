@@ -68,7 +68,7 @@ class StripeWH_Handler:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
-     
+
         # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
@@ -121,7 +121,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=(f"Webhook received: {event['type']} | SUCCESS:"
+                         f" Verified order already in database"),
                 status=200)
         else:
             """Create the order manually, if not found/created in 5 secs."""
@@ -167,7 +168,8 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=(f"Webhook received: {event['type']} | SUCCESS:"
+                     " Created order in webhook"),
             status=200
         )
 

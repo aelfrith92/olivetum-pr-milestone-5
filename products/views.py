@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic import View
-from django.http import HttpResponseRedirect, HttpResponseServerError
+from django.http import HttpResponseServerError
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -102,7 +102,6 @@ class product_detail(View):
         '''Retrieving related reviews'''
 
         reviewed = False
-        verified = False
 
         product = get_object_or_404(Product, pk=product_id)
 
@@ -117,7 +116,7 @@ class product_detail(View):
             reviews = (product.reviews.filter(approved=True)
                        .order_by('-created_on'))
         # Check whether the user is authenticated
-        if request.user.is_authenticated:
+        if auth_user:
             # Check whether the user already left a review about
             # the product on the page
             if product.reviews.filter(email=request.user.email).exists():
@@ -172,7 +171,7 @@ class product_detail(View):
         reviewed = product.reviews.filter(email=request.user.email).exists()
         review_id_passed = request.POST.get('reviewEditId', False)
 
-        if request.user.is_authenticated:
+        if auth_user:
             if (reviewed and not review_id_passed):
                 messages.info(request, 'You have already left a review for'
                                        ' this product.')
@@ -218,7 +217,8 @@ class product_detail(View):
         verified_reviews = []
         for review_email in emails_on_reviews:
             if review_email in emails_on_orders:
-                verified_reviews.append(get_object_or_404(Review, email=review_email).id)
+                verified_reviews.append(get_object_or_404(
+                    Review, email=review_email).id)
 
         context = {
             'product': product,
@@ -378,7 +378,7 @@ def add_provider(request):
     if request.method == 'POST':
         form = provider_form(request.POST)
         if form.is_valid():
-            provider = form.save()
+            form.save()
             messages.success(request, 'Successfully added provider!')
             return redirect(reverse('all_providers'))
         else:
@@ -450,9 +450,9 @@ def contactform(request):
         form_is_from_auth = request.POST.get('authEmail')
 
         auth_from_form = (form_is_from_auth
-                          if request.user.is_authenticated else False)
+                          if user_is_auth else False)
 
-        if auth_from_form and not request.user.is_authenticated:
+        if auth_from_form and not user_is_auth:
             return HttpResponseServerError(
                 render(
                     request,
