@@ -217,6 +217,13 @@ body>nav {
   border-width: 1px!important;
 }
 
+.provider-label {
+  transform:translate(-20%,-50%);
+  width: 65%;
+  top: 25%;
+  left: 0;
+}
+
 /*------------------- Sign-in and sign-up elements */
 .form-signin,
 .form-logout {

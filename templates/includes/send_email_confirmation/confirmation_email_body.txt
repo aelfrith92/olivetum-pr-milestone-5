@@ -4,13 +4,11 @@ This is a confirmation we have received your enquiry n. {{ contact.id }}:
 
 Your enquiry:
 {{ contact.query }}
-
 {% if not contact.auth %}
-    Please, remember that we cannot disclose sensitive information, unless you submit an authenticated support request.
-    If you did not log in at the time of the form submission, we may require to authenticate you fist.
-    Thanks for your understanding.
+Please, remember that we cannot disclose sensitive information, unless you submit an authenticated support request.
+If you did not authenticate at the time of the form submission, we may require to authenticate you first.
+Thanks for your understanding.
 {% endif %}
-
 We are working hard to get back to you asap.
 
 Thank you!

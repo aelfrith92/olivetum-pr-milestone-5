@@ -4,6 +4,7 @@ from .models import Product, Category, Review, Provider, Contact
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'sku',
         'name',
         'category',

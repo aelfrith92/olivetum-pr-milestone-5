@@ -67,9 +67,18 @@
                                         <img class="productImg card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                     </a>
                                 {% endif %}
+                                {% if product.provider %}
+                                    <div class="position-relative w-50">
+                                        <div class="position-absolute provider-label">
+                                            <p class="badge bg-success text-light rounded shadow text-wrap">
+                                                {{ product.provider }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">
-                                        <a class="text-decoration-none" href="{% url 'product_detail' product.id %}">
+                                        <a class="text-decoration-none text-dark" href="{% url 'product_detail' product.id %}">
                                             {{ product.name }}
                                         </a>
                                     </p>
@@ -139,31 +148,52 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+		$( document ).ready(function() {
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
+            // Change of back-to-top btn colour
+            $(window).scroll(function() {
+                let totalHeight = $(window).scrollTop() + $(window).height();
+                let scrollingPoint = $(document).height() - 1316;
+                let paths = $('.btt-link path');
+                if(totalHeight > scrollingPoint) {
+                    if($('.btt-link path').length){
+                        for(let path of paths){
+                            path.setAttribute('fill', '#e6b10f');
+                        }
+                    }
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+                } else {
+                    for(let path of paths){
+                        path.setAttribute('fill', '#181d31');
+                    }
+                }
+            });
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            $('.btt-link').click(function(e) {
+                window.scrollTo(0,0)
+            })
+	
+        
+            $('#sort-selector').change(function() {
+                var selector = $(this);
+                var currentUrl = new URL(window.location);
 
-                window.location.replace(currentUrl);
-            }
-        })
+                var selectedVal = selector.val();
+                if(selectedVal != "reset"){
+                    var sort = selectedVal.split("_")[0];
+                    var direction = selectedVal.split("_")[1];
+
+                    currentUrl.searchParams.set("sort", sort);
+                    currentUrl.searchParams.set("direction", direction);
+
+                    window.location.replace(currentUrl);
+                } else {
+                    currentUrl.searchParams.delete("sort");
+                    currentUrl.searchParams.delete("direction");
+
+                    window.location.replace(currentUrl);
+                }
+            })
+        });
     </script>
 {% endblock %}

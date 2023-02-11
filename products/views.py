@@ -467,9 +467,9 @@ def contactform(request):
             created_on=datetime.now(),
         )
         contact.save()
-        
+
         """Send the user a confirmation email"""
-        
+
         subject = render_to_string(
             '../templates/includes/send_email_confirmation/'
             'confirmation_email_subject.txt',

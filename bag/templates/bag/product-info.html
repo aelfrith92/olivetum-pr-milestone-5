@@ -1,0 +1,16 @@
+<p class="my-0">
+    <strong>
+        <a class="text-decoration-none text-dark" href="{% url 'product_detail' item.product.id %}">
+            {{ item.product.name }}
+        </a>
+    </strong>
+</p>
+<p class="my-0 small text-muted">
+    SKU: {{ item.product.sku|upper }}
+</p>
+{% if item.product.has_child_variants %}
+<p class="my-0 small text-muted">
+    <strong>Unit Litres: </strong>
+    {{ item.size_jinja_fronte }}
+</p>
+{% endif %}
