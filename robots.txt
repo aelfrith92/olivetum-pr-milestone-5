@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /admin/
+Disallow: /bag/
+Disallow: /profile/
+Sitemap: https://olivetum-proj-milestone-5-am.herokuapp.com/sitemap.xml
