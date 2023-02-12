@@ -17,3 +17,6 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'olivetum.views.handler404'
+handler500 = 'olivetum.views.handler500'
+handler403 = 'olivetum.views.handler403'
+handler400 = 'olivetum.views.handler400'

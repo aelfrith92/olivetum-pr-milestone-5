@@ -458,14 +458,6 @@ def contactform(request):
         auth_from_form = (form_is_from_auth
                           if user_is_auth else False)
 
-        if auth_from_form and not user_is_auth:
-            return HttpResponseServerError(
-                render(
-                    request,
-                    "500.html",
-                )
-            )
-
         contact = Contact(
             email=email_from_form,
             query=contactQuery_from_form,
