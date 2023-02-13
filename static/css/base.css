@@ -134,25 +134,28 @@ h1 {
 /*------------------- Allauth form formatting - TEMPORARY*/
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+  margin-top: 1.5rem;
+  /* mt-4 */
+  color: #6c757d;
+  /* text-secondary */
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
-    border-radius: 0;
+  border-color: #000;
+  border-radius: 0;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
+  display: none;
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+  color: #aab7c4;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+  color: #17a2b8;
+  /* text-info */
 }
 
 /*------------------- Navigation bar */
@@ -213,12 +216,12 @@ body>nav {
 }
 
 .borderHidden {
-  border-style: dashed!important;
-  border-width: 1px!important;
+  border-style: dashed !important;
+  border-width: 1px !important;
 }
 
 .provider-label {
-  transform:translate(-20%,-50%);
+  transform: translate(-20%, -50%);
   width: 65%;
   top: 25%;
   left: 0;
@@ -306,9 +309,9 @@ a.category-badge>span.badge:hover {
 }
 
 #div_id_image .input-group * {
-  border-color: #181D31!important;
-  border-radius: 0!important;
-  border-width: 1px!important;
+  border-color: #181D31 !important;
+  border-radius: 0 !important;
+  border-width: 1px !important;
 }
 
 /*------------------- Back to top btn */
@@ -332,9 +335,15 @@ a.category-badge>span.badge:hover {
 }
 
 .bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*---------------------- Mailchimp */
+#mc_embed_signup {
+  background: #181D31;
+  clear: left;
 }
 
 @media (max-width: 991px) {
@@ -387,7 +396,7 @@ a.category-badge>span.badge:hover {
   #delivery-banner {
     padding-top: 63px;
   }
-  
+
   #homeContainer {
     margin-top: 7rem;
   }
