@@ -1,13 +1,15 @@
+[```Disclaimer: This project contains graphic material that requires attribution. See the section relating to the footer for further details.```]
+
 # Olivetum
 
 Olivetum is an e-commerce website that lists olive-based products for sale. The website fosters genuine and
 locally-produced goods, to support farmers with their struggle against Xylella in Salento, Italy. See [this
 article](https://www.olivami.com/en/blog/curiosities-about-olive-trees/xylella-an-unprecedented-battle/) for further
 information about the context. This project collects all farmers' produce and pays them back, once their products are
-successfully sold for profit. The categories may range from olive oil, tapenade, or pitted kalamata, depending on the
-actual availability.
+successfully sold for profit. The products may range from olive oil, tapenade, or pitted kalamata, depending on the
+ availability.
 
-[Inserire layout multi-piattaforma]
+![Mock Up](media/docs/readme_images/all-devices-black.png)
 
 ## Table of Contents
 * [User Experience Design (UX)](#User-Experience-Design)
@@ -18,22 +20,22 @@ actual availability.
     * [The Scope Plane](#The-Scope-Plan)
     * [The Structure Plane](#The-Structure-Plan)
 
-# User-Experience-Design
+# User Experience Design
 
 ## The-Strategy-Plane
 
 ### Site-Goals
 
 The website empowers local farmers with online presence, to let them reach a broader target, that ranges from private
-customers to businesses, such as restaurants. In other words, the selling activity is meant as both B2C and B2B models.
+customers to businesses, such as restaurants. In other words, the selling activity is meant for both B2C and B2B models.
 Initially, this project gives complete authority to the owners of the website, that will mediate between providers (the
 farmers) and end-customers. On a later stage, the website becomes a platform that will offer sellers' onboarding, to let
 each selling account conduct their selling strategy. This will be eventually possible with Stripe Connect and related
 services.
 
-Actors on the website will be administrators, staff, sellers, and end-customers. Each account type behaves differently
-on the platform. The scope of this project will grant these actors all the basic and required functions expected for the
-selling activity. For example, sellers' profiles will store basic information about themselves, to show the end-user the
+Roles on the website will be administrators, staff, sellers/providers, and end-customers/users. Each account type behaves differently
+on the platform. The scope of this project will grant these roles all the basic and required functions expected for the
+selling activity. For example, sellers/providers' profiles will store basic information about themselves, to show the end-user the
 source of the products being purchased; there is no need to collect KYC data in this phase, as the staff will take on
 this responsibility at the beginning.
 
@@ -46,12 +48,12 @@ All issues were assigned to epics, prioritized under the labels Must have, Shoul
 to sprints and stories according to their complexity (being self-explanatory). This allowed the main requirements to be
 completed first, while secondary features could be added whether time could be allocated to them or not.
 
-The Kanban board was created using github projects and can be found ```Link to the project```. It can be viewed to see
+The Kanban board was created using github projects and can be found [here](https://github.com/users/aelfrith92/projects/4). It can be viewed to see
 more information on the project cards. Some stories have a set of acceptance criteria in order to define the
 functionality that marks that story as complete. Some other stories do not have acceptance criteria, as they were
 considered self-explanatory.
 
-```Pic to the project overview (Kanban board)```
+![Kanban Board](media/docs/readme_images/kanban-board.png)
 
 #### User Stories
 
@@ -59,9 +61,9 @@ The following user stories were completed over time. Basic setup stories - such 
 omitted, to prioritize those strictly pertaining the end-user experience.
 
 The categories of users described below are:
-- "Site User" - meant as a non-authenticated user.
+- "Site User" - meant as a non-authenticated user or user of the website in the broadest and most general sense.
 - "Admin" - meant as an authenticated user with admin privileges.
-- "Shopper" - meant as an authenticated user whose purpose is to place and review orders.
+- "Shopper" - meant as an authenticated user whose purpose is to place orders and review products.
 
 **Customer's statement**
 
@@ -77,17 +79,17 @@ The project can be divided into 5 Epics.
 
 As a site admin I can manipulate (add/edit/delete) products, so that I can handle the available listings on the website.
 
-As a site admin I can moderate (approve/delete) product reviews, so that I can prevent bad actors from leaving malicious
-or misleading information.
+As a site admin I can manipulate (add/edit/delete) providers, so that I can handle those registered on the website.
 
-As a site admin I can re-stock products, so that I can let customers view available products only.
+As a site admin I can moderate (approve/hide/unhide) product reviews, so that I can prevent bad actors from leaving malicious
+or misleading information.
 
 **Viewing and Navigation**
 
 As a shopper, I can view the list of available products, so that I can select some to purchase.
 
 As a shopper, I can view the individual product details, so that I can see the price, description, product rating,
-product image, and available options such as litres and grams.
+product image, and available options such as litres.
 
 As a shopper, I can quickly identitfy deals, clearance items and special offers, so that I can take advantage of special
 savings on products.
@@ -149,6 +151,8 @@ As a shopper, I can view an order confirmation after checkout, do that I can ver
 As a shopper, I can receive an email confirmation after checking out, so that I can keep the confirmation of what I have
 purchased for my records.
 
+As a shopper, I can leave product reviews, so that I can leave my personal opinion about the purchase experience.
+
 **Documentation**
 
 Tasks:
@@ -161,16 +165,104 @@ Tasks:
 * Responsive Design - Site should be fully functional on all devices from 320px up
 * Hamburger menu for mobile devices
 * Ability to perform CRUD functionality on products - admin
+* Ability to perform CRUD functionality on providers - admin
 * Restricted role-based features
 * Home page with grid of products
 * Review of orders for shoppers
 * Review of payment details for shoppers
+* Contact form for users
+* Newsletter subscription for users
 
 ## The-Structure-Plan
 
 ### Features
 
-#### Colour-palette
-The colour palette can be found at https://colorhunt.co/palette/181d31678983e6ddc4f0e9d2
+``CUSTOMER'S STATEMENT - As the shop owners, we give local farmers the opportunity to reach a broader target, via online shopping. Shoppers will be able to interact with the website, to manage their orders and purchasing process. The staff/owners can help in specific scenarios, to guarantee the best CX.`` 
 
-```To be completed```
+Within this statement, there are a series of taken-for-granted features that should cover essential home page components, such as the navigation menu at the top.
+
+Implementation:
+
+**Navigation Menu**
+
+![Navbar](media/docs/readme_images/navbar.png)
+![Navbar-non-auth](media/docs/readme_images/navbar-non-auth.png)
+![Navbar-non-auth](media/docs/readme_images/navbar-burger.png)
+
+ The Navigation contains links for 
+ - Home, 
+ - Allauth options, 
+ - Management (product creation and provider CRUD functionalities),
+ - Personal profile,
+ - Products searchbar,
+ - Bag and grand total overview
+
+The following navigation items are available on all pages:
+  * Home -> Visible to all
+  * Login -> Visible to logged out users
+  * Register -> Visible to logged out users
+  * Logout -> Visible to logged in users
+  * Management > Add a product -> Visible to logged in admins
+  * Management > All providers -> Visible to logged in admins
+  * My Profile > -> Visible to logged in users
+  * Products searchbar -> Visible to all
+  * Bag and grand total overview -> Visible to all
+
+The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices. The navigation menu is part of the base template.
+
+**Footer**
+
+![footer](media/docs/readme_images/footer.png)
+
+The Footer contains the following sections:
+ - Short description and purpose of the website, 
+ - Producst, followed by the related categories,
+ - Useful links, such as Privacy Policy and About Xylella, while the rest is listed for demo purposes only,
+ - Contact, with fictitious information about the business, a functioning contact form,
+ - Newsletter form,
+ - Social media, where only a fictitious FB page anchor is implemented, for demo purposes.
+
+All items available on all pages.
+
+The footer is part of the base template.
+
+__``Admin and store management``__
+
+``As a site admin I can manipulate (add/edit/delete) products, so that I can handle the available listings on the website.``
+
+On the index or initial page, the user is presented with a welcoming message, together with a symbolic background that depicts olive oil and food at large. The message clearly states the scope of the offered products (from local farmers, sustainable). A banner fixed at the top warns about last offers - available on all pages, via the base template. The user can get to the list of prodcts by clicking on the button "SHOP NOW" button.
+
+![index](media/docs/readme_images/index-welcome.png)
+
+A list of paginated-by-24 products is available via the 'products' view.
+
+![products-read](media/docs/readme_images/products-read.png)
+
+Update and Delete functionalities are visible, if logged as an admin.
+
+![products-ud](media/docs/readme_images/products-ud.png)
+
+The create functionality is available via the navigation menu > Management > Add a product. Create and Update functionalities lead to the respective views, while the delete function is executed as soon as the link is clicked. The UIs for create and update functions are the same, but the update view pre-populates the fields.
+
+![product-form](media/docs/readme_images/product-form.png)
+
+``As a site admin I can manipulate (add/edit/delete) providers, so that I can handle those registered on the website.``
+
+Same logic is applied to the providers, via dedicated views. All providers can be seen via the navigation menu > All providers.
+
+![providers-read](media/docs/readme_images/providers-read.png)
+
+Within the same page, create, update, and delete functionalities are easily accessible via their dedicated views. If providers are handled via the admin view, a google map widget is successfully rendered within the form.
+
+![providers-admin](media/docs/readme_images/providers-admin.png)
+
+Providers info are shown on each related product with a label. See the pictures above.
+
+``As a site admin I can moderate (approve/hide/unhide) product reviews, so that I can prevent bad actors from leaving malicious
+or misleading information.``
+
+
+
+
+#### Colour-palette
+The main colour palette can be found at https://colorhunt.co/palette/181d31678983e6ddc4f0e9d2
