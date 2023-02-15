@@ -310,6 +310,7 @@ The user is invited to sign up, if they want to finalise an order on the e-Comme
 ``As a site user, I can easily log in or log out, so that I can access my personal account information.``
 
 ![login](media/docs/readme_images/signin.png)
+___________________________________________________________
 
 ![logout](media/docs/readme_images/signout.png)
 
@@ -319,11 +320,92 @@ The user needs to enter their credentials to correctly start a session and avail
 
 ![password-rec](media/docs/readme_images/pass-reset.png)
 
+___________________________________________________________
+
+![reset-email](media/docs/readme_images/reset-email.png)
+
+___________________________________________________________
+
+![reset-started](media/docs/readme_images/reset-started.png)
+
+___________________________________________________________
+
 ``As a site user, I can receive an email confirmation after registering, so that I verify that my account registration was
 successful.``
 
+![verify-email](media/docs/readme_images/verify-email.png)
+
+___________________________________________________________
+
+![verify-email-sent](media/docs/readme_images/verification-email.jpeg)
+
 ``As a site user, I can have a personalised user profile, so that I view my personal order history and save my payment
 information.``
+
+![personal-profile](media/docs/readme_images/personalprofile.png)
+
+``As a shopper, I can sort the list of available products, so that I can easily identify the best-rated, best-priced, and
+categorically-sorted products.``
+
+``As a shopper, I can sort sort a specific category of products, so that I can easily identify the best-rated, best-priced
+product in a specific category, or sort the products in that category by name.``
+
+``As a shopper, I can sort multiple categories of products simultaneously, so that I can find the best-rated or
+best-priced products across broad categories, such as "food" and "homeware".``
+
+As shown above, users can select several filters, once on the products list page:
+
+![filters-and-sort](media/docs/readme_images/filters-and-sort.png)
+
+``As a shopper, I can search for a product by name or description, so that I can find a specific product I would like to
+purchase.``
+
+It is possible to search by name or description via the search box in the navbar:
+
+![search](media/docs/readme_images/search.png)
+
+``As a shopper, I can easily see what I have searched for and the number of results, so that I can quickly decide whether
+the product I want is available.``
+
+The number of results and the search query are returned as soon as the page loads:
+
+![search](media/docs/readme_images/number-and-query.png)
+
+``As a shopper, I can easily select the size and the quantity of a product when purchasing it, so that I can ensure I do
+not accidentally select the wrong product, quantity, or size.``
+
+Users can select the subvariants on products under the "Oil" category:
+
+![search](media/docs/readme_images/sub-variants.png)
+
+``As a shopper, I can view items in my bag to be purchased, so that I can identify the total cost of my purchase and all
+items I will receive.``
+
+``As a shopper, I can adjust the quantity of individual items in my bag, so that I can easily make changes to my purchase
+before checkout.``
+
+![search](media/docs/readme_images/bag-overview.png)
+
+![search](media/docs/readme_images/total-overview.png)
+
+
+``As a shopper, I can easily enter my payment information, so that I can check out quickly and with no hassles.``
+
+![checkout](media/docs/readme_images/checkout.png)
+
+``As a shopper, I can feel my personal and payment information are safe and secure, so that I confidently provide the
+needed information to make a purchase.``
+
+
+
+``As a shopper, I can view an order confirmation after checkout, do that I can verify that I have not made any mistakes.``
+
+
+``As a shopper, I can receive an email confirmation after checking out, so that I can keep the confirmation of what I have
+purchased for my records.``
+
+
+``As a shopper, I can leave product reviews, so that I can leave my personal opinion about the purchase experience.``
 
 #### Colour-palette
 The main colour palette can be found at https://colorhunt.co/palette/181d31678983e6ddc4f0e9d2
