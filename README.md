@@ -261,8 +261,69 @@ Providers info are shown on each related product with a label. See the pictures 
 ``As a site admin I can moderate (approve/hide/unhide) product reviews, so that I can prevent bad actors from leaving malicious
 or misleading information.``
 
+![reviews](media/docs/readme_images/reviews.png)
 
+In the product detail page-
 
+- Admin users can Hide/Unhide reviews. Hidden reviews are highlighted with dashed borders, visible to admins only.
+
+- Users can read the reviews.
+
+- Auth users can leave or update a review, encompassing a rating 1 to 5, the title, the body.
+
+- Authors can delete their respective reviews. Authors will also see their reviews highlighted with 1px borders and the "My review" badge under the rating.
+
+- Users leaving reviews on products purchased in the past will have the "Verified Purchase" badge on their review.
+
+``As a shopper, I can view the list of available products, so that I can select some to purchase.``
+
+![products-list](media/docs/readme_images/products-list.png)
+
+Products are paginated by 24 each page to improve the general website performance.
+
+``As a shopper, I can view the individual product details, so that I can see the price, description, product rating,
+product image, and available options such as litres.``
+
+![product-details](media/docs/readme_images/product-details.png)
+
+The product details page let the user have a general overview of the product: Title, unit price, category, rating, decription, image, sub-variants (if any), quantity, back-to-list and add-to-bag buttons.
+
+``As a shopper, I can quickly identitfy deals, clearance items and special offers, so that I can take advantage of special
+savings on products.``
+
+![filters](media/docs/readme_images/filters-and-sort.png)
+
+Filters let the user customise the products list view. Parameters like category or sorting asc/desc apply.
+
+``As a shopper, I can easily view the total of my purchases at any time, so that I can avoid spending too much.``
+
+![total](media/docs/readme_images/total.png)
+
+The bag icon top right (or bottom, in case of mobile view) shows the aggregated total.
+
+``As a site user, I can easily register for an account, so that I have a personal account and be able to view my profile.``
+
+![sign-up](media/docs/readme_images/signup.png)
+
+The user is invited to sign up, if they want to finalise an order on the e-Commerce.
+
+``As a site user, I can easily log in or log out, so that I can access my personal account information.``
+
+![login](media/docs/readme_images/signin.png)
+
+![logout](media/docs/readme_images/signout.png)
+
+The user needs to enter their credentials to correctly start a session and avail of the several features offered.
+
+``As a site user, I can easily recover my password in case I forget it, so that I recover access to my account.``
+
+![password-rec](media/docs/readme_images/pass-reset.png)
+
+``As a site user, I can receive an email confirmation after registering, so that I verify that my account registration was
+successful.``
+
+``As a site user, I can have a personalised user profile, so that I view my personal order history and save my payment
+information.``
 
 #### Colour-palette
 The main colour palette can be found at https://colorhunt.co/palette/181d31678983e6ddc4f0e9d2
