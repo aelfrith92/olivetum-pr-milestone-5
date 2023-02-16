@@ -396,16 +396,173 @@ before checkout.``
 ``As a shopper, I can feel my personal and payment information are safe and secure, so that I confidently provide the
 needed information to make a purchase.``
 
+The payment process, card-saving dynamics, 3D Secure checks etc. are handled by Stripe. Visit [here](https://stripe.com/docs/security) for more.
 
+``As a shopper, I can view an order confirmation after checkout, so that I can verify that I have not made any mistakes.``
 
-``As a shopper, I can view an order confirmation after checkout, do that I can verify that I have not made any mistakes.``
+![checkout](media/docs/readme_images/order-review.png)
 
+``As a shopper, I can receive an email confirmation after checking out, so that I can keep the confirmation of what I have purchased for my records.``
 
-``As a shopper, I can receive an email confirmation after checking out, so that I can keep the confirmation of what I have
-purchased for my records.``
-
+![checkout](media/docs/readme_images/order-email-confirmation.png)
 
 ``As a shopper, I can leave product reviews, so that I can leave my personal opinion about the purchase experience.``
 
-#### Colour-palette
+See above, admin stories.
+
+Further implemented:
+
+``As a user, I can reach out to the staff of Olivetum, so that I can submit my queries.``
+
+``As a user, I can subscribe to the newsletter, find social media / online presence, and a document about the privacy policy, so that I can find a series of useful links.``
+
+At the bottom-right, users can find an essential contact form, which behaves differently, depending on the authentication:
+- auth: the user receives a standard confirmation of query submission.
+- non-auth: the user receives an email warning about the necessity to authenticate, should the author of the contact query have requested sensitive information.
+
+![contact-form](media/docs/readme_images/footer.png)
+
+The newsletter subscription is available via the form at the bottom, visible in the last screenshot above.
+
+### Features Left To Implement
+
+In the future, some obvious adjustments both in technical and UX terms will be applied. For example:
+
+* The general appearance will be better developed;
+* Some external services, such as mailchimp and stripe, return errors in the console that cannot be completely handled at this stage. JS Destroying methods or further troubleshooting will be employed;
+* Re-stock logic will be implemented, by editing the models accordingly.
+
+## The Skeleton Plan
+
+### Wireframes
+
+The website was designed with responsiveness in mind, however, wireframing was meant to get a general idea of the first impression, hence, mobile wireframing is not available. There are discrepancies within the menu items depicted, as authenticated sessions change the content of the navbar.
+
+* Home Page
+
+![Home Page](media/docs/readme_images/Wireframing/index.png)
+
+* Products
+
+![Products](media/docs/readme_images/Wireframing/products-and-providers.png)
+
+* Product Details
+
+![Product Details](media/docs/readme_images/Wireframing/product-details.png)
+
+
+* Product Details - Review
+
+![Product Details Review](media/docs/readme_images/Wireframing/product-details-reviews.png)
+
+* Bag
+
+![Bag](media/docs/readme_images/Wireframing/bag.png)
+
+* Checkout
+
+![Checkout](media/docs/readme_images/Wireframing/checkout.png)
+
+* Order Summary
+
+![Order Summary](media/docs/readme_images/Wireframing/order-summary.png)
+
+* Profile Summary
+
+![Profile Summary](media/docs/readme_images/Wireframing/profile-summary.png)
+
+* Sign in
+
+![Sign-in](media/docs/readme_images/Wireframing/auth.png)
+
+* Sign up
+
+![Sign-up](media/docs/readme_images/Wireframing/auth1.png)
+
+* Password Reset
+
+![Password-reset](media/docs/readme_images/Wireframing/auth2.png)
+
+### Database-Design
+
+The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model plays a crucial role in handling authentication, provided by Django. Enhanced user permissions were designed based on the user.is_staff and user.is_superuser boolean fields. Further information about this model can be found on [Django](https://docs.djangoproject.com/en/4.1/ref/contrib/auth/).
+
+The Product model includes information about the respective category and provider.
+
+The Review model includes information about the respective product.
+
+The Order model includes information about the respective User Profile.
+
+The OrderLineItem model includes information about the respective product and order.
+
+The UserProfile model includes information about the respective User.
+
+Entity relationship diagram was created using Microsoft Excel and shows the schemas for each of the models and how they are related.
+
+![Models](media/docs/readme_images/models.png)
+
+## The-Surface-Plane
+### Design
+
+### Colour-Scheme
+
 The main colour palette can be found at https://colorhunt.co/palette/181d31678983e6ddc4f0e9d2
+
+![colour-palette](media/docs/readme_images/colour-palette.png)
+
+The present project handled style via BS5, overriding CSS style when necessary.
+
+### Typography
+
+The Roboto, Lato fonts were used throughout the website. Source [Google Fonts](https://fonts.google.com/)
+
+### Imagery
+
+Images uploaded on an AWS S3 Bucket and visible on the website were retrieved from [Pixabay](https://pixabay.com/). Attributions are required, hence, the authors will be listed as follows, while a general statement will eventually be included in the footer.
+- Pictures retrieved from [author with anchor to the respective pic]:
+  - [stevepb](https://pixabay.com/photos/olive-oil-olives-food-oil-natural-968657/)
+  - [Couleur](https://pixabay.com/photos/olive-oil-oil-food-carafe-1596417/)
+  - [Couleur](https://pixabay.com/photos/olive-oil-oil-olives-carafe-fruits-1596639/)
+  - [Anelka](https://pixabay.com/photos/olive-oil-tomatoes-herbs-spices-346997/)
+  - [photoAC](https://pixabay.com/photos/olive-oil-pickled-appetizers-snack-2614000/)
+  - [Pezibear](https://pixabay.com/photos/oil-olive-oil-bottles-food-meal-1383546/)
+  - [Pezibear](https://pixabay.com/photos/oil-olive-oil-bottles-food-meal-1383602/)
+  - [manfredrichter](https://pixabay.com/photos/olives-drupes-mediterranean-meal-3191245/)
+
+- Icons retrieved from [official attribution copied from flaticon.com]:
+  - <a href="https://www.flaticon.com/free-icons/olive-oil" title="olive oil icons">Olive oil icons created by Freepik - Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/olive" title="olive icons">Olive icons created by Freepik - Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/olives" title="olives icons">Olives icons created by Freepik - Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/cooking-oil" title="cooking oil icons">Cooking oil icons created by Freepik Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/food-and-restaurant" title="food and restaurant icons">Food and restaurant icons created by Freepik - Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/olive-tree" title="olive tree icons">Olive tree icons created by Freepik - Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/buy" title="buy icons">Buy icons created by Pixel perfect - Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/top" title="top icons">Top icons created by azmianshori - Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Smashicons - Flaticon</a>
+  - <a href="https://www.flaticon.com/free-icons/bag" title="bag icons">Bag icons created by phatplus - Flaticon</a>
+
+
+
+## Technolgies
+
+- HTML
+  - The structure of the Website was developed using HTML as the main language.
+- CSS
+  - The Website was styled using custom CSS in an external file.
+- JavaScript
+  - JavaScript was used, even though via cdn only.
+- Python
+  - Python was the main programming language used for the application using the Django Framework.
+- Gitpod
+  - The website was developed using Gitpod IDE
+- GitHub
+  - Source code is hosted on [GitHub](https://github.com/aelfrith92/olivetum-pr-milestone-5)
+- Git
+  - Used to commit and push code during the development of the Website
+- Font Awesome
+  - This was used for various icons throughout the site
+- Favicon.io
+  - favicon files were created at https://favicon.io/favicon-converter/
+- balsamiq
+  - wireframes were created using balsamiq from https://balsamiq.com/
+
