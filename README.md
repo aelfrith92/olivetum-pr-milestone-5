@@ -497,7 +497,7 @@ The OrderLineItem model includes information about the respective product and or
 
 The UserProfile model includes information about the respective User.
 
-Entity relationship diagram was created using Microsoft Excel and shows the schemas for each of the models and how they are related.
+The entity relationship diagram was created using a spreadsheet environment and shows the schemas for each of the models and how they are related.
 
 ![Models](media/docs/readme_images/models.png)
 
@@ -550,9 +550,38 @@ Images uploaded on an AWS S3 Bucket and visible on the website were retrieved fr
 - CSS
   - The Website was styled using custom CSS in an external file.
 - JavaScript
-  - JavaScript was used, even though via cdn only.
+  - JavaScript was used. Some libraries were also imported, to avail of external services, such as Stripe. Main syntax based on jQuery.
+  - JavaScript was also employed for minor but fundamental checks on expected behaviours, such as-
+    - Hovering effects on svg elements;
+    - Form submission and UX (negative quantities at checkout and filters on the products page);
+    - To initialise [Bootstrap toasts instances](https://getbootstrap.com/docs/5.3/components/toasts/#live-example);
+    - Back-to-top behaviour while scrolling.
 - Python
   - Python was the main programming language used for the application using the Django Framework.
+  - The following modules were installed to run the project:
+    - asgiref==3.5.2
+    - boto3==1.26.59
+    - botocore==1.29.59
+    - crispy-bootstrap5==0.7
+    - dj-database-url==0.5.0
+    - Django==3.2
+    - django-allauth==0.41.0
+    - django-bootstrap-v5==1.0.11
+    - django-countries==7.2.1
+    - django-crispy-forms==1.14.0
+    - django-location-field==2.1.0
+    - django-storages==1.13.2
+    - gunicorn==20.1.0
+    - jmespath==1.0.1
+    - oauthlib==3.2.2
+    - Pillow==9.4.0
+    - psycopg2==2.9.5
+    - python3-openid==3.2.0
+    - pytz==2022.6
+    - requests-oauthlib==1.3.1
+    - s3transfer==0.6.0
+    - sqlparse==0.4.3
+    - stripe==5.0.0
 - Gitpod
   - The website was developed using Gitpod IDE
 - GitHub
@@ -565,4 +594,129 @@ Images uploaded on an AWS S3 Bucket and visible on the website were retrieved fr
   - favicon files were created at https://favicon.io/favicon-converter/
 - balsamiq
   - wireframes were created using balsamiq from https://balsamiq.com/
+- Stripe  
+  - Checkout process handled with Stripe from https://stripe.com/
+- Bootstrap
+  - CSS main library for style Bootstrap 5.3.0-alpha1, from https://getbootstrap.com/
+- Crispy forms
+  - Django module django-crispy-forms employed to style and handle forms front-end
+-  Django
+    - Django was used as the main python framework in the development of this project
+    - Django AllAuth was utilised to provide enhanced user account management functionality.
+- Heroku
+    - Was used as the cloud based platform to deploy the site on
+- ElephantSQL
+    - ElephantSQL was used as the database for this project during development and in production.
+- Jinja/Django Templating
+    - Jinja/Django templating language was utilised to insert data from the database into the sites pages. It was also utilised to perform queries on different datasets.
 
+#### Resources Used
+
+* The Django documentation was used extensively during development of this project
+* The Code Institute reference material was used as a general reference for things that I had previously done during the course.
+* Django Bootstrap and django location fields.
+* All other resources used are referenced where appropriate.
+
+## Deployment
+
+The site was deployed via Heroku, and the live link can be found here - [Druid](https://druid-computers.herokuapp.com/)
+
+## Deployment
+
+### Version Control
+
+The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘pro-loco-milestone-project-4’.
+
+The following git commands were used throughout development to push code to the remote repo:
+
+```git add .``` - This command was used to add all files to the staging area before they are committed.
+
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step.
+
+```git push``` - This command was used to push all committed code to the remote repository on github.
+
+### Heroku Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+- Navigate to heroku and create an account
+- Click the new button in the top right corner
+- Select create new app
+- Enter app name
+- Select region and click create app
+- **[Before Nov 28th, 2022 via Heroku]** Click the resources tab and search for Heroku Postgres. **[After Nov 28th, 2022 via ElephantSQL]** Create an account on [ElephantSQL](https://www.elephantsql.com/) 
+- **[Before Nov 28th, 2022 via Heroku]** Select hobby dev and continue. **[After Nov 28th, 2022 via ElephantSQL]** Create a new instance on ElephantSQL, by using the "Tiny Turtle" plan; enter a name that would resemble the project name; select a region; review the selected information; create the instance.
+- Go to the settings tab and then click reveal config vars
+- Add the following config vars (shown in uppercase):
+  - SECRET_KEY: (Your Django secret key)
+  - **[Before Nov 28th via Heroku]** DATABASE_URL: (This should already exist with add on of postgres). **[After Nov 28th via ElephantSQL]** Copy the URL of your instance on ElephantSQL and paste it as config var named DATABASE_URL. The URL should start with ```postgres://```
+  - Email sending with Django:
+    - EMAIL_HOST_PASS: Via gmail, generate a password for apps; 
+    - EMAIL_HOST_USER: Via gmail, enter the email address.
+  - Google Maps API: Enter the Google Maps API key, after making sure that you have restricted it for security purposes.
+  - PORT: Set it to '8000'
+  - Stripe:
+    - STRIPE_PRIVATE_KEY: Paste your Stripe acct private/secret key, for test purposes.
+    - STRIPE_PUBLIC_KEY: Paste your Stripe acct public key, for test purposes.
+    - STRIPE_WH_SECRET: Paste the key generated, after having created the stripe webhook endpoint, with the url of the deployed project and all events selected. The url should made up of your heroku public URL and /checkout/wh, i.e. if your deployed website url is www.xyz.herokuapp.com, the url endpoint should be www.xyz.herokuapp.com/checkout/wh.
+  - AWS S3 Bucket:
+    - Navigate in a browser to Amazon AWS, log in, or create an account and log in. 
+    - Create a new S3 bucket for the site and create a static directory and media directory within the bucket.
+    - From the dashboard - copy the bucket details into the settings file.
+        - you will require the following:
+            - Storage Bucket Name
+            - Storage Bucket Region Name
+            - Access Key ID
+            - Secret Access Key
+        * configure these settings in the [settings file](https://github.com/aelfrith92/olivetum-pr-milestone-5/blob/main/olivetum/settings.py)
+    - USE_AWS: Set it to 'TRUE'.
+    - AWS_ACCESS_KEY_ID: Generated through the aforementioned process.
+    - AWS_SECRET_ACCESS_KEY: Generated through the aforementioned process.
+  - In settings.py, remember to customise:
+    - AWS_STORAGE_BUCKET_NAME, according to the bucket name set up on aws.
+  - Also add the KEY - DISABLE_COLLECTSTATIC with the Value '1' to the config vars. This key value pair must be removed prior to final deployment
+  - Using the requirements.txt file install all of the required packages (see Dependencies below).
+- Add Heroku to the ALLOWED_HOSTS list, the format will be the app name given in Heroku when creating the app followed by .herokuapp.com
+- Create a new file on the top level directory - Procfile
+- Within the Procfile add the code - web: guincorn PROJECT_NAME.wsgi
+- In the terminal, add the changed files, commit and push to GitHub
+- In Heroku, navigate to the deployment tab and deploy the branch manually - watch the build logs for any errors.
+- Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
+- This project utilises Stripe as a payment platform provider - You can create a stripe account at www.stripe.com, you will need to generate developer API keys to gain access to the several functionalities.
+
+Other parameters can be available through the settings.py of this project.
+
+The app should now be deployed.
+
+The live link can be found here: [Live Site](http://olivetum-proj-milestone-5-am.herokuapp.com/)
+
+### Run Locally
+
+Navigate to the GitHub Repository you want to clone to use locally:
+
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type "git clone [copied-git-url](https://github.com/aelfrith92/olivetum-pr-milestone-5.git)" into the IDE terminal
+
+The project will now have been cloned on your local machine for use.
+
+### Fork Project
+
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
+
+- Navigate to the GitHub Repository you want to fork.
+- On the top right of the page under the header, click the fork button.
+- This will create a duplicate of the full project in your GitHub Repository.
+
+### Dependencies
+
+In all cases, remember to install the dependencies by running the following command in the terminal:
+
+```$ pip install -r requirements.txt```
+
+
+## Credits 
+
+Thanks to my mentor Daisy Mc Girr, who guided me through this project. Thanks to Vale, who inspired me till the very last moment and never failed to encourage me.

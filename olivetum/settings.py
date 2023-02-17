@@ -149,6 +149,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# Uncomment for local sqlite3
 # if development:
 # DATABASES = {
 #     'default': {
