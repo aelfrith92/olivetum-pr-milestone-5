@@ -328,6 +328,14 @@ a.category-badge>span.badge:hover {
   cursor: pointer;
 }
 
+#editForm input,
+#editForm textarea,
+#editForm select {
+  border-radius: 0 !important;
+  border-color: #181D31 !important;
+  border-width: 1px !important;
+}
+
 /*------------------- Toasts */
 
 .toast-container {
@@ -344,6 +352,11 @@ a.category-badge>span.badge:hover {
 #mc_embed_signup {
   background: #181D31;
   clear: left;
+}
+
+#mc-embedded-subscribe {
+  background-color: #f8f3e5!important;
+  color: #181D31!important;
 }
 
 @media (max-width: 991px) {

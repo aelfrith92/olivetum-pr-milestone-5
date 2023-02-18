@@ -78,7 +78,7 @@
                                         </span>
                                     </button>
                                 </div>
-                                <input type="number" class="w-25 form-control qty_input id_qty_{{ product.id }}"
+                                <input id="id_qty_{{ product.id }}" type="number" class="w-25 form-control qty_input id_qty_{{ product.id }}"
                                     name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
                                 <div class="input-group-append">
                                     <button class="increment-qty btn rounded increment-qty_{{ product.id }}"
@@ -171,7 +171,7 @@
             </div>
             <div class="col-md-12 col-lg-6 order-md-0 order-lg-1">
                 {% if reviewed and user.is_authenticated %}
-                    <div class="accordion rounded-0" id="editReviewAccordion">
+                    <div class="accordion rounded-0 border border-dark" id="editReviewAccordion">
                         <div class="accordion-item rounded-0">
                             <h2 class="accordion-header rounded-0" id="headingOne">
                                 <button class="accordion-button collapsed rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#editForm" aria-expanded="false" aria-controls="editForm">
@@ -197,7 +197,7 @@
                         </div>
                     </div>
                 {% elif user.is_authenticated %}
-                    <div class="accordion rounded-0" id="editReviewAccordion">
+                    <div class="accordion rounded-0 border border-dark" id="editReviewAccordion">
                         <div class="accordion-item rounded-0">
                             <h2 class="accordion-header rounded-0" id="headingOne">
                                 <button class="accordion-button collapsed rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#editForm" aria-expanded="false" aria-controls="editForm">

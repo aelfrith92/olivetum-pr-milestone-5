@@ -9,6 +9,9 @@ information about the context. This project collects all farmers' produce and pa
 successfully sold for profit. The products may range from olive oil, tapenade, or pitted kalamata, depending on the
  availability.
 
+Github - https://github.com/aelfrith92/olivetum-pr-milestone-5
+Deployed version - https://olivetum-proj-milestone-5-am.herokuapp.com/
+
 ![Mock Up](media/docs/readme_images/all-devices-black.png)
 
 ## Table of Contents
@@ -35,8 +38,12 @@ successfully sold for profit. The products may range from olive oil, tapenade, o
   * [Resources Used](#Resources-Used)
 * [Social Media](#Social-Media)
 * [Testing](#Testing)
-  ** [Functional Testing](Functional-Testing)
-  ** [Negative Testing](Negative-Testing)
+  * [Functional Testing](Functional-Testing)
+  * [Validation](Validation)
+    * [HTML Validation](HTML-Validation)
+    * [JS Validation](JS-Validation)
+    * [Python Flake8](Python-Flake8)
+  * [Negative Testing](Negative-Testing)
 * [Deployment](#Deployment)
     * [Version Control](#Version-Control)
     * [Heroku Deployment](#Heroku-Deployment)
@@ -680,7 +687,8 @@ There are several areas of imporvement that I would like to address in the futur
 The key areas are:
 * A stock management system
 * Social Media logins for all new users
-* Provider model enhancement, where each provider can actually handle several aspect of the e-Commerce through Stripe Connect.
+* Provider model enhancement, where each provider can actually handle several aspect of the e-Commerce through Stripe Connect
+* Better Products page style, as the cards may affect the general appearance
 
 # Social Media
 
@@ -924,6 +932,37 @@ Actual:
 ![400 Error](media/docs/readme_images/400.png)
 
 Check the view products.views.add_provider
+
+<hr>
+
+## Validation
+
+### HTML Validation
+- The Bag template contains a bug of duplicate IDs. The conflict is caused by:
+  - The responsive design solution provided via the botique_ado walkthrough, as this project got the main development inspiration (but it is obviously not identical) from it
+  - The quantity form solution later suggested in the same walkthrough to correct the negative quantity bug.
+  - For the same reason, no labels have been applied to the quantity form, not to generate further conflict.
+
+At the time this was found out, there is too little time to handle it, hence, the error will be dealt with as soon as possible.
+
+### JS Validation
+- The Product detail script shows an additional trailing comma, but it actually serves the purpose to pass the 3rd parameter
+- Other minor warnings are shown, but incorrect.
+
+### Python Flake8
+- The Python Flake8 validation was run within the gitpod IDE. Major issues were addressed. Most of them related to "Line too long".
+
+
+## Stripe CLI
+
+Stripe CLI webhook testing- Stripe CLI was employed for testing purposes, by targeting the endpoint set up in the account:
+
+![stripe-webhook-trigger](media/docs/readme_images/stripe-trigger.png)
+![response-body](media/docs/readme_images/pi_response.png)
+![request-body](media/docs/readme_images/pi_request.png)
+![response-codes](media/docs/readme_images/webhook_success.jpg)
+
+
 
 ## Negative Testing
 
