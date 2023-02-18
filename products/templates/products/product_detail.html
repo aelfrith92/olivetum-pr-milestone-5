@@ -109,8 +109,8 @@
             <div class="text-center display-6 mb-3">Reviews</div>
             <hr>
         </div>
-        <div class="row">
-            <div class="col justify-content-start align-content-center">
+        <div class="row flex-md-column flex-lg-row">
+            <div class="col-md-12 col-lg-6 justify-content-start align-content-center order-md-1 order-lg-0">
                 {% if reviews %}
                     {% for review in reviews %}
                     <div class="card rounded-0 shadow-none{% if review.email == request.user.email %}{% if review.approved %} border-1 border-dark{% else %} border-1 borderHidden{% endif %}{% elif not review.approved and request.user.is_superuser or not review.approved and request.user.is_staff %} border-dark border-1 borderHidden{% else %} border-0{% endif %}">
@@ -169,7 +169,7 @@
                     <p>No reviews found for this product</p>
                 {% endif %}
             </div>
-            <div class="col">
+            <div class="col-md-12 col-lg-6 order-md-0 order-lg-1">
                 {% if reviewed and user.is_authenticated %}
                     <div class="accordion rounded-0" id="editReviewAccordion">
                         <div class="accordion-item rounded-0">

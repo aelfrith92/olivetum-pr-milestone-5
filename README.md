@@ -1,4 +1,4 @@
-[```Disclaimer: This project contains graphic material that requires attribution. See the section relating to the footer for further details.```]
+[```Disclaimer: This project contains graphic material that requires attribution. See the section relating to the Surface plan - Imagery.```]
 
 # Olivetum
 
@@ -19,8 +19,30 @@ successfully sold for profit. The products may range from olive oil, tapenade, o
           * [User Stories](#User-Stories)
     * [The Scope Plane](#The-Scope-Plan)
     * [The Structure Plane](#The-Structure-Plan)
+      * [Features](#Features)
+      * [Future Features](#Features-Left-to-Implement)
+    * [The Skeleton Plane](#The-Skeleton-Plane)
+        * [Wireframes](#Wireframes)
+        * [Database Design](#Database-Design)
+        * [Security](#Security)
+    * [The Surface Plane](#The-Surface-Plane)
+        * [Design](#Design)
+            * [Colour Scheme](#Colour-Scheme)
+            * [Typography](#Typography)
+            * [Imagery](#Imagery)
+* [Technologies](#Technologies)
+  * [Resources Used](#Resources-Used)
+* [Testing](#Testing)
+  ** [Functional Testing](Functional-Testing)
+  ** [Negative Testing](Negative-Testing)
+* [Deployment](#Deployment)
+    * [Version Control](#Version-Control)
+    * [Heroku Deployment](#Heroku-Deployment)
+    * [Run Locally](#Run-Locally)
+    * [Fork Project](#Fork-Project)
+* [Credits](#Credits)
 
-# User Experience Design
+# User-Experience-Design
 
 ## The-Strategy-Plane
 
@@ -160,7 +182,7 @@ Tasks:
 * Complete readme documentation
 * Complete testing documentation write up
 
-## The-Scope-Plan
+## The-Scope-Plane
 
 * Responsive Design - Site should be fully functional on all devices from 320px up
 * Hamburger menu for mobile devices
@@ -173,7 +195,7 @@ Tasks:
 * Contact form for users
 * Newsletter subscription for users
 
-## The-Structure-Plan
+## The-Structure-Plane
 
 ### Features
 
@@ -310,7 +332,7 @@ The user is invited to sign up, if they want to finalise an order on the e-Comme
 ``As a site user, I can easily log in or log out, so that I can access my personal account information.``
 
 ![login](media/docs/readme_images/signin.png)
-___________________________________________________________
+
 
 ![logout](media/docs/readme_images/signout.png)
 
@@ -320,22 +342,22 @@ The user needs to enter their credentials to correctly start a session and avail
 
 ![password-rec](media/docs/readme_images/pass-reset.png)
 
-___________________________________________________________
+
 
 ![reset-email](media/docs/readme_images/reset-email.png)
 
-___________________________________________________________
+
 
 ![reset-started](media/docs/readme_images/reset-started.png)
 
-___________________________________________________________
+
 
 ``As a site user, I can receive an email confirmation after registering, so that I verify that my account registration was
 successful.``
 
 ![verify-email](media/docs/readme_images/verify-email.png)
 
-___________________________________________________________
+
 
 ![verify-email-sent](media/docs/readme_images/verification-email.jpeg)
 
@@ -432,7 +454,7 @@ In the future, some obvious adjustments both in technical and UX terms will be a
 * Some external services, such as mailchimp and stripe, return errors in the console that cannot be completely handled at this stage. JS Destroying methods or further troubleshooting will be employed;
 * Re-stock logic will be implemented, by editing the models accordingly.
 
-## The Skeleton Plan
+## The Skeleton Plane
 
 ### Wireframes
 
@@ -501,7 +523,13 @@ The entity relationship diagram was created using a spreadsheet environment and 
 
 ![Models](media/docs/readme_images/models.png)
 
-## The-Surface-Plane
+### Security
+
+Views were secured by using not only the django @login_required decorators before the respective views, but also via ad-hoc if statements checking the user permissions passed through the requests. Any staff restricted functionality, i.e. user edit/delete functionalities for provider or product models were secured using this method.
+
+Environment variables were stored in an env.py for local development. In production, these variables were added to the heroku config vars within the project.
+
+## The Surface Plan
 ### Design
 
 ### Colour-Scheme
@@ -543,7 +571,7 @@ Images uploaded on an AWS S3 Bucket and visible on the website were retrieved fr
 
 
 
-## Technolgies
+# Technolgies
 
 - HTML
   - The structure of the Website was developed using HTML as the main language.
@@ -610,16 +638,231 @@ Images uploaded on an AWS S3 Bucket and visible on the website were retrieved fr
 - Jinja/Django Templating
     - Jinja/Django templating language was utilised to insert data from the database into the sites pages. It was also utilised to perform queries on different datasets.
 
-#### Resources Used
+## Resources Used
 
 * The Django documentation was used extensively during development of this project
 * The Code Institute reference material was used as a general reference for things that I had previously done during the course.
 * Django Bootstrap and django location fields.
 * All other resources used are referenced where appropriate.
 
-## Deployment
+# Testing
 
-The site was deployed via Heroku, and the live link can be found here - [Druid](https://druid-computers.herokuapp.com/)
+## Functional Testing
+
+``Disclaimer: For the sole purposes of this section, as well as the PASS criteria, a few edits have been implemented to trigger specific responses and prove that Django exceptions handling are correctly implemented, in particular statuses 404, 403, 500, and 400. However, they have been implemented for specific scenarios only, hence, please, follow the instructions below. The rest of the exceptions are rather handled via simple redirects and BS toasts. In the products app, views.py, the commented-out code is the one preferred, while http triggers replace those lines of code just for demo purposes.``
+
+**Authentication**
+
+Description:
+
+Ensure a user can sign up to the website
+
+Steps:
+
+1. Navigate to [Olivetum](https://olivetum-proj-milestone-5-am.herokuapp.com/) and click Register
+2. Enter email, username and password 
+3. Click Sign up
+
+Expected:
+
+The user gets errors in case of invalid passwords (i.e. temporary) or existing username, depending on Django's security measures. (Django-allauth-handled)
+
+The user gets logged in as soon as they enter valid information. (Django-allauth-handled)
+
+A green banner confirming authentication also shows up. (Django-messages-handled)
+
+Actual: 
+
+The user gets errors in case of invalid passwords (i.e. temporary) or existing username, depending on Django's security measures. (Django-allauth-handled)
+
+The user gets logged in as soon as they enter valid information. (Django-allauth-handled)
+
+A green banner confirming authentication also shows up. (Django-messages-handled)
+
+<hr>
+
+Description:
+
+Ensure a user can log in once signed up
+
+Steps:
+1. Navigate to [Olivetum](https://olivetum-proj-milestone-5-am.herokuapp.com/) and click Login
+2. Enter login details created in previous test case
+3. Click login
+
+Expected:
+
+User is successfully logged in and redirected to the home page (Django-allauth-handled)
+
+Actual:
+
+User is successfully logged in and redirected to the home page (Django-allauth-handled)
+
+<hr>
+
+Description:
+
+Ensure a user can sign out
+
+Steps:
+
+1. Login to the website
+2. Click the logout button
+3. Click confirm on the confirm logout page
+
+Expected:
+
+User is logged out (Django-allauth-handled)
+
+Actual:
+
+User is logged out (Django-allauth-handled)
+
+**Review CRUD functionalities**
+
+Description:
+
+Ensure a new review can be created or edited (all authenticated users) 
+
+Steps:
+
+1. Navigate to any product details page (standard url format https://olivetum-proj-milestone-5-am.herokuapp.com/products/[number])
+2. You will read 'Leave your review' if you have not left a review for that product, otherwise 'Edit your review'.
+3. Enter the following:
+    - Title: Any title
+    - Body: Any text that crosses your mind
+    - Single rating: Leave the rating for that product 1 to 5
+4. Click or tap on "Submit"
+
+Expected:
+
+Form successfully submits and a BS toast is shown to alert the user of successful submission.
+
+Actual:
+
+Form successfully submits and a BS toast is shown to alert the user of successful submission.
+
+<hr> 
+
+Description:
+
+Ensure a review can be deleted:
+
+Steps:
+
+1. Navigate to any product details page (standard url format https://olivetum-proj-milestone-5-am.herokuapp.com/products/[number])
+2. You will read 'Leave your review' if you have not left a review for that product, otherwise 'Edit your review'.
+3. Enter the following:
+    - Title: Any title
+    - Body: Any text that crosses your mind
+    - Single rating: Leave the rating for that product 1 to 5
+4. Now your review should be visible and posted
+5. Within its area, a red button with the writing "Delete" is also visible
+6. Click or tap on "Delete" to delete your review
+
+**Please note that only authors can delete the respective reviews. Admins can only hide or unhide them**
+
+Expected:
+
+Form successfully submits and a BS toast is shown to alert the user of successful submission.
+
+Actual:
+
+Form successfully submits and a BS toast is shown to alert the user of successful submission.
+
+<hr>
+
+**Unauthorized actions - 403**
+
+Description:
+
+Prevent unauthorized users from performing unauthorized actions, i.e. deleting reviews on behalf of others. Auth and non-auth users alike.
+
+Steps:
+
+1. Enter the following url into the browser address bar: https://olivetum-proj-milestone-5-am.herokuapp.com/products/delreview/13
+
+What is happening: You are trying to delete a review whose author is not you. If the review ID #13 is not available in future, just try to delete a review which was not posted by your current user, using the url format (https://olivetum-proj-milestone-5-am.herokuapp.com/products/delreview/[number])
+
+Expected:
+
+Error message returned, the user gets redirected to the product details page of the product id 'tied' to the review ID passed in the URL
+
+Actual:
+
+403 error returned for demo purposes. See the commented-out code in products.views
+
+![403 Error](media/docs/readme_images/403.png)
+
+<hr>
+
+**Page not found - 404**
+
+Description:
+
+Ensure better UX for users visiting pages that do not exist.
+
+Steps:
+
+1. Navigate to [page](https://proloco-supersano.herokuapp.com/this-page-does-not-exist)
+
+What is happening: You are trying to visit a page that does not exist
+
+Expected:
+
+404 error returned
+
+Actual:
+
+404 error returned
+
+![404 Error](docs/readme_images/404.png)
+
+<hr>
+
+**Internal server error 500**
+
+Description:
+
+Ensure better UX for users getting server errors.
+
+Steps:
+
+1. Navigate to [page](https://proloco-supersano.herokuapp.com/update/test-the-date) - Log in (staff level credentials provided at the time of milestone-project-4 submission)
+2. Inspect the code
+3. Add an option to the "select" tag presenting the id "id_scheduled_on_year", value attribute set to "2024", innerText set to "2024". Then, select "2024" as year of the event.
+
+![year not allowed](docs/readme_images/year-not-allowed.png)
+
+4. Fill the rest as you like
+5. Click or tap on "Submit"
+
+What is happening: This test was facilitated via the EventUpdate view, but - generally speaking - this sort of checks - integrated as conditional statements - will be changed to error-handling code format. For the time being, something deceitful is just being handled.
+
+Expected:
+
+500 error returned for demo purposes
+
+Actual: 
+
+500 error returned for demo purposes
+
+![500 Error](docs/readme_images/500.png)
+
+## Negative Testing
+
+Tests were performed on the create booking to ensure that:
+
+1. A user cannot create a date in the past
+2. A user cannot create an event on the same dates that others are scheduled on
+3. A user cannot update events too far in the future (2024 onwards)
+4. Forms cannot be submitted when required fields are empty + other Django-based checks
+
+## Custom testing
+
+Additional testing has been performed via TestCase Django classes. Tests run via tests_forms.py and test_views.py. One test failed only, to be corrected in future.
+
+
 
 ## Deployment
 

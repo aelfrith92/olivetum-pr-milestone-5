@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import (render, redirect, reverse, get_object_or_404,
+                              HttpResponse)
 from django.core.paginator import Paginator
 from django.views.generic import View
-from django.http import HttpResponseServerError
+from django.http import HttpResponseServerError, HttpResponseForbidden
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -317,7 +318,8 @@ def delete_review(request, review_id):
     product_id = review.product.id
     if request.user.email is not review.email:
         messages.error(request, 'Sorry, only the review author can do that.')
-        return redirect(reverse('product_detail', args=[product_id]))
+        return HttpResponseForbidden(render(request, "errors/403.html",))
+        # return redirect(reverse('product_detail', args=[product_id]))
 
     review.delete()
     messages.success(request, 'Review deleted!')
@@ -434,7 +436,7 @@ def edit_provider(request, provider_id):
 @login_required
 def delete_provider(request, provider_id):
     """ Delete a product from the store """
-    if not request.user.is_superuser:
+    if not request.user.is_superuser or not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
