@@ -554,6 +554,8 @@ Research was conducted to discover the appropriate keywords to utilise given the
 
 From this research a refined keyword list was cultivated for use with the short-tail keywords within the head meta tags and for content through out the site. However this only formed a small part of the overall strategy for the sites SEO strategy.
 
+Header tags were also employed, especially on the homepage, to stress the importance of farming, sustainability, and quality.
+
 #### Content Strategy
 The main foundation for the sites SEO strategy was to provide a platform for the company from which they can provide users with informative and relevant information. Product pages were designed to include more details that the average product page - which enables the company to configure the descriptions in a manner that maximises the SEO value. The blog section of the site enables the company to write informative articles that can answer commonly searched for questions. This will enable the company to increase their authoritativeness on relevant topics that their users are searching for. Three articles were provided with content acquired from other relevant websites. There articles were edited to incorporate the keywords discovered from the earlier research.
 
