@@ -87,7 +87,7 @@ class Provider(models.Model):
 
     def __str__(self):
         '''Returns a string which facilitates a concise approach'''
-        return f"Provider {self.business_name} from {self.city}"
+        return f"{self.business_name}"
 
 
 class Contact(models.Model):
