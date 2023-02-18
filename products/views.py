@@ -2,7 +2,8 @@ from django.shortcuts import (render, redirect, reverse, get_object_or_404,
                               HttpResponse)
 from django.core.paginator import Paginator
 from django.views.generic import View
-from django.http import HttpResponseServerError, HttpResponseForbidden
+from django.http import (HttpResponseServerError, HttpResponseForbidden,
+                         HttpResponseBadRequest)
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -365,7 +366,8 @@ def all_providers(request):
     """ Retrieve all providers """
     if not request.user.is_superuser or not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        # return redirect(reverse('home'))
+        return HttpResponseServerError(render(request, 'errors/500.html',))
 
     providers = Provider.objects.all()
     print(providers)
@@ -381,7 +383,8 @@ def add_provider(request):
     """ Add a provider to the store """
     if not request.user.is_superuser or not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        # return redirect(reverse('home'))
+        return HttpResponseBadRequest(render(request, 'errors/400.html'))
 
     if request.method == 'POST':
         form = provider_form(request.POST)

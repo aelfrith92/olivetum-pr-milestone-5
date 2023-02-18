@@ -25,6 +25,7 @@ successfully sold for profit. The products may range from olive oil, tapenade, o
         * [Wireframes](#Wireframes)
         * [Database Design](#Database-Design)
         * [Security](#Security)
+        * [SEO Considerations](#SEO-Considerations)
     * [The Surface Plane](#The-Surface-Plane)
         * [Design](#Design)
             * [Colour Scheme](#Colour-Scheme)
@@ -32,6 +33,7 @@ successfully sold for profit. The products may range from olive oil, tapenade, o
             * [Imagery](#Imagery)
 * [Technologies](#Technologies)
   * [Resources Used](#Resources-Used)
+* [Social Media](#Social-Media)
 * [Testing](#Testing)
   ** [Functional Testing](Functional-Testing)
   ** [Negative Testing](Negative-Testing)
@@ -444,7 +446,7 @@ At the bottom-right, users can find an essential contact form, which behaves dif
 
 ![contact-form](media/docs/readme_images/footer.png)
 
-The newsletter subscription is available via the form at the bottom, visible in the last screenshot above.
+The newsletter subscription is available via the form at the bottom, visible in the last screenshot above. The code was generated on mailchimp.
 
 ### Features Left To Implement
 
@@ -528,6 +530,32 @@ The entity relationship diagram was created using a spreadsheet environment and 
 Views were secured by using not only the django @login_required decorators before the respective views, but also via ad-hoc if statements checking the user permissions passed through the requests. Any staff restricted functionality, i.e. user edit/delete functionalities for provider or product models were secured using this method.
 
 Environment variables were stored in an env.py for local development. In production, these variables were added to the heroku config vars within the project.
+
+### SEO Considerations
+
+<br>
+
+#### Keyword Research
+Research was conducted to discover the appropriate keywords to utilise given the target customer markets and product range to be carried. This research was based on Google's SEO tools which provides details of common search terms users search for and allows you to search these terms by target market. The UK, Ireland and the USA markets were used for example purposes.
+
+<br>
+
+![Olive Oil Keyword Research - Ireland](media/docs/readme_images/SEO-keyword-Ireland.png)
+
+<br>
+
+![Olive Oil Keyword Research - UK](media/docs/readme_images/SEO-keyword-UK.png)
+
+<br>
+
+[Olive Oil Keyword Research - USA](media/docs/readme_images/SEO-keyword-US.png)
+
+<br>
+
+From this research a refined keyword list was cultivated for use with the short-tail keywords within the head meta tags and for content through out the site. However this only formed a small part of the overall strategy for the sites SEO strategy.
+
+#### Content Strategy
+The main foundation for the sites SEO strategy was to provide a platform for the company from which they can provide users with informative and relevant information. Product pages were designed to include more details that the average product page - which enables the company to configure the descriptions in a manner that maximises the SEO value. The blog section of the site enables the company to write informative articles that can answer commonly searched for questions. This will enable the company to increase their authoritativeness on relevant topics that their users are searching for. Three articles were provided with content acquired from other relevant websites. There articles were edited to incorporate the keywords discovered from the earlier research.
 
 ## The Surface Plan
 ### Design
@@ -645,11 +673,33 @@ Images uploaded on an AWS S3 Bucket and visible on the website were retrieved fr
 * Django Bootstrap and django location fields.
 * All other resources used are referenced where appropriate.
 
+# Future Enhancements
+There are several areas of imporvement that I would like to address in the future.
+The key areas are:
+* A stock management system
+* Social Media logins for all new users
+* Provider model enhancement, where each provider can actually handle several aspect of the e-Commerce through Stripe Connect.
+
+# Social Media
+
+## Social Media Marketing
+For the purposes of the assessment a Facebook page was created for the company. As a key foundation for any ecommerce website's marketing strategy social media would form a key part of the businesses marketing strategy. The page included links to the main website to drive traffic from the social network to the site. Content for the page was based on the blog posts created for the site, whilst at the same time incorporating information that might be useful for users in smaller formats such as a back in stock notice.
+
+<br>
+
+![Olivetum Facebook Page 1](media/docs/readme_images/scshFB1.png)
+
+![Olivetum Facebook Page 2](media/docs/readme_images/scshFB2.png)
+
+![Olivetum Facebook Page 3](media/docs/readme_images/scshFB3.png)
+
+<br>
+
 # Testing
 
 ## Functional Testing
 
-``Disclaimer: For the sole purposes of this section, as well as the PASS criteria, a few edits have been implemented to trigger specific responses and prove that Django exceptions handling are correctly implemented, in particular statuses 404, 403, 500, and 400. However, they have been implemented for specific scenarios only, hence, please, follow the instructions below. The rest of the exceptions are rather handled via simple redirects and BS toasts. In the products app, views.py, the commented-out code is the one preferred, while http triggers replace those lines of code just for demo purposes.``
+``Disclaimer: For the sole purposes of this section, as well as the PASS criteria, a few edits have been implemented to trigger specific responses and prove that Django exceptions handling is correctly implemented, in particular statuses 404, 403, 500, and 400. However, they have been implemented for specific scenarios only, hence, please, follow the instructions below. The rest of the exceptions are rather handled via simple redirects and BS toasts. In the products app, views.py, the commented-out code is the one normally preferred, while http triggers replace those lines of code just for demo purposes.``
 
 **Authentication**
 
@@ -790,7 +840,7 @@ Error message returned, the user gets redirected to the product details page of 
 
 Actual:
 
-403 error returned for demo purposes. See the commented-out code in products.views
+403 error returned for demo purposes. See the commented-out code in products.views.delete_review
 
 ![403 Error](media/docs/readme_images/403.png)
 
@@ -804,7 +854,7 @@ Ensure better UX for users visiting pages that do not exist.
 
 Steps:
 
-1. Navigate to [page](https://proloco-supersano.herokuapp.com/this-page-does-not-exist)
+1. Navigate to any page of the website and add '/' + a random string, i.e. '/ghost' https://olivetum-proj-milestone-5-am.herokuapp.com/products/ghost
 
 What is happening: You are trying to visit a page that does not exist
 
@@ -816,7 +866,7 @@ Actual:
 
 404 error returned
 
-![404 Error](docs/readme_images/404.png)
+![404 Error](media/docs/readme_images/404.png)
 
 <hr>
 
@@ -828,39 +878,61 @@ Ensure better UX for users getting server errors.
 
 Steps:
 
-1. Navigate to [page](https://proloco-supersano.herokuapp.com/update/test-the-date) - Log in (staff level credentials provided at the time of milestone-project-4 submission)
-2. Inspect the code
-3. Add an option to the "select" tag presenting the id "id_scheduled_on_year", value attribute set to "2024", innerText set to "2024". Then, select "2024" as year of the event.
+1. The error should be triggered whenever an internal server error is found, however, for demo purposes, this project will trigger this error on purpose, out of context.
+2. Log into a standard user account and go to the following page https://olivetum-proj-milestone-5-am.herokuapp.com/products/providers
 
-![year not allowed](docs/readme_images/year-not-allowed.png)
-
-4. Fill the rest as you like
-5. Click or tap on "Submit"
-
-What is happening: This test was facilitated via the EventUpdate view, but - generally speaking - this sort of checks - integrated as conditional statements - will be changed to error-handling code format. For the time being, something deceitful is just being handled.
+What is happening: Youu are trying to access the list of providers registered on the website via a standard user account, but only staff or admins can access such page.
 
 Expected:
 
-500 error returned for demo purposes
+Redirect to the homepage
 
 Actual: 
 
 500 error returned for demo purposes
 
-![500 Error](docs/readme_images/500.png)
+![500 Error](media/docs/readme_images/500.png)
+
+Check the view products.views.all_providers
+
+<hr>
+
+**Bad request 400**
+
+Description:
+
+Ensure better UX for users getting bad request errors.
+
+Steps:
+
+1. The error should be triggered whenever a bad request is triggered.
+2. For demo purposes, log into your olivetum account with a standard user account.
+3. Visit the page https://olivetum-proj-milestone-5-am.herokuapp.com/products/add_provider
+
+What is happening: You are trying to access the page that lets you add a provider to the database, but you are missing the right user permission.
+
+Expected:
+
+Redirect to the homepage
+
+Actual: 
+
+400 error returned for demo purposes
+
+![400 Error](media/docs/readme_images/400.png)
+
+Check the view products.views.add_provider
 
 ## Negative Testing
 
-Tests were performed on the create booking to ensure that:
+Tests were performed on CRUD functionalities:
 
-1. A user cannot create a date in the past
-2. A user cannot create an event on the same dates that others are scheduled on
-3. A user cannot update events too far in the future (2024 onwards)
-4. Forms cannot be submitted when required fields are empty + other Django-based checks
+1. A user with standard permissions cannot perform admin-level action
+2. Other testing was performed while implementing JS snippets, to prevent unwanted form submissions. Please, read above.
 
-## Custom testing
+___
 
-Additional testing has been performed via TestCase Django classes. Tests run via tests_forms.py and test_views.py. One test failed only, to be corrected in future.
+Testing logics above apply extensively to the website and all models, not only reviews or products app.
 
 
 
@@ -960,6 +1032,10 @@ In all cases, remember to install the dependencies by running the following comm
 ```$ pip install -r requirements.txt```
 
 
-## Credits 
+### Acknowledgements
 
-Thanks to my mentor Daisy Mc Girr, who guided me through this project. Thanks to Vale, who inspired me till the very last moment and never failed to encourage me.
+I'd like to thank the following:
+* Daisy McGirr for encouraging me throughout this project.
+* All tutors that assisted me throughout this project.
+* Vale, who I owe so much to <3
+* gitHub user MattBCoding, who I took as reference for this readme writing.
